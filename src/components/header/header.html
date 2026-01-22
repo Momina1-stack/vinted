@@ -1,80 +1,161 @@
 <header class="bg-white border-b border-gray-200">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="flex items-center justify-between h-[52px]">
+
+    <!-- ================= TOP BAR ================= -->
+    <div class="flex items-center justify-between h-14">
+
       <!-- Logo -->
-      <div class="img bg-no-repeat bg-cover rounded-none box-border
-       inline-block text-[0] mx-auto overflow-hidden relative text-center align-top">
-        <img src="logo.f29f72cb.svg" alt="" class=" rounded-inherit h-[42px] max-w-full outline-none">
+      <div class="flex items-center">
+        <img src="logo.f29f72cb.svg" alt="Vinted" class="h-10">
       </div>
 
-      <!-- Catalog Dropdown + Search Bar (Combined) -->
-      <div class="flex-1 max-w-3xl mx-8 h-[36px] w-full">
-        <div class="flex items-center bg-gray-100 rounded-md overflow-hidden">
-          <!-- Catalog Dropdown -->
-          <button class="flex items-center gap-2 px-2 py-1 hover:bg-gray-200 transition border-r border-gray-300">
-            <span class="text-[#5A6566] text-[14px] font-medium">Catalog</span>
-            <svg class="w-4 h-4 text-[#5A6566]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+      <!-- ================= DESKTOP SEARCH ================= -->
+      <div class="hidden md:flex flex-1 max-w-3xl mx-6">
+        <div class="flex items-center bg-gray-100 rounded-md w-full h-9">
 
-          <!-- Search Bar -->
-          <div class="relative flex-1 w-[609px]">
-            <div class=" text-[16px] absolute inset-y-0 left-3 flex items-center pointer-events-none ">
-              <svg class="w-5 h-5 text-[#7A8384]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          <!-- Catalog -->
+          <div class="relative">
+            <button
+              (click)="toggleCatalog()"
+              class="flex items-center gap-2 px-3 h-9 border-r border-gray-300 hover:bg-gray-200">
+              <span class="text-sm text-[#5A6566] font-medium">Catalog</span>
+              <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
+                <path d="M8 12 2 6h12z"></path>
               </svg>
+            </button>
+
+            <div *ngIf="isCatalogOpen"
+              class="absolute left-0 mt-2 w-36 rounded-md border bg-white shadow-lg z-50">
+              <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
+                Catalog
+              </button>
+              <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
+                Member
+              </button>
             </div>
-            <input type="text" placeholder="Search for items"
-              class="w-full pl-10 pr-12 py-1.5 bg-[#EDF2F2] focus:outline-none focus:ring-2 focus:[#007782]" />
-            <button class="absolute inset-y-0 right-3 flex items-center ">
-              <svg class="w-5 h-5 text-[#007782]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+          </div>
+
+          <!-- Search -->
+          <div class="relative flex-1">
+            <svg
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A8384]"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+
+            <input
+              type="text"
+              placeholder="Search for items"
+              class="w-full pl-10 pr-10 h-9 bg-[#EDF2F2] rounded-r-md focus:outline-none">
+
+            <button class="absolute right-3 top-1/2 -translate-y-1/2">
+              <svg class="w-5 h-5 text-[#007782]" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path fill="currentColor" d="M8.75 1.004a.75.75 0 0 1 0 1.5H7.07a1.25 1.25 0 0 0-1.04.557c-.255.383-.494.943-1.03.943H2.75c-.69 0-1.25.56-1.25 1.25v7c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-5.5a.75.75 0 0 1 1.5 0v5.5a2.75 2.75 0 0 1-2.75 2.75H2.75A2.75 2.75 0 0 1 0 12.254v-7a2.75 2.75 0 0 1 2.75-2.75h1.849l.183-.275A2.75 2.75 0 0 1 7.07 1.004zm-.749 4a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m0 1.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4m5.012-6c.15 0 .312.088.375.263l.2.537c.187.512.587.912 1.1 1.112l.55.213a.4.4 0 0 1 0 .75l-.55.213c-.513.2-.913.6-1.1 1.112l-.2.537a.4.4 0 0 1-.388.263.4.4 0 0 1-.388-.263l-.2-.537a1.9 1.9 0 0 0-1.1-1.112l-.55-.213a.4.4 0 0 1 0-.75l.55-.213c.513-.2.913-.6 1.1-1.112l.2-.537a.43.43 0 0 1 .4-.263Z"></path>ng 
               </svg>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Right Side Actions -->
-      <div class="flex items-center gap-3 h-[32px] px-[12px]">
-        <!-- Sign up / Log in (Combined Border) -->
-        <div class="flex items-center rounded-md border border-[#007782] overflow-hidden px-[12px]">
-          <button class="pr-1 text-[12px] py-[7px] text-[#007782] text-[12px] font-medium hover:bg-teal-50 transition">
+      <!-- ================= DESKTOP ACTIONS ================= -->
+      <div class="hidden md:flex items-center gap-3">
+
+        <!-- Sign up / Login -->
+        <div class="flex border border-[#007782] rounded-md overflow-hidden">
+          <button class="px-3 py-1.5 text-xs text-[#007782] hover:bg-teal-50">
             Sign up
           </button>
-          <div class="w-[1.5px] h-3.5 pt-[6px] font-extrabold bg-[#007782]"></div>
-          <button class="pl-1 text-[12px] py-[7px] text-[#007782] text-[12px] font-medium hover:bg-teal-50 transition">
+          <div class="w-px bg-[#007782]"></div>
+          <button class="px-3 py-1.5 text-xs text-[#007782] hover:bg-teal-50">
             Log in
           </button>
         </div>
 
-        <!-- Sell now -->
-        <button class="px-[14px] py-[7px] rounded-md bg-[#007782] text-white text-[12px] hover:bg-teal-700 transition font-medium">
+        <!-- Sell -->
+        <button class="px-4 py-1.5 bg-[#007782] text-white text-xs rounded-md">
           Sell now
         </button>
 
-        <!-- Help Icon -->
-        <button
-          class="w-[24px] h-[24px] flex items-center justify-center border border-[#5d6060] rounded-full  hover:bg-gray-50 transition">
-          <span class="text-[#5A6566] font-medium">?</span>
-        </button>
+        <!-- Help -->
+        <button class="w-7 h-7 border rounded-full text-[#5A6566]">?</button>
 
-        <!-- Language Dropdown -->
+        <!-- Language -->
         <div class="relative">
-          <button class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded-md transition">
-            <span class="text-[#5A6566] font-medium">EN</span>
-            <svg class="w-4 h-4 text-[#5A6566]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <button
+            (click)="toggleLanguage()"
+            class="flex items-center gap-1 px-2 py-1">
+            <span class="text-sm text-[#5A6566]">EN</span>
+            <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
+              <path d="M8 12 2 6h12z"></path>
             </svg>
           </button>
-          
+
+          <div *ngIf="isLanguageOpen"
+            class="absolute right-0 mt-2 w-44 border rounded-lg bg-white shadow-lg z-1">
+            <button class="block w-full px-4 py-2 hover:bg-gray-100">
+              English (US)
+            </button>
+            <button class="block w-full px-4 py-2 hover:bg-gray-100">
+              Español (US)
+            </button>
+          </div>
         </div>
       </div>
+
+      <!-- ================= MOBILE HAMBURGER (RIGHT) ================= -->
+      <button
+        class="md:hidden p-2"
+        (click)="toggleMobileMenu()">
+        <svg class="w-6 h-6 text-[#5A6566]" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
     </div>
+
+    <!-- ================= MOBILE SEARCH ================= -->
+    <div class="md:hidden pb-3">
+      <div class="relative">
+        <svg
+          class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A8384]"
+          fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+
+        <input
+          type="text"
+          placeholder="Search for items"
+          class="w-full pl-10 py-2 bg-[#EDF2F2] rounded-md focus:outline-none">
+      </div>
+    </div>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div
+      *ngIf="isMobileMenuOpen"
+      class="md:hidden border-t bg-white">
+
+      <div class="p-4 space-y-3">
+
+        <div class="flex border border-[#007782] rounded-md overflow-hidden">
+          <button class="flex-1 py-2 text-sm text-[#007782]">Sign up</button>
+          <div class="w-px bg-[#007782]"></div>
+          <button class="flex-1 py-2 text-sm text-[#007782]">Log in</button>
+        </div>
+
+        <button class="w-full py-2 bg-[#007782] text-white rounded-md">
+          Sell now
+        </button>
+
+        <h1 class="w-full text-[#007782] text-center font-semibold">
+          Your Guide To Vinted
+        </h1>
+      </div>
+    </div>
+
   </div>
 </header>

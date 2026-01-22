@@ -9,15 +9,19 @@ import { Component } from '@angular/core';
 })
 export class Header {
   
-   isLanguageDropdownOpen = false;
+  isCatalogOpen = false;
+  isLanguageOpen = false;
+  isMobileMenuOpen = false;
 
-  toggleLanguageDropdown() {
-    this.isLanguageDropdownOpen = !this.isLanguageDropdownOpen;
+  toggleCatalog() {
+    this.isCatalogOpen = !this.isCatalogOpen;
   }
 
-  selectLanguage(lang: string) {
-    console.log('Selected language:', lang);
-    this.isLanguageDropdownOpen = false;
+  toggleLanguage() {
+    this.isLanguageOpen = !this.isLanguageOpen;
+  }
 
-}
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
