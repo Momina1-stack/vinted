@@ -5,7 +5,7 @@
     <div class="flex items-center justify-between h-14">
 
       <!-- Logo -->
-      <div class="flex items-center">
+      <div class="flex items-center" >
         <img src="logo.f29f72cb.svg" alt="Vinted" class="h-10">
       </div>
 
@@ -49,7 +49,7 @@
               placeholder="Search for items"
               class="w-full pl-10 pr-10 h-9 bg-[#EDF2F2] rounded-r-md focus:outline-none">
 
-            <button class="absolute right-3 top-1/2 -translate-y-1/2">
+            <button class="absolute right-3 top-1/2 -translate-y-1/2" (click)="openModal()" >
               <svg class="w-5 h-5 text-[#007782]" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24">
                 <path fill="currentColor" d="M8.75 1.004a.75.75 0 0 1 0 1.5H7.07a1.25 1.25 0 0 0-1.04.557c-.255.383-.494.943-1.03.943H2.75c-.69 0-1.25.56-1.25 1.25v7c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-5.5a.75.75 0 0 1 1.5 0v5.5a2.75 2.75 0 0 1-2.75 2.75H2.75A2.75 2.75 0 0 1 0 12.254v-7a2.75 2.75 0 0 1 2.75-2.75h1.849l.183-.275A2.75 2.75 0 0 1 7.07 1.004zm-.749 4a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m0 1.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4m5.012-6c.15 0 .312.088.375.263l.2.537c.187.512.587.912 1.1 1.112l.55.213a.4.4 0 0 1 0 .75l-.55.213c-.513.2-.913.6-1.1 1.112l-.2.537a.4.4 0 0 1-.388.263.4.4 0 0 1-.388-.263l-.2-.537a1.9 1.9 0 0 0-1.1-1.112l-.55-.213a.4.4 0 0 1 0-.75l.55-.213c.513-.2.913-.6 1.1-1.112l.2-.537a.43.43 0 0 1 .4-.263Z"></path>ng 
@@ -63,7 +63,8 @@
       <div class="hidden md:flex items-center gap-3">
 
         <!-- Sign up / Login -->
-        <div class="flex border border-[#007782] rounded-md overflow-hidden">
+        <div class="flex border border-[#007782] rounded-md overflow-hidden" 
+        routerLink="/login">
           <button class="px-3 py-1.5 text-xs text-[#007782] hover:bg-teal-50">
             Sign up
           </button>
@@ -141,7 +142,8 @@
 
       <div class="p-4 space-y-3">
 
-        <div class="flex border border-[#007782] rounded-md overflow-hidden">
+        <div class="flex border border-[#007782] rounded-md overflow-hidden"
+         routerLink="/login">
           <button class="flex-1 py-2 text-sm text-[#007782]">Sign up</button>
           <div class="w-px bg-[#007782]"></div>
           <button class="flex-1 py-2 text-sm text-[#007782]">Log in</button>
@@ -159,3 +161,6 @@
 
   </div>
 </header>
+<div class="h-full z-50 fixed inset-0 top-20 flex justify-center items-center w-full ">
+  <app-img-upload></app-img-upload>
+</div>

@@ -1,0 +1,47 @@
+<div *ngIf="isOpen" class="flex items-center w-screen h-screen justify-center p-4">
+  <div class="w-full  max-w-md bg-white border border-gray-200 rounded-xl p-6 text-center shadow-md ">
+
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">
+      Image Search
+    </h2>
+
+    <div class="bg-[#E1E6E6] h-72  border border-dashed border-gray-600 rounded-md">
+
+      <!-- ICON -->
+      <div class="flex justify-center pt-12 mb-4">
+        <!-- tumhara svg yahan same rahe ga -->
+        <!-- SVG same as you sent -->
+      </div>
+
+      <!-- Hidden File Input -->
+      <input
+        type="file"
+        accept="image/*"
+        #fileInput
+        class="hidden"
+        (change)="onImageSelect($event)"
+      />
+
+      <!-- Upload Button -->
+      <button
+        (click)="fileInput.click()"
+        class="bg-[#007782] text-white font-medium py-2 px-6 rounded-md hover:bg-teal-700 transition-colors mb-2 mt-20">
+        Upload an image
+      </button>
+
+      <p class="text-gray-500 text-sm">
+        Or drag an image here
+      </p>
+
+    </div>
+
+    <!-- Preview -->
+    <div *ngIf="previewImage" class="mt-4">
+      <img
+        [src]="previewImage"
+        class="w-32 h-32 mx-auto object-cover rounded-md border"
+      />
+    </div>
+
+  </div>
+</div>

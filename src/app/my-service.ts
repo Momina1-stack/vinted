@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MyService {
-  
-  constructor() { }
+private modalState = new BehaviorSubject<boolean>(false);
+  modalState$ = this.modalState.asObservable();
 
-  sayHello() {
-    return "Hello from service!";
+  openModal() {
+    this.modalState.next(true);
+  }
+
+  closeModal() {
+    this.modalState.next(false);
   }
   
 }
