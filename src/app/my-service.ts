@@ -15,5 +15,15 @@ private modalState = new BehaviorSubject<boolean>(false);
   closeModal() {
     this.modalState.next(false);
   }
+  private modalMenu = new BehaviorSubject<boolean>(false);
+  modalMenu$ = this.modalMenu.asObservable();
+
+  openMenu() {
+    this.modalMenu.next(true);
+  }
+
+  closeMenu() {
+    this.modalMenu.next(false);
+  }
   
 }
