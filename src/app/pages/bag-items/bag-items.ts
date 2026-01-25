@@ -8,5 +8,8 @@ import { RouterLink } from "@angular/router";
   styleUrl: './bag-items.css',
 })
 export class BagItems {
+openModal() {
+throw new Error('Method not implemented.');
+}
 
 }
