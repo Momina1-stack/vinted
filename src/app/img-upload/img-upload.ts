@@ -29,6 +29,6 @@ onImageSelect(event: any) {
     }
   }
   close() {
-    this.modalService.closeModal();
+    this.modalService.closeItems();
   }
 }
