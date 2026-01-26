@@ -1,0 +1,119 @@
+<div *ngIf="isModalOpen" class="fixed inset-0 z-60 bg-black/40 flex items-center justify-center min-h-screen p-4">
+    
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-sm sm:max-w-md md:max-w-sm lg:max-w-sm relative">
+        <!-- Close Button -->
+        <button (click)="isModalOpen = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-3xl font-light leading-none p-2">
+            ×
+        </button>
+        
+        <!-- Modal Content -->
+        <div class="p-6 sm:p-8 max-h-[80vh] overflow-y-auto">
+            <!-- Heading -->
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Choosing item condition</h1>
+            
+            <!-- Description -->
+            <p class="text-gray-600 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                The item condition helps members filter the catalog and find items more easily. For this reason, it's important to stay as objective as possible when deciding which condition your item falls into.
+            </p>
+            
+            <!-- Subheading -->
+            <h2 class="text-sm sm:text-base font-medium text-gray-900 mb-3 sm:mb-4">Here are all the item conditions in more detail:</h2>
+            
+            <!-- Condition List -->
+            <ul class="space-y-3 sm:space-y-5">
+                <!-- New -->
+                <li class="flex">
+                    <span class="text-gray-900 mr-2 sm:mr-3">•</span>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-medium text-gray-900">New</span><span class="text-gray-600">: A brand-new, unused, and unopened item in its original condition, with all its original packaging and accessories.</span>
+                    </div>
+                </li>
+                
+                <!-- Like new -->
+                <li class="flex">
+                    <span class="text-gray-900 mr-2 sm:mr-3">•</span>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-medium text-gray-900">Like new</span><span class="text-gray-600">: A brand-new, unused item in its original condition, either opened or without its original packaging.</span>
+                    </div>
+                </li>
+                
+                <!-- Very good -->
+                <li class="flex">
+                    <span class="text-gray-900 mr-2 sm:mr-3">•</span>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-medium text-gray-900">Very good</span><span class="text-gray-600">: A gently-used item in excellent condition, with minor imperfections.</span>
+                    </div>
+                </li>
+                
+                <!-- Good -->
+                <li class="flex">
+                    <span class="text-gray-900 mr-2 sm:mr-3">•</span>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-medium text-gray-900">Good</span><span class="text-gray-600">: A regularly-used item in good condition that shows wear, but still works well for its intended purpose.</span>
+                    </div>
+                </li>
+                
+                <!-- Satisfactory -->
+                <li class="flex">
+                    <span class="text-gray-900 mr-2 sm:mr-3">•</span>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-medium text-gray-900">Satisfactory</span><span class="text-gray-600">: A well-used item that shows clear signs of wear and imperfections, but still works as intended.</span>
+                    </div>
+                </li>
+                
+                <!-- Needs repair -->
+                <li class="flex">
+                    <span class="text-gray-900 mr-2 sm:mr-3">•</span>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-medium text-gray-900">Needs repair (only applicable to electronic devices)</span><span class="text-gray-600">: An item that no longer works as intended, with broken or missing parts.</span>
+                    </div>
+                </li>
+            </ul>
+            
+            <!-- Bottom Information -->
+            <div class="mt-6 sm:mt-8 text-gray-600 text-sm sm:text-base leading-relaxed space-y-3 sm:space-y-4">
+                <p>
+                    Buyers might cancel the order and <a href="#" class="text-teal-600 underline hover:text-teal-700">return the item</a> if its condition is significantly worse than the listing suggested. Also, we may hide a listing if we see that a wrong condition is chosen.
+                </p>
+                
+                <p>
+                    To avoid this, make sure to always include photos and descriptions of any flaws of used items, and choose a poorer condition if you're in doubt.
+                </p>
+            </div>
+            
+            <!-- Listing items with flaws section -->
+            <div class="mt-6 sm:mt-8">
+                <h2 class="text-lg sm:text-2xl font-medium text-gray-900 mb-4 sm:mb-6">Listing items with flaws:</h2>
+                
+                <ol class="space-y-3 sm:space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                    <li class="flex">
+                        <span class="font-medium text-gray-900 mr-2">1.</span>
+                        <span>Upload a photo where the flaw is clearly visible. If there are several flaws, upload a photo for each of them.</span>
+                    </li>
+                    
+                    <li class="flex">
+                        <span class="font-medium text-gray-900 mr-2">2.</span>
+                        <span>You should also describe the flaws in more detail in the item's description.</span>
+                    </li>
+                </ol>
+                
+                <p class="mt-4 sm:mt-6 text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Examples of flaws worth mentioning: scuffs or marks, stains, holes or tears, missing parts, broken zips, odors, alterations, stretching or shrinkage, fading or discoloration.
+                </p>
+                
+                <p class="mt-2 sm:mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Please see more information on <a href="#" class="text-teal-600 underline hover:text-teal-700">how to take photos of electronic devices</a>.
+                </p>
+            </div>
+            
+            <!-- Condition of electronic devices section -->
+            <div class="mt-6 sm:mt-8">
+                <h2 class="text-lg sm:text-2xl font-medium text-gray-900 mb-4 sm:mb-6">Condition of electronic devices</h2>
+                
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    To showcase the condition of electronic devices, consider these tips for <a href="#" class="text-teal-600 underline hover:text-teal-700">taking photos of electronic devices</a>. For mobile devices, you may need to set the <a href="#" class="text-teal-600 underline hover:text-teal-700">SIM lock status</a> as well as condition.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

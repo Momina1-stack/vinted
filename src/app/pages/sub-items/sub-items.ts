@@ -11,13 +11,16 @@ import { MyService } from '../../my-service';
 })
 export class SubItems {
 
-  isModalOpen = false;
+  isModalOpen = true;
+    closeModal() {
+    this.isModalOpen = false;
+  }
   
-
   constructor(private modalService: MyService) {
     this.modalService.modalItems$.subscribe(val => {
       this.isModalOpen = val;
     });
+    
   }
 
   @ViewChild('slider') slider!: ElementRef;

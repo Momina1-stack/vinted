@@ -47,24 +47,48 @@
         </div>
 
         <!-- META INFO -->
-        <div class="mt-4 border-y border-gray-300 py-2 space-y-1 text-sm">
-          <div class="flex  flex-wrap">
+        <div class="mt-4 border-y border-gray-300 py-2 text-[14px]">
+
+          <!-- Row -->
+          <div class="grid grid-cols-[120px_1fr_20px] items-center py-1">
             <span class="text-gray-500">Brand</span>
-            <span class="text-[#007782] font-medium">Michael Kors</span>
+
+            <span class="text-[#007782] font-medium">
+              Michael Kors
+            </span>
+
+            <!-- 3 dots icon -->
+            <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><title>Brand menu</title><path fill="currentColor" d="M6 11.25A1.125 1.125 0 1 1 6 9a1.125 1.125 0 0 1 0 2.25M6 3A1.125 1.125 0 1 1 6 .75 1.125 1.125 0 0 1 6 3m0 4.125a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25"></path></svg>
           </div>
-          <div class="flex justify-between flex-wrap">
+
+          <!-- Row -->
+          <div class="grid grid-cols-[120px_1fr_20px] items-center py-1">
             <span class="text-gray-500">Condition</span>
-            <span>New with tags</span>
+
+            <span class="text-gray-800">
+              New with tags
+            </span>
+
+            <!-- info icon -->
+          <button (click)="openModalInfo()"  data-testid="item-attributes-status-faq-link" class="overflow-menu overflow-menu--top-right u-cursor-pointer" type="button" aria-label="Condition information" title="Condition information"><span class="web_ui__Icon__icon web_ui__Icon__greyscale-level-2" style="width: 12px;"><svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M6 1.5a4.5 4.5 0 0 1 4.5 4.49 4.51 4.51 0 0 1-4.5 4.5 4.51 4.51 0 0 1-4.5-4.5A4.5 4.5 0 0 1 6 1.5M6 0a6 6 0 1 0 0 12A6 6 0 0 0 6 0m.6 5.25H5.4V8.5h1.2zM5.47 3.21A.75.75 0 0 1 6 2.99a.76.76 0 0 1 .75.75.75.75 0 0 1-.75.75.74.74 0 0 1-.75-.75.75.75 0 0 1 .22-.53" clip-rule="evenodd"></path></svg></span></button>
           </div>
-          <div class="flex justify-between flex-wrap ">
+
+          <!-- Row -->
+          <div class="grid grid-cols-[120px_1fr_20px] items-center py-1">
             <span class="text-gray-500">Color</span>
-            <span>Cream, Beige</span>
+            <span class="text-gray-800">Cream, Beige</span>
+            <span></span>
           </div>
-          <div class="flex justify-between flex-wrap ">
+
+          <!-- Row -->
+          <div class="grid grid-cols-[120px_1fr_20px] items-center py-1">
             <span class="text-gray-500">Uploaded</span>
-            <span>2 days ago</span>
+            <span class="text-gray-800">4 months ago</span>
+            <span></span>
           </div>
+
         </div>
+
 
         <!-- DESCRIPTION -->
         <div class="mt-3 border-b border-gray-300 pb-2 text-sm text-gray-600">
@@ -273,3 +297,4 @@
   </div>
 </div>
 <app-sub-items></app-sub-items>
+<app-info-modal></app-info-modal>

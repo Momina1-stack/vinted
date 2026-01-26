@@ -38,7 +38,18 @@ private modalState = new BehaviorSubject<boolean>(false);
   }
 
   closeItems() {
-    this.modalMenu.next(false);
+    this.modalItems.next(false);
+  }
+
+   private modalInfo = new BehaviorSubject<boolean>(false);
+  modalInfo$ = this.modalInfo.asObservable();
+
+  openInfo() {
+    this.modalInfo.next(true);
+  }
+
+  closeInfo() {
+    this.modalInfo.next(false);
   }
   
 }
