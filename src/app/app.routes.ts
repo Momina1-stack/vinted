@@ -8,6 +8,8 @@ import { ImgUpload } from './img-upload/img-upload';
 import { AboutSubsection } from './about-subsection/about-subsection';
 import { AboutUs } from './about-us/about-us';
 import { TrustAndSaftey } from './trust-and-saftey/trust-and-saftey';
+import { Accessibility } from './accessibility/accessibility';
+import { PrivacyCenter } from './privacy-center/privacy-center';
 
 export const routes: Routes = [
 
@@ -20,7 +22,11 @@ export const routes: Routes = [
       { path: 'items', component: BagItems },
       { path: 'about-subsection', component: AboutSubsection },
       { path: 'about-us', component: AboutUs },
-      { path: 'trust&safety', component:TrustAndSaftey },
+      { path: 'trust&safety', component: TrustAndSaftey },
+      { path: 'accessibility', component: Accessibility },
+      { path: 'privacy-center', component: PrivacyCenter },
+
+
 
 
 
