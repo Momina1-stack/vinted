@@ -10,7 +10,8 @@ import { AboutUs } from './about-us/about-us';
 import { TrustAndSaftey } from './trust-and-saftey/trust-and-saftey';
 import { Accessibility } from './accessibility/accessibility';
 import { PrivacyCenter } from './privacy-center/privacy-center';
-
+import { BagsPage } from './pages/bags-page/bags-page';
+import { LoginForm } from './login-form/login-form';
 export const routes: Routes = [
 
   {
@@ -18,13 +19,18 @@ export const routes: Routes = [
     component: Layout,
     children: [
       { path: '', component: Home },
-      { path: 'login', component: Login },
+      { path: 'login', component:Login},
       { path: 'items', component: BagItems },
       { path: 'about-subsection', component: AboutSubsection },
       { path: 'about-us', component: AboutUs },
       { path: 'trust&safety', component: TrustAndSaftey },
       { path: 'accessibility', component: Accessibility },
       { path: 'privacy-center', component: PrivacyCenter },
+      { path: 'bags-page', component: BagsPage },
+      { path: 'login-form', component: LoginForm },
+      
+
+
 
 
 
@@ -34,4 +40,7 @@ export const routes: Routes = [
 
     ],
   },
+
+
+
 ];

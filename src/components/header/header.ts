@@ -4,6 +4,7 @@ import { RouterLink } from "@angular/router";
 import { MyService } from '../../app/my-service';
 import { ImgUpload } from "../../app/img-upload/img-upload";
 import { Menu } from "../../app/menu/menu";
+import { Auth } from '../../app/services/auth';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,20 @@ import { Menu } from "../../app/menu/menu";
   styleUrl: './header.css',
 })
 export class Header {
-      constructor(private modalService: MyService) {}
+Service: any;
+authService: any;
 
-  
+  constructor(
+  public auth: Auth,
+  private modalService: MyService
+) {}
+
+  logout() {
+    this.auth.logout();
+  }
+
+
+
   isCatalogOpen = false;
   isLanguageOpen = false;
   isOpen = false;
@@ -25,7 +37,7 @@ export class Header {
   }
 
   toggleLanguage() {
-    console.log("clicked",this.isLanguageOpen)
+    console.log("clicked", this.isLanguageOpen)
 
     this.isLanguageOpen = !this.isLanguageOpen;
   }
@@ -36,6 +48,6 @@ export class Header {
 
   openModal() {
     this.modalService.openModal();
-    
+
   }
 }

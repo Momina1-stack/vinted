@@ -1,0 +1,33 @@
+<div class="max-w-md mx-auto border border-gray-200 bg-white shadow-lg overflow-hidden font-sans">
+  
+  <div *ngIf="activeView === 'main'" class="divide-y divide-gray-100">
+    <div *ngFor="let item of menuItems" 
+         (click)="openSubMenu(item)"
+         class="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors">
+      
+      <div class="flex items-center gap-4">
+        <span class="text-xl text-teal-600">{{ item.icon }}</span>
+        <span class="text-gray-800 text-lg font-medium">{{ item.title }}</span>
+      </div>
+
+      <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </div>
+
+  <div *ngIf="activeView === 'sub'" class="animate-in slide-in-from-right duration-300">
+    <div (click)="goBack()" class="flex items-center gap-3 p-4 bg-gray-50 border-b cursor-pointer font-bold text-gray-700">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="15 19l-7-7 7-7" />
+      </svg>
+      {{ selectedCategory?.title }}
+    </div>
+
+    <div *ngFor="let sub of selectedCategory?.subItems" 
+         class="p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer text-gray-600">
+      {{ sub }}
+    </div>
+  </div>
+
+</div>

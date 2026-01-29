@@ -1,0 +1,764 @@
+<div class="p-8 bg-white font-sans min-h-screen">
+  <nav class="text-xs text-gray-500 mb-2 flex gap-1">
+    <span class="hover:underline cursor-pointer">Women</span>
+    <span>/</span>
+    <span class="font-semibold text-black">Bags</span>
+  </nav>
+
+  <h1 class="text-4xl font-bold mb-8 text-gray-900">Bags</h1>
+
+  <div class="flex flex-wrap items-center gap-2 border-t border-b border-gray-200 py-5 relative">
+    <!-- category -->
+    <div class="relative">
+      <button (click)="toggleMenu('category')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'category'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 transition-all">
+        Category
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'category'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="activeMenu === 'category'"
+        class=" absolute top-10 z-50 h-70  w-[320px] bg-white border border-gray-200 rounded-xl overflow-y-scroll">
+
+        <!-- Women -->
+        <div class="flex items-center justify-between px-5 py-4 border-b cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Women</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+
+        <!-- Men -->
+        <div class="flex items-center justify-between px-5 py-4 border-b cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="men-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Men</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+
+        <!-- Designer -->
+        <div class="flex items-center justify-between px-5 py-4 border-b cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="designer-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Designer</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+
+        <!-- Kids -->
+        <div class="flex items-center justify-between px-5 py-4 border-b cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="kids-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Kids</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+
+        <!-- Home -->
+        <div class="flex items-center justify-between px-5 py-4 border-b cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="home-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Home</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+
+        <!-- Electronics -->
+        <div class="flex items-center justify-between border-b  px-5 py-4 cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="electronics.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Electronics</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+        <!-- entertainment -->
+        <div class="flex items-center justify-between border-b  px-5 py-4 cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="entertainment-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Entertainment</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+        <!-- hobbies and collectibles -->
+        <div class="flex items-center justify-between border-b  px-5 py-4 cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="hobbies-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Hobbies and Collectibles </span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+        <!-- sports -->
+        <div class="flex items-center justify-between  px-5 py-4 cursor-pointer hover:bg-gray-50">
+          <div class="flex items-center gap-4">
+            <img src="sports-icon.png" class="w-6 h-6" alt="">
+            <span class="text-gray-900 font-medium">Sports</span>
+          </div>
+          <span class="text-gray-400 text-2xl">›</span>
+        </div>
+
+      </div>
+    </div>
+    <!-- brands -->
+    <div class="relative">
+      <button (click)="toggleMenu('brand')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'brand'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        Brand
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'brand'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="activeMenu === 'brand'"
+        class="absolute top-10  z-60 w-92.5 bg-white rounded-xl shadow-sm border border-gray-200 ">
+
+        <!-- Search -->
+        <div class="p-4 border-b border-gray-200">
+          <input type="text" placeholder="Search for brands"
+            class="w-full text-sm text-gray-700 placeholder-gray-400 focus:outline-none" />
+        </div>
+
+        <!-- Brand List -->
+        <div class="max-h-105 overflow-y-auto divide-y divide-gray-200">
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Primark</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">River Island</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Michael Kors</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">No Label</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700">
+              <img src="checkbox.svg" alt="">
+            </span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Radley</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Coach</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Ted Baker</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">New Look</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Shein</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Zara</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Source Unknown</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+        </div>
+
+        <!-- Button -->
+        <div class="p-4 border-t border-gray-200">
+          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+            Show results
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- condition -->
+    <div class="relative">
+      <button (click)="toggleMenu('condition')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'condition'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        Condition
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'condition'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="activeMenu === 'condition'"
+        class="absolute top-10  z-60 w-[320px] bg-white rounded-xl shadow-sm border border-gray-200 ">
+
+        <!-- condition List -->
+        <div class="max-h-105 overflow-y-auto divide-y divide-gray-200">
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <span class="font-medium text-black">New with tags
+                <p class="font-normal text-gray-500 w-50">A brand-new, unused item with tags attached or in the original
+                  packaging.
+                </p>
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <span class="font-medium text-black">New without tags
+                <p class="font-normal text-gray-500 w-50">A brand-new, unused item without tags or original packaging.
+                </p>
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <span class="font-medium text-black">Very good
+                <p class="font-normal text-gray-500 w-50">A lightly used item that may have slight imperfections, but
+                  still looks great.
+                </p>
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <span class="font-medium text-black">Good
+                <p class="font-normal text-gray-500 w-50">A used item that may show imperfections and signs of wear.
+                </p>
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700">
+              <img src="checkbox.svg" alt="">
+            </span>
+          </label>
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <span class="font-medium text-black">Satisfactory
+                <p class="font-normal text-gray-500 w-50">A frequently used item with imperfections and signs of wear.
+                </p>
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+        </div>
+
+        <!-- Button -->
+        <div class="p-4 border-t border-gray-200">
+          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+            Show results
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!-- Color-->
+    <div class="relative">
+      <button (click)="toggleMenu('color')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'color'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        Color
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'color'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <div *ngIf="activeMenu === 'color'"
+        class="absolute top-10  z-60 w-[320px] bg-white rounded-xl shadow-sm border border-gray-200 ">
+
+        <!-- condition List -->
+        <div class="max-h-105 overflow-y-auto divide-y divide-gray-200">
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-black"></div>
+              <span class="font-medium text-black">Black
+             
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-gray-500"></div>
+              <span class="font-medium text-black">Grey
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full border border-gray-200 bg-white"></div>
+              <span class="font-medium text-black">White
+               
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-[#F8F8E1]"></div>
+              <span class="font-medium text-black">Cream
+               
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700">
+              <img src="checkbox.svg" alt="">
+            </span>
+          </label>
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-[#F4E0C8]"></div>
+              <span class="font-medium text-black">Beige
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-[#FFCC98]"></div>
+              <span class="font-medium text-black">Apricot
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-orange-400"></div>
+              <span class="font-medium text-black">Orange
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-[#FF8F2F]"></div>
+              <span class="font-medium text-black">Coral
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-red-600"></div>
+              <span class="font-medium text-black">Red
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+           <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-[#AE2E3D]"></div>
+              <span class="font-medium text-black">Burgundy
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+           <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-pink-400"></div>
+              <span class="font-medium text-black">Pink
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+           <label class="flex items-center justify-between p-4 cursor-pointer">
+            <div class="flex">
+              <div class="colors h-5 w-5 mt-1 mr-2 rounded-full bg-[#FFCCCA]"></div>
+              <span class="font-medium text-black">Rose
+              
+              </span>
+            </div>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+        </div>
+
+        <!-- Button -->
+        <div class="p-4 border-t border-gray-200">
+          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+            Show results
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!-- price-->
+    <div class="relative">
+      <button (click)="toggleMenu('price')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'price'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400">
+        Price
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'price'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <div *ngIf="activeMenu === 'price'"
+        class="absolute z-50 mt-3 w-72 bg-white border border-gray-200 rounded-2xl shadow-2xl p-4">
+       <div class="flex gap-10 max-w-sm">
+  <!-- FROM -->
+  <div class="flex flex-col w-1/2">
+    <label class="text-sm text-gray-500 mb-1">From</label>
+
+    <div
+      class="flex items-center border-b border-transparent focus-within:border-teal-500"
+    >
+      <span class="text-gray-400 mr-1">$</span>
+
+      <input
+        type="text"
+        placeholder="0.00"
+        class="w-full py-1 text-gray-800 focus:outline-none bg-transparent placeholder-gray-300"
+      />
+    </div>
+  </div>
+
+  <!-- TO -->
+  <div class="flex flex-col w-1/2">
+    <label class="text-sm text-gray-500 mb-1">To</label>
+
+    <div
+      class="flex items-center border-b border-transparent focus-within:border-teal-500"
+    >
+      <span class="text-gray-400 mr-1">$</span>
+
+      <select
+        class="w-full py-1 text-gray-800 bg-transparent focus:outline-none appearance-none"
+        (change)="onSelectChange($event)"
+      >
+        <option value="" selected hidden>Select</option>
+        <option class="text-gray-800">USD</option>
+        <option class="text-gray-800">EUR</option>
+        <option class="text-gray-800">PKR</option>
+      </select>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+    <!-- material -->
+    <div class="relative">
+      <button (click)="toggleMenu('material')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'material'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        Material
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'mayerial'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="activeMenu === 'material'"
+        class="absolute top-10  z-60 w-[320px] bg-white rounded-xl shadow-sm border border-gray-200 ">
+
+        <!-- Brand List -->
+        <div class="max-h-105 overflow-y-auto divide-y divide-gray-200">
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Acrylic</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Alpaca</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Bamboo
+</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Canvas</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700">
+              <img src="checkbox.svg" alt="">
+            </span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Cardboard</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Cashmere</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Cashmere</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Chiffon</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Corduroy</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Cotton</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Denim</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-gray-500 rounded-md peer-checked:bg-teal-700 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+        </div>
+
+        <!-- Button -->
+        <div class="p-4 border-t border-gray-200">
+          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+            Show results
+          </button>
+        </div>
+
+      </div>
+       
+    </div>
+    <!-- next -->
+    <div class="relative">
+      <button (click)="toggleMenu('sortby')"
+        [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'sortby'}"
+        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        Sort By
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
+          [ngClass]="{'rotate-180': activeMenu === 'sortby'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+       <div *ngIf="activeMenu === 'sortby'"
+        class="absolute top-10  z-60 w-60 bg-white rounded-xl shadow-sm border border-gray-200 overflow-y-scroll">
+        <!-- Sort byList -->
+        <div class="max-h-105 overflow-y-auto divide-y divide-gray-200">
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Relevnce</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5  border border-[#007782] rounded-full  peer-checked:border-6 peer-checked:border-teal-700"> 
+            </span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Price: hight to low</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5 border border-[#007782] rounded-full peer-checked:border-6  peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Price: low to high</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5  border border-[#007782] rounded-full peer-checked:border-6 peer-checked:border-teal-700"><img
+                src="checkbox.svg" alt=""></span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 cursor-pointer">
+            <span class="font-medium text-black">Newest first</span>
+            <input type="checkbox" class="hidden peer">
+            <span
+              class="w-5 h-5  border border-[#007782] rounded-full peer-checked:border-6 peer-checked:border-teal-700">
+              <img src="checkbox.svg" alt="">
+            </span>
+          </label>
+
+
+         
+
+        </div>
+
+        <!-- Button -->
+        <div class="p-4 border-t border-gray-200">
+        <p class="text-[12px]"><span class="underline">Learn more</span> about how we sort relevat element tems in your feed</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="ml-auto text-teal-600 text-sm font-bold hover:underline">Clear filters</button>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-x-12 mt-12">
+    <div class="flex flex-col gap-3 text-teal-700 text-[15px]">
+      <a href="#" class="hover:underline">Handbags</a>
+      <a href="#" class="hover:underline">Shoulder bags</a>
+      <a href="#" class="hover:underline">Wallets</a>
+      <a href="#" class="hover:underline">Clutches</a>
+      <a href="#" class="hover:underline">Tote bags</a>
+      <a href="#" class="hover:underline">Backpacks</a>
+    </div>
+    <div class="flex flex-col gap-3 text-teal-700 text-[15px]">
+      <a href="#" class="hover:underline">Makeup bags</a>
+      <a href="#" class="hover:underline">Satchels & messenger bags</a>
+      <a href="#" class="hover:underline">Bucket bags</a>
+      <a href="#" class="hover:underline">Beach bags</a>
+      <a href="#" class="hover:underline">Fanny packs</a>
+      <a href="#" class="hover:underline">Hobo bags</a>
+    </div>
+    <div class="flex flex-col gap-3 text-teal-700 text-[15px]">
+      <a href="#" class="hover:underline">Holdalls & duffel bags</a>
+      <a href="#" class="hover:underline">Wristlets</a>
+      <a href="#" class="hover:underline">Garment bags</a>
+      <a href="#" class="hover:underline">Luggage & suitcases</a>
+      <a href="#" class="hover:underline">Gym bags</a>
+      <a href="#" class="hover:underline">Briefcases</a>
+    </div>
+  </div>
+
+</div>
