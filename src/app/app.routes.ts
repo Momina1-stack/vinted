@@ -12,6 +12,7 @@ import { Accessibility } from './accessibility/accessibility';
 import { PrivacyCenter } from './privacy-center/privacy-center';
 import { BagsPage } from './pages/bags-page/bags-page';
 import { LoginForm } from './login-form/login-form';
+import { SignupForm } from './signup-form/signup-form';
 export const routes: Routes = [
 
   {
@@ -28,6 +29,7 @@ export const routes: Routes = [
       { path: 'privacy-center', component: PrivacyCenter },
       { path: 'bags-page', component: BagsPage },
       { path: 'login-form', component: LoginForm },
+      { path: 'signup-form', component: SignupForm },
       
 
 

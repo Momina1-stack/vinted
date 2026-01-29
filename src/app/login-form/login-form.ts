@@ -14,6 +14,12 @@ export class LoginForm {
   email: string = '';
   password: string = '';
   error: string = '';
+ showPassword: boolean = false;
+
+    togglePassword() {
+    this.showPassword = !this.showPassword;
+  }
+
 
   constructor(private auth: Auth) {}
 
@@ -30,4 +36,6 @@ export class LoginForm {
       alert('Login successful ✅');
     }
   }
+
+
 }

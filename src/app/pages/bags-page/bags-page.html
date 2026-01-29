@@ -1,11 +1,22 @@
-<div class="p-8 bg-white font-sans min-h-screen">
+<div class="pl-8 py-8 bg-white font-sans min-h-screen max-w-4xl ">
   <nav class="text-xs text-gray-500 mb-2 flex gap-1">
     <span class="hover:underline cursor-pointer">Women</span>
     <span>/</span>
-    <span class="font-semibold text-black">Bags</span>
+    <span class="font-semibold text-black ">Bags
+    
+    </span>
   </nav>
 
-  <h1 class="text-4xl font-bold mb-8 text-gray-900">Bags</h1>
+  <h1 class="text-4xl font-bold mb-8 text-gray-900 flex items-center justify-between">Bags
+      <button class="border rounded-md px-3   flex items-center" type="button">
+       
+      <span class="">
+        <svg fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M6.75 2.5c-.69 0-1.25.56-1.25 1.25v17.793l5.483-3.738a1.75 1.75 0 0 1 2.034 0l5.483 3.738V3.75c0-.69-.56-1.25-1.25-1.25zM4 3.75A2.75 2.75 0 0 1 6.75 1h10.5A2.75 2.75 0 0 1 20 3.75v18.28a1.25 1.25 0 0 1-1.977 1.017l-5.878-4.02a.25.25 0 0 0-.29 0l-5.878 4.02A1.25 1.25 0 0 1 4 22.028z"></path></svg>
+      </span>
+     <span class="relative bottom-2 left-1">
+          <span class="text-[18px] font-normal">Save search</span>
+        </span></button>
+  </h1>
 
   <div class="flex flex-wrap items-center gap-2 border-t border-b border-gray-200 py-5 relative">
     <!-- category -->
@@ -733,8 +744,9 @@
 
     <button class="ml-auto text-teal-600 text-sm font-bold hover:underline">Clear filters</button>
   </div>
+ 
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-x-12 mt-12">
+  <div class=" border-b border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-x-12 mt-12">
     <div class="flex flex-col gap-3 text-teal-700 text-[15px]">
       <a href="#" class="hover:underline">Handbags</a>
       <a href="#" class="hover:underline">Shoulder bags</a>
@@ -751,7 +763,7 @@
       <a href="#" class="hover:underline">Fanny packs</a>
       <a href="#" class="hover:underline">Hobo bags</a>
     </div>
-    <div class="flex flex-col gap-3 text-teal-700 text-[15px]">
+    <div class="pb-6 flex flex-col gap-3 text-teal-700 text-[15px]">
       <a href="#" class="hover:underline">Holdalls & duffel bags</a>
       <a href="#" class="hover:underline">Wristlets</a>
       <a href="#" class="hover:underline">Garment bags</a>
@@ -760,5 +772,87 @@
       <a href="#" class="hover:underline">Briefcases</a>
     </div>
   </div>
+
+ <div class="flex justify-between text-gray-500 py-4 ">
+    <p>500+ results.</p>
+    <p class="flex items-center gap-2">Search results
+    <svg fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11"></path><path fill="currentColor" d="M12 7.75c-.826 0-1.5.674-1.5 1.5a.75.75 0 0 1-1.5 0c0-1.654 1.346-3 3-3s3 1.346 3 3c0 1.133-.538 2.036-1.415 2.716-.362.28-.835.515-.835 1.034a.75.75 0 0 1-1.5 0c0-1.031.662-1.635 1.415-2.219.514-.399.835-.86.835-1.531 0-.826-.674-1.5-1.5-1.5M13 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0"></path></svg>
+    </p>
+  </div>
+
+    <div class="col-span-12 lg:col-span-8 lg:px-0 px-8 ">
+        <h2 class="text-lg font-semibold mb-5 pt-4 mr-8 lg:mr-0">Member's items</h2>
+        <div class="grid sm:px-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Card 1 -->
+          <div class="relative  flex flex-col rounded-lg overflow-hidden bg-white">
+            <img src="bag.webp" alt="Sample Item" class="w-full h-80 object-cover rounded-lg bg-[#E8DED1]" />
+            <!-- Card content -->
+            <div class="p-1 flex flex-col space-y-1">
+              <p class="text-xs text-gray-500  truncate">Anthropologie</p>
+              <p class="text-xs text-gray-500 truncate">Very good</p>
+              <p class="text-xs text-gray-500 ">$54.45</p>
+              <button class="flex items-center text-normal text-[#007782]">
+                $57.87 incl.
+                <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
+                  <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
+                  <path fill-rule="evenodd"
+                    d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="relative flex flex-col rounded-lg overflow-hidden bg-white">
+            <img src="bag 2.webp" alt="Sample Item" class="w-full h-80 object-cover rounded-lg bg-[#E8DED1]" />
+            <div class="p-1 flex flex-col space-y-1">
+              <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
+              <p class="text-xs text-gray-500 truncate">New with tags</p>
+              <p class="text-xs text-gray-500">$54.45</p>
+              <button class="flex items-center text-normal text-[#007782]">
+                $57.87 incl.
+                <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
+                  <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
+                  <path fill-rule="evenodd"
+                    d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="relative flex flex-col rounded-lg overflow-hidden bg-white">
+            <img src="black-bag.webp" alt="Sample Item" class="w-full h-80 object-cover rounded-lg bg-[#E8DED1]" />
+            <div class="p-1 flex flex-col space-y-1">
+              <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
+              <p class="text-xs text-gray-500 truncate">New With Tags</p>
+              <p class="text-xs text-gray-500">$54.45</p>
+              <button class="flex items-center text-normal text-[#007782]">
+                $57.87 incl.
+                <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
+                  <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
+                  <path fill-rule="evenodd"
+                    d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="relative flex flex-col rounded-lg overflow-hidden bg-white">
+            <img src="brown bag.webp" alt="Sample Item" class="w-full h-80 object-cover rounded-lg bg-[#E8DED1]" />
+            <div class="p-1 flex flex-col space-y-1">
+              <p class="text-xs text-gray-500 truncate">Michael Kors</p>
+              <p class="text-xs text-gray-500 truncate">New with tags</p>
+              <p class="text-xs text-gray-500">$54.45</p>
+              <button class="flex items-center text-normal text-[#007782]">
+                $57.87 incl.
+                <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
+                  <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
+                  <path fill-rule="evenodd"
+                    d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </div>
