@@ -13,6 +13,7 @@ export class Auth {
   login(email: string, password: string): boolean {
     if (email === this.dummyEmail && password === this.dummyPassword) {
       this.isLoggedIn = true;
+      
       return true;
     }
     return false;

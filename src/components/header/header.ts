@@ -13,19 +13,22 @@ import { Auth } from '../../app/services/auth';
   styleUrl: './header.css',
 })
 export class Header {
-Service: any;
-authService: any;
+toggleDropdown() {
+throw new Error('Method not implemented.');
+}
+  Service: any;
+  router: any;
+  // authService: any;
 
   constructor(
-  public auth: Auth,
-  private modalService: MyService
-) {}
+    public auth: Auth,
+    private modalService: MyService
+  ) { }
+ 
 
   logout() {
     this.auth.logout();
   }
-
-
 
   isCatalogOpen = false;
   isLanguageOpen = false;
@@ -50,4 +53,9 @@ authService: any;
     this.modalService.openModal();
 
   }
+
+  logoutt() {
+  this.auth.logout();
+  this.router.navigate(['/login']);
+}
 }

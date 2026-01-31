@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Auth } from '../services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -16,26 +17,22 @@ export class LoginForm {
   error: string = '';
  showPassword: boolean = false;
 
-    togglePassword() {
+
+
+  constructor(private auth: Auth , private router :Router) {}
+
+
+      togglePassword() {
     this.showPassword = !this.showPassword;
   }
 
-
-  constructor(private auth: Auth) {}
-
   onLogin() {
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
+  const success = this.auth.login(this.email, this.password);
 
-    const success = this.auth.login(this.email, this.password);
-
-    if (!success) {
-      this.error = 'Invalid email or password';
-    } else {
-      this.error = '';
-      alert('Login successful ✅');
-    }
+  if (success) {
+    this.router.navigate(['/']);
+  } else {
+    this.error = 'Invalid email or password';
   }
-
-
+}
 }

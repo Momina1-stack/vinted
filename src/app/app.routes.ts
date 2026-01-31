@@ -13,6 +13,8 @@ import { PrivacyCenter } from './privacy-center/privacy-center';
 import { BagsPage } from './pages/bags-page/bags-page';
 import { LoginForm } from './login-form/login-form';
 import { SignupForm } from './signup-form/signup-form';
+import { Inbox } from './inbox/inbox';
+import { FavList } from './fav-list/fav-list';
 export const routes: Routes = [
 
   {
@@ -30,6 +32,11 @@ export const routes: Routes = [
       { path: 'bags-page', component: BagsPage },
       { path: 'login-form', component: LoginForm },
       { path: 'signup-form', component: SignupForm },
+      { path: 'inbox', component: Inbox },
+      { path: 'favlist', component: FavList },
+      
+
+
       
 
 
