@@ -58,4 +58,10 @@ throw new Error('Method not implemented.');
   this.auth.logout();
   this.router.navigate(['/login']);
 }
+isDropdownOpen = false;
+
+toggleDropdownn() {
+  this.isDropdownOpen = !this.isDropdownOpen;
+}
+
 }

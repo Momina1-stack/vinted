@@ -15,6 +15,8 @@ import { LoginForm } from './login-form/login-form';
 import { SignupForm } from './signup-form/signup-form';
 import { Inbox } from './inbox/inbox';
 import { FavList } from './fav-list/fav-list';
+import { Profile } from './profile/profile';
+import { Invite } from './invite/invite';
 export const routes: Routes = [
 
   {
@@ -34,6 +36,8 @@ export const routes: Routes = [
       { path: 'signup-form', component: SignupForm },
       { path: 'inbox', component: Inbox },
       { path: 'favlist', component: FavList },
+      { path: 'profile', component: Profile },
+      { path: 'invite', component: Invite },
       
 
 
