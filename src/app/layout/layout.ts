@@ -9,7 +9,7 @@ import { LoginForm } from "../login-form/login-form";
 
 @Component({
   selector: 'app-layout',
-  imports: [Header, Footer, Navbar, RouterOutlet, Login, Home, LoginForm],
+  imports: [Header, Footer, Navbar, RouterOutlet],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })
