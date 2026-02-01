@@ -1,0 +1,49 @@
+<div *ngIf="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+  <section class="relative top-75 w-full max-h-[80vh] rounded-xl bg-white overflow-hidden block md:hidden">
+    
+    <!-- Heading (fixed inside modal) -->
+    <h2 class="sticky top-0 flex items-center justify-center font-bold p-4 border-b border-gray-500 bg-white z-10">
+      How referrals work
+      <!-- CLOSE ICON -->
+      <button (click)="isModalOpen = false" class="absolute right-4 text-teal-700 hover:text-teal-900">
+        ✕
+      </button>
+    </h2>
+
+    <!-- Scrollable Content -->
+    <div class="overflow-y-auto px-6  max-h-[calc(80vh-4rem)]">
+      <!-- Card 1 -->
+<div class="flex flex-col items-start text-left">
+  <img src="referrals_share.png" alt="Share your link" class="w-50 h-40 object-contain mx-auto" />
+  <h3 class="text-lg font-semibold text-gray-900 mb-2">Share your link</h3>
+  <p class="text-gray-600 leading-relaxed text-sm">
+    Invite people to join Vinted by sharing your link with them.
+  </p>
+</div>
+
+<!-- Card 2 -->
+<div class="flex flex-col items-start text-left">
+  <img src="referrals_friends.png" alt="Tell your friends to list" class="w-50 h-40 object-contain mx-auto" />
+  <h3 class="text-lg font-semibold text-gray-900 mb-2">Tell your friends to list</h3>
+  <p class="text-gray-600 leading-relaxed text-sm">
+    If they list 3 items within 7 days of joining Vinted, you'll get
+    2 coupons worth 2,50 $ each. If they sell an item within 30 days
+    of joining, you'll get another 5 coupons worth 2,00 $ each.
+  </p>
+</div>
+
+<!-- Card 3 -->
+<div class="flex flex-col items-start text-left  mb-60">
+  <img src="referrals_voucher.png" alt="Spend your coupon" class="w-50 h-40  object-contain mx-auto" />
+  <h3 class="text-lg font-semibold text-gray-900 mb-2">Spend your coupon</h3>
+  <p class="text-sm text-gray-600">
+    Buy an item that costs 15,00 $ or more (not including shipping),
+    and one of your coupons will be automatically deducted from the
+    item price.
+  </p>
+</div>
+
+    </div>
+
+  </section>
+</div>

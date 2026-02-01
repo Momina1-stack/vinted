@@ -5,6 +5,11 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class MyService {
+  referrals: any;
+  Referrals: any;
+  openInfo2() {
+    throw new Error('Method not implemented.');
+  }
   BagItems() {
     throw new Error('Method not implemented.');
   }
@@ -51,5 +56,41 @@ private modalState = new BehaviorSubject<boolean>(false);
   closeInfo() {
     this.modalInfo.next(false);
   }
+
+   private modalprofileInfo = new BehaviorSubject<boolean>(false);
+  modalprofileInfo$ = this.modalprofileInfo.asObservable();
+
+  openprofileInfo() {
+    this.modalprofileInfo.next(true);
+  }
+
+  closeprofileInfo() {
+    this.modalprofileInfo.next(false);
+  }
+
+   private modalprofileInfo2 = new BehaviorSubject<boolean>(false);
+  modalprofileInfo2$ = this.modalprofileInfo2.asObservable();
+
+  openprofileInfo2() {
+    this.modalprofileInfo2.next(true);
+  }
+
+  closeprofileInfo2() {
+    this.modalprofileInfo2.next(false);
+  }
+
+  private modalReferrals = new BehaviorSubject<boolean>(false);
+  modalReferrals$ = this.modalReferrals.asObservable();
+
+  openReferrals() {
+    this.modalReferrals.next(true);
+  }
+
+  closeReferrals() {
+    this.modalReferrals.next(false);
+  }
+
+
+  
   
 }

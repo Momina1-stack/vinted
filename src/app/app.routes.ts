@@ -17,6 +17,9 @@ import { Inbox } from './inbox/inbox';
 import { FavList } from './fav-list/fav-list';
 import { Profile } from './profile/profile';
 import { Invite } from './invite/invite';
+import { Referrals } from './referrals/referrals';
+import { Settings } from './settings/settings';
+import { Wallet } from './wallet/wallet';
 export const routes: Routes = [
 
   {
@@ -38,6 +41,10 @@ export const routes: Routes = [
       { path: 'favlist', component: FavList },
       { path: 'profile', component: Profile },
       { path: 'invite', component: Invite },
+      { path: 'referrals', component: Referrals},
+      { path: 'settings', component: Settings},
+      { path: 'wallet', component: Wallet},
+
       
 
 

@@ -1,55 +1,143 @@
-<div class="m-0 bg-gray-100 flex items-center justify-center min-h-screen ">
+<div class="w-full bg-white flex items-center justify-center ">
+  <!-- RIGHT IMAGE -->
+  <!-- IMAGE -->
+  <div class="w-full  md:h-auto md:flex-1 relative">
+    <img src="invite.png" alt="Invite" class="w-full h-full object-cover md:absolute md:inset-0" />
 
-<!-- ROOT -->
-<div class="relative h-full w-full max-w-full overflow-hidden">
 
-  <!-- BG IMAGE -->
-  <img
-    src="invite.png"
-    alt=""
-    class="absolute w-full h-full"/>
+    <!-- CARD -->
+    <div class="relative bg-white rounded-xl shadow-lg
+            p-4 md:p-8 md:w-92.5
+             md:mt-10 mx-0 md:mx-20 md:mb-20 ">
 
-  <!-- WHITE CARD -->
-  <div class="absolute top-8 left-10 bottom-4 h-[50%]  w-full sm:w-[45%] lg:w-[15%] bg-white
-              rounded-tr-xl rounded-xl
-              flex flex-col justify-center
-              px-4 pr-1"
-       style="width:25%;">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-snug mb-3">
+        Invite friends and<br />earn up to $15
+      </h1>
 
-    <h1 class="text-[30px] font-bold text-gray-950 leading-tight mb-3">
-      Invite friends and<br/>earn up to $15
-    </h1>
+      <p class="text-gray-600 text-sm mb-4">
+        Get $5 to shop on Vinted when your friend lists 3 items within 7 days
+        of signing up. Get $10 more when they sell an item within the first
+        30 days.
+      </p>
 
-    <p class="text-[12.5px] text-gray-500 leading-[1.55] mb-0.5">
-      Get $5 to shop on Vinted when your friend lists 3 items within 7 days of signing up. Get $10 more when they sell an item within the first 30 days.
-    </p>
+      <p class="text-sm text-gray-600 mb-4">
+        The referral program is subject to
+        <a href="#" class="text-teal-700 underline">terms</a>.
+      </p>
 
-    <p class="text-[12.5px] text-gray-500 mb-4">
-      The referral program is subject to <a href="#" class="text-teal-600 underline underline-offset-2 hover:text-teal-700">terms</a>.
-    </p>
+      <p class="text-sm text-gray-800 break-all mb-4">
+        https://www.vinted.com/invite/meerab23
+      </p>
 
-    <p class="text-[13px] font-medium text-gray-900 mb-3 tracking-[-0.1px]">
-      https://www.vinted.com/invite/meerab23
-    </p>
+      <button class="w-full bg-[#007782] hover:bg-teal-800 text-white py-2 rounded-lg font-medium">
+        Copy invite link
+      </button>
 
-    <button
-      class=" text-white font-semibold text-[13.5px] rounded-lg py-2.5 cursor-pointer transition-colors duration-150"
-      style="background-color:#2aaca8;">
-
-      Copy invite link
-    </button>
-
-    <hr class="border-gray-200 my-4"/>
-
-    <div class=" flex items-center justify-between">
-      <div class="flex items-center gap-2.5">
-       <img src="referrals_icon.png" class="h-8 w-8" alt="">
-        <span class="text-[13.5px] font-medium text-gray-800">Your referrals</span>
+      <div class="hidden  md:flex items-center gap-2 mt-6 text-gray-700 cursor-pointer">
+        <img src="referrals_icon.png" class="h-5 w-5" />
+        <span class="font-medium">Your referrals</span>
+        <svg class="ml-auto" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path
+            d="M9.237 6.23a.766.766 0 0 0 0 1.106L14.05 12l-4.813 4.664a.766.766 0 0 0 0 1.107.826.826 0 0 0 1.142 0l5.384-5.218a.765.765 0 0 0 0-1.106L10.38 6.229a.826.826 0 0 0-1.142 0Z" />
+        </svg>
       </div>
-     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6 L15 12 L9 18" stroke="#9ca3af" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- next section -->
+<section class=" w-full px-16 lg:px-16 py-12  hidden md:block">
+  <!-- Heading -->
+  <h2 class="text-3xl font-semibold text-gray-900 mb-14">
+    How referrals work
+  </h2>
+
+  <!-- Cards Wrapper -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 z-0">
+
+    <!-- Card 1 -->
+    <div class="flex flex-col items-start text-left">
+      <img src="referrals_share.png" alt="Share your link" class="w-80 h-50 mb-6" />
+
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">
+        Share your link
+      </h3>
+
+      <p class="text-gray-600 leading-relaxed">
+        Invite people to join Vinted by sharing your link with them.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col items-start text-left">
+      <img src="referrals_friends.png" alt="Tell your friends to list" class="w-80 h-50 mb-6" />
+
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">
+        Tell your friends to list
+      </h3>
+
+      <p class="text-gray-600 leading-relaxed">
+        If they list 3 items within 7 days of joining Vinted, you'll get
+        2 coupons worth 2,50 $ each. If they sell an item within 30 days
+        of joining, you'll get another 5 coupons worth 2,00 $ each.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex flex-col items-start text-left">
+      <img src="referrals_voucher.png" alt="Spend your coupon" class="w-80 h-50 mb-6" />
+
+      <h3 class="text-xl font-semibold text-gray-900 mb-3">
+        Spend your coupon
+      </h3>
+
+      <p class="text-[16px] pr-10 text-gray-600">
+        Buy an item that costs 15,00 $ or more (not including shipping),
+        and one of your coupons will be automatically deducted from the
+        item price.
+      </p>
     </div>
 
   </div>
-</div>
+</section>
+<!-- small screen design -->
+<section class="block md:hidden bg-white">
 
-</div>
+  <!-- Item 1 -->
+  <div class=" bg-white flex items-center justify-between px-4 py-4 border-b border-gray-200">
+
+    <div class="flex items-center gap-3">
+      <img src="referrals_icon.png" alt="Your referrals" class="w-8 h-8" />
+      <span class="text-gray-900 text-[16px] font-medium">
+        Your referrals
+      </span>
+    </div>
+
+    <svg routerLink="/referrals" class="w-5 h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="flex items-center justify-between px-4 py-4">
+    <div class="flex items-center gap-3">
+      <img src="how_it_works_icon.png" alt="How referrals work" class="w-8 h-8" />
+      <span class="text-gray-900 text-[16px] font-medium">
+        How referrals work
+      </span>
+    </div>
+
+    <button (click)="openReferrals()" class="p-1 bg-transparent rounded hover:bg-gray-200">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+
+
+</section>
+
+<app-referrals-work></app-referrals-work>

@@ -87,23 +87,22 @@
 <!-- next -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-  <!-- ================= ROW 1 ================= -->
+
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
-    <!-- LEFT TEXT -->
+
     <div class="text-center lg:text-left!">
       <h2 class="text-[26px] sm:text-[30px] lg:text-[46px] font-medium leading-tight text-black">ng
         How we handle your data
       </h2>
     </div>
 
-    <!-- IMAGE -->
+
     <div class="flex justify-center lg:justify-center mt-8 lg:mt-0 ">
-      <img src="IllustrationDataCollected.jpg"
-        class="w-45 sm:w-50 lg:w-67.5 rounded-2xl rotate-[4deg] object-cover" />
+      <img src="IllustrationDataCollected.jpg" class="w-45 sm:w-50 lg:w-67.5 rounded-2xl rotate-[4deg] object-cover" />
     </div>
 
-    <!-- CONTENT -->
+
     <div class="max-w-md mx-auto lg:mx-0 mt-8 lg:mt-0 text-center lg:text-left">
       <h3 class="text-lg font-semibold text-left! mb-4">What data we collect</h3>
       <p class="text-gray-700 leading-relaxed text-left! mb-6">
@@ -119,19 +118,18 @@
 
   </div>
 
-  <!-- ================= ROW 2 ================= -->
+
   <div class="mt-16 lg:mt-28 grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
-    <!-- EMPTY COLUMN (for alignment on desktop) -->
+
     <div class="hidden lg:block"></div>
 
-    <!-- IMAGE -->
+
     <div class="flex justify-center mt-8 lg:mt-0">
-      <img src="IllustrationDataUse.jpg"
-        class="w-45 sm:w-50 lg:w-67.5 rounded-2xl rotate-[-4deg] object-cover" />
+      <img src="IllustrationDataUse.jpg" class="w-45 sm:w-50 lg:w-67.5 rounded-2xl rotate-[-4deg] object-cover" />
     </div>
 
-    <!-- CONTENT -->
+
     <div class="max-w-md mx-auto lg:mx-0 mt-8 lg:mt-0 text-center lg:text-left">
       <h3 class="text-lg font-semibold text-left! mb-4">How we use your data</h3>
       <p class="text-gray-700 leading-relaxed text-left! mb-6">
@@ -146,19 +144,16 @@
 
   </div>
 
-  <!-- ================= ROW 3 ================= -->
+
   <div class="mt-16 lg:mt-28 grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+    <div class="hidden lg:block">
 
-    <!-- EMPTY COLUMN (for alignment on desktop) -->
-    <div class="hidden lg:block"></div>
-
-    <!-- IMAGE -->
+    </div>
     <div class="flex justify-center mt-8 lg:mt-0">
-      <img src="IllustrationDataSharing.jpg"
-        class="w-45 sm:w-50 lg:w-67.5 rounded-2xl rotate-[4deg] object-cover" />
+      <img src="IllustrationDataSharing.jpg" class="w-45 sm:w-50 lg:w-67.5 rounded-2xl rotate-[4deg] object-cover" />
     </div>
 
-    <!-- CONTENT -->
+
     <div class="max-w-md mx-auto lg:mx-0 mt-8 lg:mt-0 text-center lg:text-left">
       <h3 class="text-lg font-semibold text-left! mb-4">How we use your data</h3>
       <p class="text-gray-700 leading-relaxed text-left! mb-6">
@@ -179,7 +174,7 @@
 <!-- next -->
 <section class="bg-[#F3F7F7]  px-6 sm:px-12 lg:px-24 py-16">
   <div class="max-w-7xl text-left! lg:text-left">
-    <!-- Heading -->
+
     <h2 class="ml-10 sm:ml-6 lg:ml-12
          text-2xl sm:text-4xl md:text-[45px] lg:text-[55px]
          font-medium text-black mb-4 leading-tight">
@@ -270,23 +265,18 @@
 </section>
 
 <!-- faq list -->
- <div class="max-w-6xl mx-auto py-12 px-6">
+<div class="max-w-6xl mx-auto py-12 px-6">
   <!-- Heading -->
   <h1 class="text-4xl sm:text-5xl font-bold text-black mb-8">FAQs</h1>
 
   <!-- FAQ List -->
-<div class="space-y-1">
-  <div
-    *ngFor="let faq of faqs; let i = index"
-    class="
+  <div class="space-y-1">
+    <div *ngFor="let faq of faqs; let i = index" class="
       border-b border-gray-200
       px-4 sm:px-6 lg:px-0
-    "
-  >
-    <!-- Question -->
-    <button
-      (click)="toggle(i)"
-      class="
+    ">
+      <!-- Question -->
+      <button (click)="toggle(i)" class="
         w-full
         py-4
         font-medium
@@ -299,79 +289,57 @@
         sm:items-center
         sm:justify-between
         gap-3
-      "
-    >
-      <span class="text-left text-sm sm:text-base leading-6">
-        {{ faq.question }}
-      </span>
+      ">
+        <span class="text-left text-sm sm:text-base leading-6">
+          {{ faq.question }}
+        </span>
 
-      <span
-        class="self-end sm:self-auto transform transition-transform duration-300"
-        [ngClass]="{ 'rotate-180': faq.open }"
-      >
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          aria-hidden="true"
-        >
-          <path
-            fill="currentColor"
-            d="M6.23 8.237a.766.766 0 0 1 1.106 0L12 13.05l4.664-4.813a.766.766 0 0 1 1.107 0 .826.826 0 0 1 0 1.142l-5.218 5.384a.765.765 0 0 1-1.106 0L6.229 9.38a.826.826 0 0 1 0-1.142Z"
-          />
-        </svg>
-      </span>
-    </button>
+        <span class="self-end sm:self-auto transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': faq.open }">
+          <svg fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M6.23 8.237a.766.766 0 0 1 1.106 0L12 13.05l4.664-4.813a.766.766 0 0 1 1.107 0 .826.826 0 0 1 0 1.142l-5.218 5.384a.765.765 0 0 1-1.106 0L6.229 9.38a.826.826 0 0 1 0-1.142Z" />
+          </svg>
+        </span>
+      </button>
 
-    <!-- Answer -->
-    <div
-      class="grid transition-all duration-300 ease-in-out"
-      [ngClass]="faq.open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
-    >
-      <div class="overflow-hidden">
-        <p
-          class="
+      <!-- Answer -->
+      <div class="grid transition-all duration-300 ease-in-out"
+        [ngClass]="faq.open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+        <div class="overflow-hidden">
+          <p class="
             pb-4
             text-sm sm:text-base
             text-gray-700
             px-2 sm:px-0
-          "
-        >
-          {{ faq.answer }}
-        </p>
+          ">
+            {{ faq.answer }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
 </div>
 <!-- last part -->
-<section
-  class="w-full h-80 bg-[#004a5a] flex flex-col items-center justify-center text-center"
->
+<section class="w-full h-80 bg-[#004a5a] flex flex-col items-center justify-center text-center">
   <!-- Heading -->
-  <h2
-    class="text-white text-[36px] md:text-[44px] font-semibold leading-tight mb-10"
-  >
+  <h2 class="text-white text-[36px] md:text-[44px] font-semibold leading-tight mb-10">
     Can't find what you're looking for?
   </h2>
 
-  <!-- Buttons wrapper -->
+
   <div class="flex flex-col gap-4 w-full max-w-[320px] px-4">
-    <!-- Primary Button -->
-    <button
-      class="bg-white text-[#004a5a] text-[18px] font-medium py-3 rounded-lg hover:bg-gray-100 transition"
-    >
+
+    <button class="bg-white text-[#004a5a] text-[18px] font-medium py-3 rounded-lg hover:bg-gray-100 transition">
       Read the full Privacy Policy
     </button>
 
-    <!-- Secondary Button -->
+
     <button
-      class="border border-white text-white text-[18px] font-medium py-3 rounded-lg hover:bg-white hover:text-[#004a5a] transition"
-    >
+      class="border border-white text-white text-[18px] font-medium py-3 rounded-lg hover:bg-white hover:text-[#004a5a] transition">
       Contact us
     </button>
   </div>

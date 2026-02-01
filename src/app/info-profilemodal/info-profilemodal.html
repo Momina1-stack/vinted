@@ -1,0 +1,74 @@
+<!-- OVERLAY -->
+<div *ngIf="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
+
+  <!-- MODAL -->
+  <div class="relative w-full max-w-sm bg-white rounded-xl shadow-lg">
+
+    <!-- HEADER -->
+    <div class="flex items-center justify-center px-4 py-4 border-b">
+      <h2 class="text-md font-semibold text-gray-900">
+        Frequent Uploads badge
+      </h2>
+       <!-- CLOSE ICON -->
+      <button (click)="isModalOpen = false" class="absolute right-4 text-teal-700 hover:text-teal-900">
+        ✕
+      </button>
+    </div>
+
+    <!-- BODY -->
+    <div class="px-3 py-3 text-center">
+
+      <!-- ICON -->
+      <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
+        <svg class=" bg-[#C9F0EE] rounded-full" fill="none" viewBox="0 0 24 24" width="28" height="28"
+            aria-hidden="true">
+            <path fill="currentColor"
+              d="M15.672 6.783a2 2 0 0 1 1.915 1.87l.66 10.57.003.205a2 2 0 0 1-1.67 1.888l-.204.023-10.59.658L5.58 22a2 2 0 0 1-1.893-1.666l-.023-.204-.66-10.57a2 2 0 0 1 1.669-2.092l.203-.024 10.59-.659zM4.969 8.938a.5.5 0 0 0-.464.43l-.004.1.66 10.568a.5.5 0 0 0 .53.467l10.591-.658a.5.5 0 0 0 .468-.53l-.66-10.569a.5.5 0 0 0-.429-.463l-.101-.004zm4.875 2.597a.66.66 0 0 1 1.227-.071l.614 1.343a.66.66 0 0 0 .399.352l1.408.452a.656.656 0 0 1 .072 1.223l-1.346.613a.66.66 0 0 0-.355.397l-.453 1.404a.66.66 0 0 1-1.227.072l-.615-1.341a.66.66 0 0 0-.398-.354l-1.408-.451a.657.657 0 0 1-.073-1.225l1.347-.613a.66.66 0 0 0 .354-.396zm10.195-8.092a2.05 2.05 0 0 1 1.955 2.137l-.458 10.081a1.815 1.815 0 0 1-1.813 1.729.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.747v.009-.01a.315.315 0 0 0 .314-.3l.458-10.08a.55.55 0 0 0-.524-.573l-9.758-.44a.55.55 0 0 0-.574.548v.473l-.005.076a.75.75 0 0 1-1.492 0l-.004-.076v-.473a2.05 2.05 0 0 1 2.142-2.045z">
+            </path>
+          </svg>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="text-sm text-gray-600 mb-6">
+        By keeping up your listing streak, you’ll encourage buyers to check
+        out more of your items.
+      </p>
+
+      <!-- HOW TO EARN -->
+      <div class="text-left">
+        <h3 class="text-sm font-semibold text-gray-600 mb-3">
+          How to earn this badge:
+        </h3>
+
+        <ul class="px-4 space-y-2 space-x-3 text-sm text-gray-600 list-disc list-inside">
+          <li>List 5 items in a 30-day period.</li>
+          <li>
+            Each day, we’ll review your status. If you meet the criteria,
+            buyers will see the badge on your profile and listings.
+          </li>
+          <li>
+            You’ll keep your badge even if you sell an item. If you hide or
+            delete an item, however, you’ll lose your progress.
+          </li>
+          <li>
+            Listed items must comply with our
+            <a href="#" class="text-teal-700 font-medium hover:underline">
+              Catalogue Rules
+            </a>
+            and
+            <a href="#" class="text-teal-700 font-medium hover:underline">
+              Terms and Conditions
+            </a>.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FOOTER BUTTON -->
+    <div class="px-6 pb-6">
+      <button class="w-full rounded-lg bg-teal-700 py-3 text-sm font-semibold text-white hover:bg-teal-800 transition">
+        Upload an item
+      </button>
+    </div>
+  </div>
+</div>

@@ -139,9 +139,10 @@
               <ul class="py-1 text-sm text-gray-700">
                 <li routerLink="/profile" class="px-4 py-1 hover:bg-gray-100 cursor-pointer">Profile</li>
                 <li routerLink="invite" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Invite Friends</li>
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Settings</li>
+                <li routerLink="/settings" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Settings</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Personalization</li>
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Wallet</li>
+                <li routerLink="wallet" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Wallet</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">My orders</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Donations</li>
                 <li (click)="logout()" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Logout</li>

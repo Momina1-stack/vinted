@@ -1,0 +1,73 @@
+<!-- OVERLAY -->
+<div *ngIf="isModalOpen" class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 px-3">
+
+  <!-- MODAL -->
+  <div class="w-full max-w-sm bg-white rounded-2xl shadow-xl relative overflow-hidden">
+    <!-- HEADER -->
+    <div class="flex items-center justify-center py-4 relative border-b">
+      <h2 class="text-[18px] font-semibold text-gray-900">
+        Speedy Shipping badge
+      </h2>
+
+      <!-- CLOSE ICON -->
+      <button (click)="isModalOpen = false" class="absolute right-4 text-teal-700 hover:text-teal-900">
+        ✕
+      </button>
+    </div>
+
+    <!-- BODY -->
+    <div class="px-1 py-1 text-center">
+      <!-- ICON -->
+      <div class="flex justify-center mb-5">
+        <div class="w-15 h-15 rounded-full bg-teal-100 flex items-center justify-center">
+          <svg class=" bg-[#C9F0EE] rounded-full" fill="none" viewBox="0 0 24 24" width="24" height="24"
+            aria-hidden="true">
+            <path fill="currentColor"
+              d="M2.991 4.544a.926.926 0 0 0-.88.738.607.607 0 0 0 .62.739h13.532c1.116 0 2.065.541 2.537 1.447l1.266 2.43c.295.566.384 1.239.255 1.926l-.593 3.156a1.19 1.19 0 0 1-1.124.935h-.427a1 1 0 0 0-.162.016 2.623 2.623 0 0 0-4.917-.016h-2.693a2.623 2.623 0 0 0-4.912 0h-.33c-.535 0-.89-.43-.791-.957l.735-3.892c.077-.408-.196-.743-.61-.748a.926.926 0 0 0-.887.73l-.735 3.892c-.255 1.35.657 2.452 2.028 2.452h.483a2.623 2.623 0 0 0 5.126 0h2.479a2.623 2.623 0 0 0 5.125 0h.227c1.348 0 2.633-1.068 2.882-2.395l.593-3.157c.186-.99.057-1.961-.368-2.778l-1.266-2.43c-.681-1.307-2.05-2.088-3.66-2.088zm6.08 12.291a1.122 1.122 0 1 1-2.244 0 1.122 1.122 0 0 1 2.244 0m6.482 1.122a1.122 1.122 0 1 1 0-2.244 1.122 1.122 0 0 1 0 2.244">
+            </path>
+            <path fill="currentColor"
+              d="M3.524 7.348a.926.926 0 0 0-.88.739.607.607 0 0 0 .619.739h4.261a.93.93 0 0 0 .88-.739.607.607 0 0 0-.62-.739zm11.886.902-.376 2.134c-.08.45.226.815.683.815h1.986c.673 0 1.197-.75.9-1.29l-1.085-1.964c-.176-.32-.518-.51-.918-.51h-.22c-.456 0-.89.364-.97.814Z">
+            </path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <p class="text-gray-700 text-sm mb-5">
+        Win over buyers with a badge to show that you'll send their items
+        promptly.
+      </p>
+
+      <!-- HOW TO EARN -->
+      <h3 class="px-2 text-left font-semibold text-gray-900 mb-2">
+        How to earn it:
+      </h3>
+
+      <ul class="px-8 text-left text-sm text-gray-700 space-y-2 list-disc pl-5">
+        <li>
+          Once you're notified that an item has sold, try to send it within the
+          next 24 hours.
+        </li>
+        <li>Sundays and public holidays are excluded.</li>
+        <li>
+          Each day, we'll review your previous 30 days of activity and update
+          your status. If you meet the criteria, buyers will see the badge on
+          your profile and listings.
+        </li>
+      </ul>
+
+      <!-- TIP -->
+      <p class="px-2 text-left text-sm text-gray-600 mt-4">
+        <span class="font-semibold">Tip:</span>
+        Shipping items faster means you may get paid quicker, too.
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="px-4 mt-3 pb-6">
+      <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-xl transition">
+        View orders
+      </button>
+    </div>
+  </div>
+</div>
