@@ -1,114 +1,166 @@
 <div class="flex flex-col md:flex-row min-h-screen p-4 md:p-8">
   <!-- Sidebar -->
-  <aside class="w-full md:w-64 bg-white px-6 mb-6 md:mb-0">
+  <aside class="w-full text-center md:text-left! md:max-w-85 bg-white px-6 mb-6 md:mb-0">
     <h2 class="text-xl font-medium mb-6">Settings</h2>
-    <ul class="space-y-6">
-      <li class="text-gray-700 font-medium hover:text-teal-600 cursor-pointer">Profile details</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Account settings</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Shipping</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Payments</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Bundle discounts</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Notifications</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Privacy settings</li>
-      <li class="text-gray-600 hover:text-teal-600 cursor-pointer">Security</li>
+    <ul class="space-y-6 font-medium">
+      <li class="text-black hover:text-[#007580] cursor-pointer">Profile details</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Account settings</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Shipping</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Payments</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Bundle discounts</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Notifications</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Privacy settings</li>
+      <li class="text-gray-600 hover:text-[#007580] cursor-pointer">Security</li>
     </ul>
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 h-[50%] bg-white rounded-lg shadow mx-20 md:ml-6">
-    <!-- Your photo -->
-    <div class="flex items-center justify-between border-b border-gray-200 p-6 pb-4 mb-4">
-      <div>
-        <p class="font-medium text-gray-700">Your photo</p>
-      </div>
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 border rounded-full object-cover"></div>
-        <button class="px-4 py-2 border border-teal-600 text-teal-600 rounded hover:bg-teal-50 transition">Choose
-          photo</button>
-      </div>
-    </div>
+  <main class="flex-1 bg-white rounded-lg mx-4 md:mx-10 md:ml-6">
 
-    <!-- Username -->
-    <div class="flex items-center justify-between border-b p-6 border-gray-200 pb-4 mb-4">
-      <div>
+    <!-- ================= 1st SECTION ================= -->
+    <div class="rounded-lg border border-gray-200">
+
+      <!-- Your photo -->
+      <div class="flex sm:flex-row sm:items-center sm:justify-between border-b border-gray-200 p-4 md:p-6 gap-4">
+        <p class="text-nowrap font-medium text-gray-700">Your photo</p>
+
+        <div class="flex items-center gap-4">
+          <!-- Display uploaded photo here -->
+          <div class="w-12 h-12  rounded-full overflow-hidden">
+            <img *ngIf="photoUrl" [src]="photoUrl" alt="Profile Photo" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Button triggers file input -->
+          <button class="text-nowrap px-3 py-2 border border-[#007580] text-[#007580] rounded"
+            (click)="fileInput.click()">
+            Choose photo
+          </button>
+
+          <!-- Hidden file input -->
+          <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" class="hidden" />
+        </div>
+
+      </div>
+
+      <!-- Username -->
+      <div
+        class="flex justify-between sm:flex-row sm:items-center sm:justify-between border-b border-gray-200 p-4 md:p-6 gap-3">
         <p class="font-medium text-gray-700">Username</p>
+        <button
+          class="text-[14px] w-[50%] sm:w-auto text-nowrap px-4 py-2 border border-[#007580] text-[#007580] rounded">
+          Change username
+        </button>
       </div>
-      <div>
-        <button class="px-4 py-2 border border-teal-600 text-teal-600 rounded hover:bg-teal-50 transition">Change
-          username</button>
+
+      <!-- About you -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-6 gap-2">
+        <p class="font-medium text-gray-700 whitespace-nowrap mb-1 md:mb-12">About you</p>
+        <textarea placeholder="Tell us more about yourself and your style" class="mt-2 placeholder-gray-600 md:mt-0 w-full max-w-sm p-2 bg-transparent
+         border-0 border-b border-gray-300
+         focus:outline-none focus:ring-0 focus:border-teal-500
+         resize-none" rows="3"></textarea>
+
       </div>
     </div>
 
-    <!-- About you -->
+    <!-- ================= LOCATION ================= -->
+    <div class="space-y-2">
+      <h3 class="ml-5 mt-4 text-gray-400">My location</h3>
+
+      <div class="w-full md:max-w-4xl bg-white rounded-lg border border-gray-200">
+
+
+        <!-- Country -->
+        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-gray-300 p-4 gap-2">
+          <label class="font-medium text-black">Country</label>
+
+          <select [(ngModel)]="selectedCountry"
+            class="w-full sm:w-auto bg-white pl-3 pr-10 py-2 border-0 border-b border-gray-300 focus:outline-none"
+            [ngStyle]="{
+      'width': selectedLanguage.name === 'English, US (English)' ? '290px' : '350px'
+    }">
+            <option *ngFor="let country of countries">
+              {{ country }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Town / City -->
+        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-gray-300 p-4 gap-2">
+          <label class="font-medium text-gray-700">Town/City</label>
+
+          <div class="relative w-full sm:w-auto">
+            <button type="button"
+              class="w-full sm:w-auto bg-white border-b border-gray-300 pr-2 py-2 flex justify-between items-center"
+              [ngStyle]="{
+        'width': selectedLanguage.name === 'English, US (English)' ? '290px' : '350px'
+      }" (click)="dropdownOpen = !dropdownOpen">
+              <span class="truncate">
+                {{ selectedCity || 'Select a city' }}
+              </span>
+              <div class="font-bold">
+                <span style="width:26px"><svg class="font-bold" fill="none" viewBox="0 0 16 16" width="16" height="16"
+                    aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M2.47 4.47a.75.75 0 0 1 1.06 0L8 8.94l4.47-4.47a.75.75 0 1 1 1.06 1.06l-5 5a.75.75 0 0 1-1.06 0l-5-5a.75.75 0 0 1 0-1.06">
+                    </path>
+                  </svg></span>
+              </div>
+            </button>
+
+            <!-- DROPDOWN -->
+            <ul *ngIf="dropdownOpen"
+              class="absolute z-10 mt-1 w-full sm:w-100 max-w-full bg-white shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md">
+              <li *ngFor="let city of cities" (click)="selectCity(city)"
+                class="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+                {{ city }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Toggle -->
+        <div class="flex justify-between items-center p-4 py-5">
+          <span class="font-medium text-gray-700 py-5">Show city in profile</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 rounded-full peer-checked:bg-[#007580]"></div>
+            <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full peer-checked:translate-x-5 transition">
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE ================= -->
     <div
-      class="flex flex-col md:flex-row justify-between items-start p-6 md:items-center border-b border-gray-200 pb-4">
-      <div>
-        <p class="font-medium text-nowrap text-gray-700">About you</p>
+      class="w-full max-w-5xl border border-gray-300 rounded-md p-4 my-4 flex flex-col sm:flex-row sm:justify-between gap-2">
+      <label class="font-medium text-black">Language</label>
+
+      <div class="relative w-full sm:w-auto">
+        <button class="w-full sm:w-[50%]  bg-white pl-3 pr-10 py-2 border-0 border-b border-gray-300"
+          (click)="dropdownOpenn = !dropdownOpenn">
+          {{ selectedLanguage.name }}
+        </button>
+
+        <ul *ngIf="dropdownOpenn" class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md">
+          <li *ngFor="let lang of languages" (click)="selectLanguage(lang)"
+            class="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+            {{ lang.name }}
+          </li>
+        </ul>
       </div>
-      <textarea placeholder="Tell us more about yourself and your style"
-        class="text-[13px] text-gray-500 text-right! mt-2 md:mt-0 md:w-1/3 p-2 border border-transparent rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
-        rows="3"></textarea>
-    </div>
-    <!-- 2nd sec -->
-     <div class="max-w-4xl ml-30 mt-10 w-full mx-auto p-6 bg-white rounded-lg shadow-md space-y-6">
-
-  <!-- Location Section -->
-  <div class="space-y-4">
-    <h3 class="text-gray-700 font-medium">My location</h3>
-
-    <!-- Country -->
-    <div class="flex justify-between items-center border-b border-gray-300 pb-3">
-      <span class="text-gray-600">Country</span>
-      <select
-        class="text-gray-900 bg-transparent focus:outline-none"
-        [(ngModel)]="country">
-        <option *ngFor="let c of countries" [value]="c">{{c}}</option>
-      </select>
     </div>
 
-    <!-- Town/City -->
-    <div class="flex justify-between items-center border-b border-gray-300 pb-3">
-      <span class="text-gray-600">Town/City</span>
-      <select
-        class="text-gray-400 bg-transparent focus:outline-none"
-        [(ngModel)]="city">
-        <option value="" disabled>Select a city</option>
-        <option *ngFor="let city of cities[country]" [value]="city">{{city}}</option>
-      </select>
+    <!-- ================= BUTTON ================= -->
+    <div class="w-full flex justify-end">
+      <button class="w-[50%] sm:w-[20%] px-4 sm:px-6 py-2 bg-[#007580] text-white rounded-md whitespace-nowrap">
+        Update profile
+      </button>
     </div>
 
-    <!-- Show city toggle -->
-    <div class="flex justify-between items-center pt-2">
-      <span class="text-gray-600">Show city in profile</span>
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" [(ngModel)]="showCity" class="sr-only peer">
-        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-500 rounded-full peer peer-checked:bg-teal-600 transition-all"></div>
-        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md peer-checked:translate-x-5 transition-all"></div>
-      </label>
-    </div>
-  </div>
 
-  <!-- Language Section -->
-  <div class="border-b border-gray-300 pb-3">
-    <span class="text-gray-600">Language</span>
-    <select
-      class="w-full mt-1 text-gray-900 bg-transparent focus:outline-none"
-      [(ngModel)]="language">
-      <option *ngFor="let lang of languages" [value]="lang">{{lang}}</option>
-    </select>
-  </div>
-
-  <!-- Update button -->
-  <div class="pt-4">
-    <button class="w-full bg-teal-700 hover:bg-teal-800 text-white py-2 px-4 rounded-md transition">
-      Update profile
-    </button>
-  </div>
-
-</div>
   </main>
-  
+
 </div>
-
-
-

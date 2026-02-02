@@ -20,6 +20,9 @@ import { Invite } from './invite/invite';
 import { Referrals } from './referrals/referrals';
 import { Settings } from './settings/settings';
 import { Wallet } from './wallet/wallet';
+import { Personalization } from './personalization/personalization';
+import { MyOrders } from './my-orders/my-orders';
+import { Donations } from './donations/donations';
 export const routes: Routes = [
 
   {
@@ -44,6 +47,9 @@ export const routes: Routes = [
       { path: 'referrals', component: Referrals},
       { path: 'settings', component: Settings},
       { path: 'wallet', component: Wallet},
+      { path: 'personalization', component: Personalization},
+      { path: 'my-orders', component: MyOrders},
+      { path: 'donations', component: Donations},
 
       
 

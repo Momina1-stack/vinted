@@ -1,12 +1,29 @@
-<div class="min-h-screen bg-[#f3f7f6] flex">
+<div class="min-h-screen bg-[#f3f7f6] flex flex-col md:flex-row">
+  
   <!-- Sidebar -->
-  <aside class="w-64 bg-transparent px-8 py-10">
-    <h1 class="text-2xl font-semibold mb-10">Wallet</h1>
+  <aside
+    class="
+      w-full md:w-64
+      bg-transparent
+      px-6 py-8 md:px-8 md:py-10
+      flex flex-col
+      items-center md:items-start
+    "
+  >
+    <h1 class="text-2xl font-semibold mb-6 md:mb-10">
+      Wallet
+    </h1>
 
-    <ul class="space-y-6 text-gray-700">
+    <ul
+      class="
+        space-y-4 md:space-y-6
+        text-gray-700
+        text-center md:text-left!
+      "
+    >
       <li class="font-medium">My Wallet</li>
-      <li class="font-semibold text-black">Wallet</li>
-      <li>Setup</li>
+      <li class="font-medium text-black text-center">Wallet</li>
+      <li class="text-center">Setup</li>
       <li>Payment history</li>
       <li>Invoices</li>
       <li>Income</li>
@@ -14,10 +31,18 @@
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 ml-30 lg:ml-30 sm:ml-2 px-4 md:px-10 py-10">
+  <main
+    class="
+      flex-1
+      px-4 md:px-10
+      py-6 md:py-10
+      flex flex-col
+      items-center md:items-start
+    "
+  >
     
     <!-- Top Card -->
-    <div class="max-w-3xl border border-gray-200 bg-white rounded-xl ">
+    <div class="w-full max-w-3xl border border-gray-200 bg-white rounded-xl">
       <div class="px-6 py-5 border-b text-gray-600">
         February 2026
       </div>
@@ -43,10 +68,22 @@
     </div>
 
     <!-- Donate Card -->
-    <div class="bg-white max-w-3xl rounded-xl shadow-sm border border-gray-200 mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-6">
+    <div
+      class="
+        bg-white
+        w-full max-w-3xl
+        rounded-xl
+        shadow-sm
+        border border-gray-200
+        mt-6 md:mt-8
+        flex flex-col md:flex-row
+        md:items-center md:justify-between
+        gap-4
+        p-6
+      "
+    >
       <div class="flex items-center gap-4">
-        <!-- <div class="text-2xl">💙💛</div> -->
-         <img src="heart-icon.svg" alt="">
+        <img src="heart-icon.svg" alt="">
         <div>
           <h3 class="font-semibold">Donate to support Ukraine</h3>
           <p class="text-gray-600 text-sm">
@@ -59,5 +96,6 @@
         Donate now
       </button>
     </div>
+
   </main>
 </div>
