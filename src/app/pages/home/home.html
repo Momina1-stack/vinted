@@ -1,5 +1,5 @@
 <!-- hero section -->
-<div class="relative h-[65vh] w-full overflow-hidden overflow-x-hidden">
+<div *ngIf="!auth.isLoggedIn"  class="relative h-[65vh] w-full overflow-hidden overflow-x-hidden">
   <!-- Background Image -->
   <div class="absolute inset-0">
     <img src="banner-wide-1ca50d3217a3d2402dda712a8e79af381c4bd7cd5cceb0a0b7be17ac2c7522d8.jpg"
@@ -512,7 +512,7 @@
 </div>
 
 <!-- login show -->
-<section  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<section *ngIf="auth.isLoggedIn" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
   <div class="relative bg-[#EAFBE8] rounded-2xl overflow-hidden
            min-h-60 sm:min-h-70 lg:min-h-80">
     <!-- BACKGROUND IMAGE -->

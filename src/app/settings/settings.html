@@ -26,9 +26,7 @@
 
         <div class="flex items-center gap-4">
           <!-- Display uploaded photo here -->
-          <div class="w-12 h-12  rounded-full overflow-hidden">
-            <img *ngIf="photoUrl" [src]="photoUrl" alt="Profile Photo" class="w-full h-full object-cover" />
-          </div>
+          <div class="w-12 h-12 border rounded-full"></div>
 
           <!-- Button triggers file input -->
           <button class="text-nowrap px-3 py-2 border border-[#007580] text-[#007580] rounded"
@@ -91,7 +89,7 @@
 
           <div class="relative w-full sm:w-auto">
             <button type="button"
-              class="w-full sm:w-auto bg-white border-b border-gray-300 pr-2 py-2 flex justify-between items-center"
+              class="w-full sm:w-auto bg-white border-b border-gray-300 pl-3 pr-2 py-2 flex justify-between items-center"
               [ngStyle]="{
         'width': selectedLanguage.name === 'English, US (English)' ? '290px' : '350px'
       }" (click)="dropdownOpen = !dropdownOpen">

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { Auth } from '../../services/auth';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,8 @@ import { RouterLink } from "@angular/router";
   styleUrl: './home.css',
 })
 export class Home {
-auth: any;
+  constructor(public auth: Auth,) { }
+
+
 
 }

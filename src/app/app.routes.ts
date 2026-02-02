@@ -23,6 +23,7 @@ import { Wallet } from './wallet/wallet';
 import { Personalization } from './personalization/personalization';
 import { MyOrders } from './my-orders/my-orders';
 import { Donations } from './donations/donations';
+import { HelpCenter } from './help-center/help-center';
 export const routes: Routes = [
 
   {
@@ -50,6 +51,7 @@ export const routes: Routes = [
       { path: 'personalization', component: Personalization},
       { path: 'my-orders', component: MyOrders},
       { path: 'donations', component: Donations},
+      { path: 'help', component: HelpCenter},
 
       
 
