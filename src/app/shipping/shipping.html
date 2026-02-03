@@ -1,0 +1,159 @@
+<div class="max-w-3xl mx-auto space-y-8">
+
+  <!-- Your address -->
+  <div>
+    <h2 class="text-lg font-semibold text-gray-900 mb-3">Your address</h2>
+    <div class="bg-white border border-gray-200 rounded-lg flex items-center justify-between px-3 py-3 cursor-pointer hover:bg-gray-50 transition">
+      <span class="font-medium text-gray-900">Add your address</span>
+      <span (click)="openAddressModal()" class="text-2xl font-medium text-gray-700">+</span>
+    </div>
+
+    <p class="text-sm text-gray-500 mt-3 max-w-xl">
+      Where couriers will collect or deliver orders, and what we'll use to process returns.
+    </p>
+  </div>
+
+  <!-- Info box -->
+  <div class="bg-[#EEF5F4] border border-[#D6ECE9] rounded-lg p-4 flex gap-1">
+    <div class="w-6 h-6 flex items-center justify-center rounded-full bg-white text-[#007580] text-sm">
+      <svg aria-hidden="true" fill="currentcolor" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="" fill-rule="evenodd"
+          d="M2 11.996C2 6.476 6.475 2 11.996 2c5.52 0 9.996 4.476 9.996 9.996 0 5.52-4.476 9.995-9.996 9.995C6.475 21.991 2 17.516 2 11.996ZM10.74 7a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Zm.25 3v8h2v-8h-2Z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </div>
+    <p class="text-xs text-gray-700 leading-relaxed">
+      Disabling shipping options may reduce sales. If a member can only buy from you with a disabled option,
+      we may still offer it.
+      <a href="#" class="text-[#007580] underline">Learn more about disabled options.</a>
+    </p>
+  </div>
+
+  <!-- Shipping as a seller -->
+  <div>
+    <h2 class="text-lg font-semibold text-gray-900 mb-1">Shipping as a seller</h2>
+    <p class="text-sm text-gray-500 mb-4">
+      Choose which options you'd like to use for each shipping type.
+    </p>
+
+    <div class="bg-white border border-gray-200 rounded-lg">
+      <div class="flex items-center justify-between px-4 py-4 cursor-pointer hover:bg-gray-50 transition">
+        <div class="flex items-center gap-3 text-gray-400">
+          <!-- Home icon -->
+          <svg class="mb-3" fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M10.932 3.95 3.96 10.424a1.3 1.3 0 0 0-.424.95v7.7c0 .708.634 1.37 1.506 1.37h3.055a.43.43 0 0 0 .29-.103c.062-.057.08-.113.08-.152V14.79c0-1.06.932-1.791 1.904-1.791h3.26c.972 0 1.905.73 1.905 1.79V20.2c0 .049.02.107.082.163a.43.43 0 0 0 .287.103h3.055c.872 0 1.506-.662 1.506-1.371v-7.73a1.3 1.3 0 0 0-.419-.946l-.001-.001-6.943-6.467H13.1c-.592-.553-1.577-.553-2.169 0ZM9.884 2.828c1.182-1.104 3.084-1.104 4.266 0l.001.002 6.95 6.473c.568.538.899 1.28.899 2.061v7.73C22 20.738 20.588 22 18.959 22h-3.055C14.928 22 14 21.265 14 20.199V14.79c0-.04-.017-.096-.08-.152a.43.43 0 0 0-.29-.104h-3.26a.43.43 0 0 0-.29.104c-.063.056-.08.112-.08.152v5.398c0 1.06-.933 1.79-1.904 1.79H5.04C3.412 21.98 2 20.719 2 19.074v-7.699c0-.778.329-1.533.915-2.076l6.97-6.47Z">
+            </path>
+          </svg>
+          <div>
+            <p class="font-medium">From your address</p>
+            <p class="text-sm text-gray-400">A courier collects the order from you.</p>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+
+
+    </div>
+    <p class="px-1 pb-4 text-sm text-gray-500">
+      Currently, there are no options that ship from your address.
+    </p>
+  </div>
+
+
+
+
+  <!-- from a drop-off point -->
+  <div class="bg-white border border-gray-200 rounded-lg">
+
+    <!-- HEADER -->
+    <button type="button" (click)="toggle()"
+      class="w-full flex items-center justify-between px-4 py-4 hover:bg-gray-50">
+      <div class="flex items-start gap-3">
+        <!-- icon -->
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path
+            d="M13.252 15.188a.68.68 0 0 1-.555-.322c-.473-.631-3.887-5.25-3.887-7.453A4.42 4.42 0 0 1 13.224 3a4.417 4.417 0 0 1 4.412 4.413c0 1.686-3.21 7.775-4.384 7.775m-.028-10.912a3.14 3.14 0 0 0-3.138 3.137c0 1.234 1.838 4.203 3.232 6.142.97-1.305 3.042-4.806 3.042-6.142a3.14 3.14 0 0 0-3.136-3.137">
+          </path>
+          <path
+            d="M13.224 9.3a1.917 1.917 0 0 1-1.914-1.915c0-1.055.859-1.914 1.914-1.914s1.914.86 1.914 1.914A1.917 1.917 0 0 1 13.224 9.3m0-2.553a.64.64 0 0 0-.638.638.64.64 0 0 0 .638.638.639.639 0 0 0 0-1.276">
+          </path>
+          <path
+            d="M11.296 21.223a1 1 0 0 1-.108-.01L4.931 20.14a.64.64 0 0 1-.53-.649l.154-4.874-.943-4.91a.636.636 0 0 1 .794-.735l4.197 1.14 1.452-.635a.639.639 0 0 1 .512 1.17l-1.658.726a.65.65 0 0 1-.424.03l-3.427-.932.764 3.976a.7.7 0 0 1 .011.14l-.138 4.39 5.463.938 3.509-2.288a.63.63 0 0 1 .526-.079l3.816 1.104-.181-3.875.2-3.856-2.752-1.088a.638.638 0 1 1 .469-1.186l3.177 1.256c.255.1.417.353.402.627l-.222 4.25.223 4.702a.637.637 0 0 1-.815.643l-4.391-1.27-3.474 2.265a.64.64 0 0 1-.349.103">
+          </path>
+        </svg>
+
+        <div>
+          <p class="font-medium text-gray-900 text-left! ">From a drop-off point</p>
+          <p class="text-sm text-gray-500">
+            You take the order to a location like a locker or package shop.
+          </p>
+        </div>
+      </div>
+
+      <!-- ARROW -->
+      <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" [class.rotate-180]="open" fill="none"
+        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <!-- 👇 CONTENT (ONLY SHOW ON ARROW CLICK) -->
+    <div *ngIf="open" class="border-t border-gray-200">
+      <!-- Better Trucks -->
+      <div class="flex items-center justify-between px-4 py-4 border-b border-gray-200">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded flex items-center justify-center text-sm font-bold">
+            <img src="better_trucks@3x (1).png" alt="">
+          </div>
+          <span class="font-medium text-gray-900">Better Trucks</span>
+        </div>
+
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer" checked />
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-teal-600
+                 after:content-[''] after:absolute after:top-0.5 after:left-0.5
+                 after:bg-white after:rounded-full after:h-5 after:w-5
+                 after:transition-all peer-checked:after:translate-x-5">
+          </div>
+        </label>
+      </div>
+
+      <!-- USPS -->
+      <div class="flex items-center justify-between px-4 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded flex items-center justify-center text-sm font-bold">
+            <img src="usps@3x.png" alt="">
+          </div>
+          <span class="font-medium text-gray-900">USPS</span>
+        </div>
+
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer" />
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-teal-600
+                 after:content-[''] after:absolute after:top-0.5 after:left-0.5
+                 after:bg-white after:rounded-full after:h-5 after:w-5
+                 after:transition-all peer-checked:after:translate-x-5">
+          </div>
+        </label>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="para px-2">
+    <p class="text-xs pb-4 text-gray-500">
+      Some shipping options are enabled for all sellers on our platform and can’t be turned off
+    </p>
+    <p class="text-xs text-gray-500">
+
+      <u class="text-teal-700">See compensation information </u> for sellers using integrated shipping.
+    </p>
+  </div>
+
+  <app-address-modal></app-address-modal>

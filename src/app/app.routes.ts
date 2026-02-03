@@ -24,6 +24,14 @@ import { Personalization } from './personalization/personalization';
 import { MyOrders } from './my-orders/my-orders';
 import { Donations } from './donations/donations';
 import { HelpCenter } from './help-center/help-center';
+import { AccountSettings } from './account-settings/account-settings';
+import { ProfileDetails } from './profile-details/profile-details';
+import { Shipping } from './shipping/shipping';
+import { Payments } from './payments/payments';
+import { BundleDiscounts } from './bundle-discounts/bundle-discounts';
+import { Notifications } from './notifications/notifications';
+import { PrivacySettings } from './privacy-settings/privacy-settings';
+import { Security } from './security/security';
 export const routes: Routes = [
 
   {
@@ -46,24 +54,26 @@ export const routes: Routes = [
       { path: 'profile', component: Profile },
       { path: 'invite', component: Invite },
       { path: 'referrals', component: Referrals},
-      { path: 'settings', component: Settings},
+      { path: '', component: Settings,
+        children:[
+          { path: 'settings/profile', component: ProfileDetails },
+         { path: 'settings/accountsettings', component: AccountSettings},
+         { path: 'settings/shipping', component:Shipping},
+         { path: 'settings/payments', component: Payments},
+         { path: 'settings/bundle-discounts', component: BundleDiscounts},
+         { path: 'settings/notifications', component: Notifications},
+         { path: 'settings/privacy-settings', component: PrivacySettings},
+         { path: 'settings/security', component: Security},
+
+        ]
+      },
       { path: 'wallet', component: Wallet},
       { path: 'personalization', component: Personalization},
       { path: 'my-orders', component: MyOrders},
       { path: 'donations', component: Donations},
       { path: 'help', component: HelpCenter},
 
-      
-
-
-      
-
-
-
-
-
-
-
+    
 
 
     ],

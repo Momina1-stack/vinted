@@ -1,0 +1,50 @@
+<div *ngIf="isModalOpen" class="fixed inset-0 bg-black/30 flex items-center justify-center p-4 z-50 ">
+  <div class="bg-white w-full max-w-sm rounded-xl p-4 max-h-[80vh] overflow-y-auto relative"  style="scrollbar-width: none; -ms-overflow-style: none;">
+    <!-- Header -->
+    <div class="flex items-center justify-center relative mb-4">
+      <h2 class="text-lg font-semibold text-gray-800">Add address</h2>
+      <button (click)="closeAddressModal()" class="absolute right-0 text-[#007580] text-xl">✕</button>
+    </div>
+
+    <!-- Country -->
+    <div class="mb-6 border-b border-gray-300">
+      <label class="block text-sm text-gray-600 mb-1 ">Country</label>
+      <select class="w-full border-none p-0  pb-1 pr-8 text-gray-800 focus:outline-none focus:border-[#007580] bg-transparent">
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+      </select>
+    </div>
+
+    <!-- Full name -->
+    <div class="mb-6 border-b border-gray-300">
+      <label class="block text-sm text-gray-600 mb-1">Full name</label>
+      <input type="text" placeholder="e.g. Jane Doe" class="w-full border-none p-0 border-gray-300 pb-1 placeholder-gray-400 focus:outline-none focus:border-[#007580]" />
+    </div>
+
+    <!-- Address line 1 -->
+    <div class="mb-6 border-b border-gray-300">
+      <label class="block text-sm text-gray-600 mb-1">Address line 1</label>
+      <input type="text" placeholder="e.g. 71 Oxford Street" class="w-full p-0 border-none border-gray-300 pb-1 placeholder-gray-400 focus:outline-none focus:border-[#007580]" />
+    </div>
+
+    <!-- Address line 2 -->
+    <div class="mb-6 border-b border-gray-300">
+      <label class="block text-sm text-gray-600 mb-1">Address line 2 <span class="text-gray-400">(optional)</span></label>
+      <input type="text" placeholder="e.g. Apt 2" class="w-full p-0 border-none border-gray-300 pb-1 placeholder-gray-400 focus:outline-none focus:border-[#007580]" />
+    </div>
+
+    <!-- Zip code -->
+    <div class="mb-6 border-b border-gray-300">
+      <label class="block text-sm text-gray-600 mb-1">Zip code</label>
+      <input type="text" placeholder="e.g. 12345" class="w-full p-0 border-none border-gray-300 pb-1 placeholder-gray-400 focus:outline-none focus:border-[#007580]" />
+    </div>
+     <!-- FOOTER -->
+    <div class="px-4 mt-6 pb-6">
+      <button class="w-full  bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-xl transition">
+        Save Address
+      </button>
+      <h4 class="font-medium text-center mt-3">Cancel</h4>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class MyService {
+  closeAddressModal() {
+    throw new Error('Method not implemented.');
+  }
+  openAddressModal() {
+    throw new Error('Method not implemented.');
+  }
   referrals: any;
   Referrals: any;
   openInfo2() {
@@ -13,7 +19,7 @@ export class MyService {
   BagItems() {
     throw new Error('Method not implemented.');
   }
-private modalState = new BehaviorSubject<boolean>(false);
+  private modalState = new BehaviorSubject<boolean>(false);
   modalState$ = this.modalState.asObservable();
 
   openModal() {
@@ -46,7 +52,7 @@ private modalState = new BehaviorSubject<boolean>(false);
     this.modalItems.next(false);
   }
 
-   private modalInfo = new BehaviorSubject<boolean>(false);
+  private modalInfo = new BehaviorSubject<boolean>(false);
   modalInfo$ = this.modalInfo.asObservable();
 
   openInfo() {
@@ -57,7 +63,7 @@ private modalState = new BehaviorSubject<boolean>(false);
     this.modalInfo.next(false);
   }
 
-   private modalprofileInfo = new BehaviorSubject<boolean>(false);
+  private modalprofileInfo = new BehaviorSubject<boolean>(false);
   modalprofileInfo$ = this.modalprofileInfo.asObservable();
 
   openprofileInfo() {
@@ -68,7 +74,7 @@ private modalState = new BehaviorSubject<boolean>(false);
     this.modalprofileInfo.next(false);
   }
 
-   private modalprofileInfo2 = new BehaviorSubject<boolean>(false);
+  private modalprofileInfo2 = new BehaviorSubject<boolean>(false);
   modalprofileInfo2$ = this.modalprofileInfo2.asObservable();
 
   openprofileInfo2() {
@@ -90,7 +96,18 @@ private modalState = new BehaviorSubject<boolean>(false);
     this.modalReferrals.next(false);
   }
 
+  private addressModal = new BehaviorSubject<boolean>(false);
+  addressModal$ = this.addressModal.asObservable();
 
-  
-  
+  openAddress() {
+    this.addressModal.next(true);
+  }
+
+  closeAddress() {
+    this.addressModal.next(false);
+  }
+
+
+
+
 }

@@ -1,0 +1,151 @@
+<div class="w-full md:max-w-5xl mx-auto flex flex-col md:flex-row min-h-screen p-4 md:p-8 ">
+
+
+  <!-- Main Content -->
+  <main class=" flex-1 bg-white rounded-lg  w-full md:max-w-7xl mx-auto md:ml-6">
+
+    <!-- ================= 1st SECTION ================= -->
+    <div class="rounded-lg border border-gray-200">
+
+      <!-- Your photo -->
+      <div class="flex sm:flex-row sm:items-center sm:justify-between border-b border-gray-200 p-4 md:p-6 gap-4">
+        <p class="text-nowrap font-medium text-gray-700">Your photo</p>
+
+        <div class="flex items-center gap-4">
+          <!-- Display uploaded photo here -->
+          <div class="w-12 h-12 border rounded-full"></div>
+
+          <!-- Button triggers file input -->
+          <button class="text-nowrap px-3 py-2 border border-[#007580] text-[#007580] rounded"
+            (click)="fileInput.click()">
+            Choose photo
+          </button>
+
+          <!-- Hidden file input -->
+          <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" class="hidden" />
+        </div>
+
+      </div>
+
+      <!-- Username -->
+      <div
+        class="flex justify-between sm:flex-row sm:items-center sm:justify-between border-b border-gray-200 p-4 md:p-6 gap-3">
+        <p class="font-medium text-gray-700">Username</p>
+        <button
+          class="text-[14px] w-[50%] sm:w-auto text-nowrap px-4 py-2 border border-[#007580] text-[#007580] rounded">
+          Change username
+        </button>
+      </div>
+
+      <!-- About you -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-6 gap-2">
+        <p class="font-medium text-gray-700 whitespace-nowrap mb-1 md:mb-12">About you</p>
+        <textarea placeholder="Tell us more about yourself and your style" class="mt-2 placeholder-gray-600 md:mt-0 w-full max-w-sm p-2 bg-transparent
+         border-0 border-b border-gray-300
+         focus:outline-none focus:ring-0 focus:border-teal-500
+         resize-none" rows="3"></textarea>
+
+      </div>
+    </div>
+
+    <!-- ================= LOCATION ================= -->
+    <div class="space-y-2">
+      <h3 class="ml-5 mt-4 text-gray-400">My location</h3>
+
+      <div class="w-full md:max-w-4xl bg-white rounded-lg border border-gray-200">
+
+
+        <!-- Country -->
+        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-gray-300 p-4 gap-2">
+          <label class="font-medium text-black">Country</label>
+
+          <select [(ngModel)]="selectedCountry"
+            class="w-full sm:w-auto bg-white pl-3 pr-10 py-2 border-0 border-b border-gray-300 focus:outline-none"
+            [ngStyle]="{
+      'width': selectedLanguage.name === 'English, US (English)' ? '290px' : '350px'
+    }">
+            <option *ngFor="let country of countries">
+              {{ country }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Town / City -->
+        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-gray-300 p-4 gap-2">
+          <label class="font-medium text-gray-700">Town/City</label>
+
+          <div class="relative w-full sm:w-auto">
+            <button type="button"
+              class="w-full sm:w-auto bg-white border-b border-gray-300 pl-3 pr-2 py-2 flex justify-between items-center"
+              [ngStyle]="{
+        'width': selectedLanguage.name === 'English, US (English)' ? '290px' : '350px'
+      }" (click)="dropdownOpen = !dropdownOpen">
+              <span class="truncate">
+                {{ selectedCity || 'Select a city' }}
+              </span>
+              <div class="font-bold">
+                <span style="width:26px"><svg class="font-bold" fill="none" viewBox="0 0 16 16" width="16" height="16"
+                    aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M2.47 4.47a.75.75 0 0 1 1.06 0L8 8.94l4.47-4.47a.75.75 0 1 1 1.06 1.06l-5 5a.75.75 0 0 1-1.06 0l-5-5a.75.75 0 0 1 0-1.06">
+                    </path>
+                  </svg></span>
+              </div>
+            </button>
+
+            <!-- DROPDOWN -->
+            <ul *ngIf="dropdownOpen"
+              class="absolute z-10 mt-1 w-full sm:w-100 max-w-full bg-white shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md">
+              <li *ngFor="let city of cities" (click)="selectCity(city)"
+                class="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+                {{ city }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Toggle -->
+        <div class="flex justify-between items-center p-4 py-5">
+          <span class="font-medium text-gray-700 py-5">Show city in profile</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 rounded-full peer-checked:bg-[#007580]"></div>
+            <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full peer-checked:translate-x-5 transition">
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= LANGUAGE ================= -->
+    <div
+      class="w-full max-w-5xl border border-gray-300 rounded-md p-4 my-4 flex flex-col sm:flex-row sm:justify-between gap-2">
+      <label class="font-medium text-black">Language</label>
+
+      <div class="relative w-full sm:w-auto">
+        <button class="w-full sm:w-[50%]  bg-white pl-3 pr-10 py-2 border-0 border-b border-gray-300"
+          (click)="dropdownOpenn = !dropdownOpenn">
+          {{ selectedLanguage.name }}
+        </button>
+
+        <ul *ngIf="dropdownOpenn" class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md">
+          <li *ngFor="let lang of languages" (click)="selectLanguage(lang)"
+            class="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+            {{ lang.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= BUTTON ================= -->
+    <div class="w-full flex justify-end">
+      <button class="w-[50%] sm:w-[20%] px-4 sm:px-6 py-2 bg-[#007580] text-white rounded-md whitespace-nowrap">
+        Update profile
+      </button>
+    </div>
+
+
+  </main>
+
+</div>
