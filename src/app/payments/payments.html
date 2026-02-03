@@ -1,1 +1,39 @@
-<p>payments works!</p>
+<div class="w-[65vw] min-h-screen bg-white mx-15 lg:mx-1">
+  <!-- PAGE PADDING -->
+  <div class="px-1 sm:px-10 lg:px-16 py-10 ">
+
+    <!-- Payment options -->
+    <div class="mb-12">
+      <p class="text-gray-500 mb-4 px-2">Payment options</p>
+
+      <div class="w-full flex items-center justify-between border border-gray-200 rounded-xl px-6 py-5 cursor-pointer">
+        <span class="text-base font-medium text-gray-900 ">
+          Add card
+        </span>
+
+        <svg (click)="openModalCard()" class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Payout options -->
+    <div>
+      <p class="text-gray-500 mb-4 px-2">Payout options</p>
+
+      <div class="w-full flex items-center justify-between border border-gray-200 rounded-xl px-6 py-5 cursor-pointer">
+        <span class="text-base font-medium text-gray-900">
+          Add bank account
+        </span>
+
+        <svg routerLink="/bank-deatil" class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-card-modal></app-card-modal>

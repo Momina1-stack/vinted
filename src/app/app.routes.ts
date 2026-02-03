@@ -32,6 +32,7 @@ import { BundleDiscounts } from './bundle-discounts/bundle-discounts';
 import { Notifications } from './notifications/notifications';
 import { PrivacySettings } from './privacy-settings/privacy-settings';
 import { Security } from './security/security';
+import { BankDetail } from './bank-detail/bank-detail';
 export const routes: Routes = [
 
   {
@@ -64,6 +65,7 @@ export const routes: Routes = [
          { path: 'settings/notifications', component: Notifications},
          { path: 'settings/privacy-settings', component: PrivacySettings},
          { path: 'settings/security', component: Security},
+     
 
         ]
       },
@@ -78,7 +80,6 @@ export const routes: Routes = [
 
     ],
   },
-
-
-
+  { path: 'bank-deatil', component: BankDetail},
 ];
+

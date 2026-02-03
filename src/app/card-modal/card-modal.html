@@ -1,0 +1,79 @@
+
+<div *ngIf="isModalOpen" class="fixed inset-0 bg-black/30 flex justify-center items-center p-4">
+
+  <div class="mx-7 lg:mx-1 bg-white w-full max-w-95 rounded-md sm:rounded-xl shadow-lg overflow-y-auto
+              max-h-[90vh]"> 
+
+    <!-- Top Header -->
+    <div class="relative border-b border-gray-300 py-4 text-center font-medium">
+      Card details
+      <button (click)="closeModal()" class="absolute right-4 top-4 text-xl">✕</button>
+    </div>
+
+
+    <div class="px-5 pt-5">
+
+      <div class="flex justify-between items-start">
+        <div>
+          <h2 class="text-xl font-semibold">Card details</h2>
+          <p class="text-sm text-gray-500 mt-1">
+            Your card information is securely encrypted
+          </p>
+        </div>
+        <span class="material-icons text-gray-600 mt-1">
+          <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 9a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 9"></path><path fill="currentColor" d="M12 5.527h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7.527a2 2 0 0 1 2-2h1.001V4A4 4 0 1 1 12 4zM10.5 4a2.5 2.5 0 1 0-4.999 0v1.5H10.5zM13 7.027H3a.5.5 0 0 0-.5.5V14a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V7.527a.5.5 0 0 0-.5-.5"></path></svg>
+
+        </span>
+      </div>
+
+      <div class="flex gap-2 mt-4">
+        
+      </div>
+
+   
+      <div class="border border-gray-300 rounded-lg mt-5 p-4">
+
+        <div class="border-b border-gray-300 py-3">
+          <label class="text-xs text-gray-500">Cardholder's name</label>
+          <input class="w-full outline-none text-sm mt-1" value="Meerab ch">
+        </div>
+
+        <div class="border-b border-gray-300 py-3 flex items-center">
+          <div class="flex-1">
+            <label class="text-xs text-gray-600">Card number</label>
+            <input class="w-full outline-none text-sm mt-1 text-gray-600" placeholder="e.g 1234 1234 1234 1234">
+          </div>
+          <div class="p-1 ml-2 mt-7">
+            <img src="card-icon.png" alt="" class="h-8 w-8">
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-1 border-b border-gray-300 py-3">
+            <label class="text-xs text-gray-500">Expiration date</label>
+            <input class="w-full outline-none text-sm mt-1 text-gray-500" placeholder="MM/YY">
+          </div>
+
+          <div class="flex-1 border-b border-gray-300 py-2 flex items-center ml-3">
+            <div class="flex-1">
+              <label class="text-xs text-gray-500">Security code</label>
+              <input class="w-full outline-none text-sm text-gray-500 mt-1" placeholder="e.g 123">
+            </div>
+            <span class="material-icons text-gray-600 mt-7">
+              <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8 4a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5A.75.75 0 0 1 8 12M8 1.5c3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5A6.51 6.51 0 0 1 1.5 8c0-3.584 2.916-6.5 6.5-6.5M7 5a1 1 0 1 1 2 0 1 1 0 1 1-2 0" clip-rule="evenodd"></path></svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="px-4 mt-6 pb-6">
+      <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-xl transition">
+        Use this card
+      </button>
+      <h4 (click)="closeModal()" class="font-medium text-center mt-3 cursor-pointer">Cancel</h4>
+    </div>
+
+  </div>
+</div>

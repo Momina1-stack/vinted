@@ -5,6 +5,22 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class MyService {
+  openCard() {
+    throw new Error('Method not implemented.');
+  }
+  bankModal$Modal$: any;
+  openDetail() {
+    throw new Error('Method not implemented.');
+  }
+  openBankk() {
+    throw new Error('Method not implemented.');
+  }
+  openBankdetail() {
+    throw new Error('Method not implemented.');
+  }
+  closeCard() {
+    throw new Error('Method not implemented.');
+  }
   closeAddressModal() {
     throw new Error('Method not implemented.');
   }
@@ -107,6 +123,28 @@ export class MyService {
     this.addressModal.next(false);
   }
 
+ private cardModal = new BehaviorSubject<boolean>(false);
+cardModal$ = this.cardModal.asObservable();
+
+opencard() {            
+  this.cardModal.next(true);
+}
+
+closecard() {         
+  this.cardModal.next(false);
+}
+
+
+   private bankModal = new BehaviorSubject<boolean>(false);
+  bankModal$ = this.bankModal.asObservable();
+
+  openBank() {
+    this.bankModal.next(true);
+  }
+
+  closeBank() {
+    this.bankModal.next(false);
+  }
 
 
 
