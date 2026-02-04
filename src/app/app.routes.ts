@@ -33,6 +33,11 @@ import { Notifications } from './notifications/notifications';
 import { PrivacySettings } from './privacy-settings/privacy-settings';
 import { Security } from './security/security';
 import { BankDetail } from './bank-detail/bank-detail';
+import { Username } from './username/username';
+import { Change } from './change/change';
+import { VerifyNo } from './verify-no/verify-no';
+import { PasswordChange } from './password-change/password-change';
+import { DeleteAccount } from './delete-account/delete-account';
 export const routes: Routes = [
 
   {
@@ -65,8 +70,9 @@ export const routes: Routes = [
          { path: 'settings/notifications', component: Notifications},
          { path: 'settings/privacy-settings', component: PrivacySettings},
          { path: 'settings/security', component: Security},
-     
-
+         { path: 'settings/username', component: Username},
+         { path: 'delete-account', component: DeleteAccount},
+         
         ]
       },
       { path: 'wallet', component: Wallet},
@@ -74,6 +80,10 @@ export const routes: Routes = [
       { path: 'my-orders', component: MyOrders},
       { path: 'donations', component: Donations},
       { path: 'help', component: HelpCenter},
+      { path: 'change', component: Change},
+      { path: 'verify-no', component: VerifyNo},
+      { path: 'password-change', component: PasswordChange},
+      
 
     
 
@@ -81,5 +91,6 @@ export const routes: Routes = [
     ],
   },
   { path: 'bank-deatil', component: BankDetail},
+ 
 ];
 

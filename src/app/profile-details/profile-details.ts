@@ -5,7 +5,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-profile-details',
-  imports: [CommonModule,FormsModule,],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './profile-details.html',
   styleUrl: './profile-details.css',
 })
