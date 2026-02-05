@@ -16,24 +16,32 @@
         <div class="flex items-center bg-gray-100 rounded-md w-full h-9">
 
           <!-- Catalog -->
-          <div class="relative">
-            <button (click)="toggleCatalog()"
-              class="flex items-center gap-2 px-3 h-9 border-r border-gray-300 hover:bg-gray-200">
-              <span class="text-sm text-[#5A6566] font-medium">Catalog</span>
-              <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
-                <path d="M8 12 2 6h12z"></path>
-              </svg>
-            </button>
+         <div class="relative catalog-wrapper">
+  <button
+    (click)="toggleCatalog($event)"
+    class="flex items-center gap-2 px-3 h-9 border-r border-gray-300 hover:bg-gray-200"
+  >
+    <span class="text-sm text-[#5A6566] font-medium">Catalog</span>
+    <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
+      <path d="M8 12 2 6h12z"></path>
+    </svg>
+  </button>
 
-            <div *ngIf="isCatalogOpen" class="absolute left-0 mt-2 w-36 rounded-md border bg-white shadow-lg z-50">
-              <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
-                Catalog
-              </button>
-              <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
-                Member
-              </button>
-            </div>
-          </div>
+  @if (isCatalogOpen) {
+    <div
+      class="absolute left-0 mt-2 w-36 rounded-md border bg-white shadow-lg z-50"
+      (click)="$event.stopPropagation()"
+    >
+      <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
+        Catalog
+      </button>
+      <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
+        Member
+      </button>
+    </div>
+  }
+</div>
+
 
           <!-- Search -->
           <div class="relative flex-1">
@@ -161,23 +169,29 @@
         <button routerLink="/help" class="w-7 h-7 border rounded-full text-[#5A6566]">?</button>
 
         <!-- Language -->
-        <div class="relative">
-          <button (click)="toggleLanguage()" class="flex items-center gap-1 px-2 py-1">
-            <span class="text-sm text-[#5A6566]">EN</span>
-            <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
-              <path d="M8 12 2 6h12z"></path>
-            </svg>
-          </button>
+        <div class="relative language-wrapper">
+  <button (click)="toggleLanguage($event)" class="flex items-center gap-1 px-2 py-1">
+    <span class="text-sm text-[#5A6566]">EN</span>
+    <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
+      <path d="M8 12 2 6h12z"></path>
+    </svg>
+  </button>
 
-          <div *ngIf="isLanguageOpen" class="absolute right-0 mt-2 w-44 border rounded-lg bg-white shadow-lg z-1">
-            <button class="block w-full px-4 py-2 hover:bg-gray-100">
-              English (US)
-            </button>
-            <button class="block w-full px-4 py-2 hover:bg-gray-100">
-              Español (US)
-            </button>
-          </div>
-        </div>
+  @if (isLanguageOpen) {
+    <div
+      class="absolute right-0 mt-2 w-44 border rounded-lg bg-white shadow-lg z-50"
+      (click)="$event.stopPropagation()"
+    >
+      <button class="block w-full px-4 py-2 hover:bg-gray-100">
+        English (US)
+      </button>
+      <button class="block w-full px-4 py-2 hover:bg-gray-100">
+        Español (US)
+      </button>
+    </div>
+  }
+</div>
+
       </div>
 
       <!--MOBILE HAMBURGER (RIGHT)-->
@@ -193,23 +207,17 @@
       <div class="flex items-center bg-gray-100 rounded-md w-full h-9">
 
         <!-- Catalog -->
-        <div class="relative">
-          <button (click)="toggleCatalog()"
-            class="flex items-center gap-2 px-3 h-9 border-r border-gray-300 hover:bg-gray-200">
-            <span class="text-sm text-[#5A6566] font-medium">Catalog</span>
-            <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
-              <path d="M8 12 2 6h12z"></path>
-            </svg>
-          </button>
-          <div *ngIf="isCatalogOpen" class="absolute left-0 mt-2 w-36 rounded-md border bg-white shadow-lg z-50">
-            <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
-              Catalog
-            </button>
-            <button class="block w-full px-4 py-2 text-left hover:bg-gray-100">
-              Member
-            </button>
-          </div>
-        </div>
+        <button (click)="toggleCatalog($event)">
+  <span>Catalog</span>
+</button>
+
+@if (isCatalogOpen) {
+  <div (click)="$event.stopPropagation()">
+    <button>Catalog</button>
+    <button>Member</button>
+  </div>
+}
+
         <!-- Search -->
         <div class="relative flex-1">
           <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A8384]" fill="none" stroke="currentColor"

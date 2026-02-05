@@ -19,7 +19,7 @@ isModalOpen = false;
   }
 
   closeAddressModal() {
-    this.modalService.closeAddress(); // correct method name
+    this.modalService.closeAddress();
   }
 }
 

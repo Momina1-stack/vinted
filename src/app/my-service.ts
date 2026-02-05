@@ -5,6 +5,15 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class MyService {
+
+  addchecking: any;
+  addChecking: any;
+  closeAddAddressModal() {
+    throw new Error('Method not implemented.');
+  }
+  openAddAddressModal$() {
+    throw new Error('Method not implemented.');
+  }
   openCard() {
     throw new Error('Method not implemented.');
   }
@@ -123,19 +132,19 @@ export class MyService {
     this.addressModal.next(false);
   }
 
- private cardModal = new BehaviorSubject<boolean>(false);
-cardModal$ = this.cardModal.asObservable();
+  private cardModal = new BehaviorSubject<boolean>(false);
+  cardModal$ = this.cardModal.asObservable();
 
-opencard() {            
-  this.cardModal.next(true);
-}
+  opencard() {
+    this.cardModal.next(true);
+  }
 
-closecard() {         
-  this.cardModal.next(false);
-}
+  closecard() {
+    this.cardModal.next(false);
+  }
 
 
-   private bankModal = new BehaviorSubject<boolean>(false);
+  private bankModal = new BehaviorSubject<boolean>(false);
   bankModal$ = this.bankModal.asObservable();
 
   openBank() {
@@ -145,6 +154,39 @@ closecard() {
   closeBank() {
     this.bankModal.next(false);
   }
+
+  private addAddressModal = new BehaviorSubject<boolean>(false);
+  addAddressModal$ = this.addAddressModal.asObservable();
+
+  openAddAddress() {
+    this.addAddressModal.next(true);
+  }
+
+  closeAddAddress() {
+    this.addAddressModal.next(false);
+  }
+
+  private checkingModal = new BehaviorSubject<boolean>(false);
+checkingModal$ = this.checkingModal.asObservable();
+
+openChecking() {
+  this.checkingModal.next(true);
+}
+
+closeChecking() {
+  this.checkingModal.next(false);
+}
+
+  private logoutModal = new BehaviorSubject<boolean>(false);
+logoutModal$ = this.logoutModal.asObservable();
+
+openlogout() {
+  this.logoutModal.next(true);
+}
+
+closelogout() {
+  this.logoutModal.next(false);
+}
 
 
 

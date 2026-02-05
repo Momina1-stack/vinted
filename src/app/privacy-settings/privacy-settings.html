@@ -1,1 +1,109 @@
-<p>privacy-settings works!</p>
+<div class="min-h-screen p-4 sm:p-8">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Heading -->
+    <h1 class="text-md text-gray-500 font-medium mb-3 px-2">Privacy settings</h1>
+
+    <!-- Card -->
+    <div class="bg-white rounded-lg border border-gray-300 divide-y divide-gray-300">
+
+      <!-- Item -->
+      <div class="flex justify-between gap-4 p-5">
+        <div>
+          <p class="font-medium">
+            Feature my items in marketing campaigns for a chance to sell faster
+          </p>
+          <p class="text-sm text-gray-500 mt-1">
+            This allows Vinted to showcase my items on social media and other websites.
+            The increased visibility could lead to quicker sales.
+          </p>
+        </div>
+
+        <label class="relative inline-flex cursor-pointer">
+          <input type="checkbox" [(ngModel)]="settings.marketing" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-teal-600
+                      after:absolute after:top-0.5 after:left-0.5 after:bg-white
+                      after:h-5 after:w-5 after:rounded-full after:transition-all
+                      peer-checked:after:translate-x-5"></div>
+        </label>
+      </div>
+
+      <!-- Item -->
+      <div class="flex justify-between items-center p-5">
+        <p class="font-medium">
+          Notify owners when I favorite their items
+        </p>
+
+        <label class="relative inline-flex cursor-pointer">
+          <input type="checkbox" [(ngModel)]="settings.notifyFavorite" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-teal-600
+                      after:absolute after:top-0.5 after:left-0.5 after:bg-white
+                      after:h-5 after:w-5 after:rounded-full after:transition-all
+                      peer-checked:after:translate-x-5"></div>
+        </label>
+      </div>
+
+      <!-- Item -->
+      <div class="flex justify-between items-center p-5">
+        <p class="font-medium">Allow third-party tracking</p>
+
+        <label class="relative inline-flex cursor-pointer">
+          <input type="checkbox" [(ngModel)]="settings.thirdParty" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-teal-600
+                      after:absolute after:top-0.5 after:left-0.5 after:bg-white
+                      after:h-5 after:w-5 after:rounded-full after:transition-all
+                      peer-checked:after:translate-x-5"></div>
+        </label>
+      </div>
+
+      <!-- Item -->
+      <div class="flex justify-between gap-4 p-5">
+        <p class="font-medium">
+          Allow Vinted to personalize my feed and search results by evaluating my preferences,
+          settings, previous purchases and usage of Vinted website and app
+        </p>
+
+        <label class="relative inline-flex cursor-pointer">
+          <input type="checkbox" [(ngModel)]="settings.personalizeFeed" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-teal-600
+                      after:absolute after:top-0.5 after:left-0.5 after:bg-white
+                      after:h-5 after:w-5 after:rounded-full after:transition-all
+                      peer-checked:after:translate-x-5"></div>
+        </label>
+      </div>
+
+      <!-- Item -->
+      <div class="flex justify-between gap-4 p-5">
+        <div>
+          <p class="font-medium">
+            Allow Vinted to display my recently viewed items on my Homepage.
+          </p>
+          <p class="text-sm text-gray-500 mt-1">
+            If you turn this option off but allow personalized content,
+            these items will still be used to personalize your Feed.
+          </p>
+        </div>
+
+        <label class="relative inline-flex cursor-pointer">
+          <input type="checkbox" [(ngModel)]="settings.recentlyViewed" class="sr-only peer">
+          <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-teal-600
+                      after:absolute after:top-0.5 after:left-0.5 after:bg-white
+                      after:h-5 after:w-5 after:rounded-full after:transition-all
+                      peer-checked:after:translate-x-5"></div>
+        </label>
+      </div>
+
+      <!-- Manage Data -->
+      <div class="flex justify-between items-center p-5 cursor-pointer hover:bg-gray-50">
+        <div>
+          <p class="font-medium">Manage account data</p>
+          <p class="text-sm text-gray-500">
+            Request and download a copy of your Vinted account data.
+          </p>
+        </div>
+        <span class="text-gray-400 text-xl">›</span>
+      </div>
+
+    </div>
+  </div>
+</div>

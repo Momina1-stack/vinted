@@ -1,0 +1,45 @@
+<div class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
+  <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+
+    <!-- Header -->
+    <div class="px-5 py-4 border-b border-gray-200">
+      <h2 class="text-lg font-semibold text-gray-900">
+        Review login activity
+      </h2>
+      <p class="text-sm text-gray-600 mt-1">
+        Each session shows a device logged into your Vinted account.
+        If you notice any unusual activity, log out of that session.
+      </p>
+    </div>
+
+    <!-- Current Session -->
+    <div class="px-5 py-4 border-b border-gray-200">
+      <p class="text-base font-medium text-gray-900">
+        Bahawalpur, Pakistan
+      </p>
+      <p class="text-sm font-medium text-[#006D6F] mt-1">
+        Now – Current Device
+      </p>
+    </div>
+
+    <!-- Previous Session -->
+    <div class="px-5 py-4 flex items-center justify-between">
+      <div>
+        <p class="text-base font-medium text-gray-900">
+          Bahawalpur, Pakistan
+        </p>
+        <p class="text-sm text-gray-600 mt-1">
+          1 week ago · Safari, iPhone
+        </p>
+      </div>
+
+      <button (click)="openlogout()"
+        class="text-sm font-medium text-[#006D6F] hover:underline"
+      >
+        Log out
+      </button>
+    </div>
+
+  </div>
+</div>
+<app-logout-modal></app-logout-modal>

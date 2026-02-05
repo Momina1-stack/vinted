@@ -49,35 +49,213 @@
         </div>
 
         <!-- Row -->
-        <div class="grid grid-cols-12 items-center gap-4">
-          <label class="col-span-4 text-[15px] font-medium text-gray-900">
-            Account type
-          </label>
-          <select
-            class="col-span-8 border-none border-gray-200 focus:border-gray-500 focus:outline-none py-1.5 text-gray-700 bg-transparent">
-            <option class=" border-b border-gray-500">Checking</option>
-          </select>
+    <div class="grid grid-cols-12 items-center gap-4 w-full">
+  <label class="col-span-4 text-[15px] font-medium text-gray-900">
+    Account type
+  </label>
+  
+  <div class="col-span-8 relative w-full">
+    <!-- Dropdown Trigger -->
+    <div
+      class="border-b border-gray-200 focus:border-gray-500 focus:outline-none py-1.5 text-gray-700 bg-transparent flex items-center justify-between w-full cursor-pointer"
+      (click)="handleClick()"
+    >
+      <div class="py-1 flex-1">{{ selectedAccount }}</div>
+      <svg 
+        class="h-5 w-5 text-gray-400 transition-transform duration-200 shrink-0"
+        [class.rotate-180]="isDropdownOpen"
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+
+    <!-- Desktop/iPad Dropdown -->
+    <div 
+      *ngIf="isDropdownOpen && !isMobile"
+      class="absolute w-full top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-hidden"
+    >
+      <!-- Checking Option -->
+      <div 
+        class="py-4 px-4 cursor-pointer hover:bg-gray-50 transition-colors border-b border-gray-200"
+        (click)="selectAccount('Checking')"
+      >
+        <div class="flex items-start justify-between">
+          <div class="flex-1 pr-4">
+            <h3 class="text-base font-medium text-gray-900 mb-1">Checking</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">
+              The account you use for everyday spending
+            </p>
+          </div>
+          <div class="shrink-0 pt-1">
+            <div 
+              [class]="selectedAccount === 'Checking' 
+                ? 'w-6 h-6 rounded-full border-2 border-teal-700 bg-teal-700 flex items-center justify-center' 
+                : 'w-6 h-6 rounded-full border-2 border-gray-300'"
+            >
+              <div 
+                *ngIf="selectedAccount === 'Checking'"
+                class="w-2.5 h-2.5 rounded-full bg-white"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Savings Option -->
+      <div 
+        class="py-4 px-4 cursor-pointer hover:bg-gray-50 transition-colors"
+        (click)="selectAccount('Savings')"
+      >
+        <div class="flex items-start justify-between">
+          <div class="flex-1 pr-4">
+            <h3 class="text-base font-medium text-gray-900 mb-1">Savings</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">
+              Your account for savings and longer-term financial goals
+            </p>
+          </div>
+          <div class="shrink-0 pt-1">
+            <div 
+              [class]="selectedAccount === 'Savings' 
+                ? 'w-6 h-6 rounded-full border-2 border-teal-700 bg-teal-700 flex items-center justify-center' 
+                : 'w-6 h-6 rounded-full border-2 border-gray-300'"
+            >
+              <div 
+                *ngIf="selectedAccount === 'Savings'"
+                class="w-2.5 h-2.5 rounded-full bg-white"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Modal -->
+    <div 
+      *ngIf="isModalOpen && isMobile"
+      class="fixed inset-0 z-50 flex items-end sm:items-center justify-center"
+    >
+      <!-- Backdrop -->
+      <div 
+        class="fixed inset-0 bg-black/40 transition-opacity"
+        (click)="closeModal()"
+      ></div>
+
+      <!-- Modal Content -->
+      <div class="relative bg-white rounded-t-2xl sm:rounded-2xl w-full max-w-lg mx-4 mb-0 sm:mb-4 shadow-xl">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <h2 class="text-xl font-normal text-gray-900">Account type</h2>
+          <button 
+            type="button"
+            class="text-teal-700 hover:text-teal-800"
+            (click)="closeModal()"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
+        <!-- Options -->
+        <div class="p-4">
+          <!-- Checking -->
+          <div 
+            class="py-4 cursor-pointer hover:bg-gray-50 transition-colors border-b border-gray-200"
+            (click)="selectAccount('Checking')"
+          >
+            <div class="flex items-start justify-between">
+              <div class="flex-1 pr-4">
+                <h3 class="text-base font-medium text-gray-900 mb-1">Checking</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                  The account you use for everyday spending
+                </p>
+              </div>
+              <div class="shrink-0 pt-1">
+                <div 
+                  [class]="selectedAccount === 'Checking' 
+                    ? 'w-6 h-6 rounded-full border-2 border-teal-700 bg-teal-700 flex items-center justify-center' 
+                    : 'w-6 h-6 rounded-full border-2 border-gray-300'"
+                >
+                  <div 
+                    *ngIf="selectedAccount === 'Checking'"
+                    class="w-2.5 h-2.5 rounded-full bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Savings -->
+          <div 
+            class="py-4 cursor-pointer hover:bg-gray-50 transition-colors"
+            (click)="selectAccount('Savings')"
+          >
+            <div class="flex items-start justify-between">
+              <div class="flex-1 pr-4">
+                <h3 class="text-base font-medium text-gray-900 mb-1">Savings</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                  Your account for savings and longer-term financial goals
+                </p>
+              </div>
+              <div class="shrink-0 pt-1">
+                <div 
+                  [class]="selectedAccount === 'Savings' 
+                    ? 'w-6 h-6 rounded-full border-2 border-teal-700 bg-teal-700 flex items-center justify-center' 
+                    : 'w-6 h-6 rounded-full border-2 border-gray-300'"
+                >
+                  <div 
+                    *ngIf="selectedAccount === 'Savings'"
+                    class="w-2.5 h-2.5 rounded-full bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Save Button -->
+        <div class="p-4">
+          <button
+            type="button"
+            (click)="saveSelection()"
+            class="w-full bg-teal-700 hover:bg-teal-800 text-white font-medium py-4 px-6 rounded-lg transition-colors"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Backdrop -->
+    <div 
+      *ngIf="isDropdownOpen && !isMobile"
+      class="fixed inset-0 z-40"
+      (click)="closeDropdown()"
+    ></div>
+  </div>
+</div>
       </div>
     </div>
 
     <!-- Billing -->
-   <div class="bg-white rounded-sm px-8 py-6 flex justify-between items-center">
-  <div class="w-full">
-    <p class="text-[17px] text-gray-700">
-      Billing address
-    </p>
+    <div class="bg-white rounded-sm px-8 py-6 flex justify-between items-center">
+      <div class="w-full">
+        <p class="text-[17px] text-gray-700">
+          Billing address
+        </p>
 
-    <div class="flex items-center justify-between w-full mt-7">
-      <p class="text-sm text-gray-700 font-medium">
-        Add address
-      </p>
+        <div class="flex items-center justify-between w-full mt-7">
+          <p class="text-sm text-gray-700 font-medium">
+            Add address
+          </p>
 
-      <img src="arrow.svg" alt="" class="h-8 w-8 text-gray-400" />
+          <img (click)=" openAddAddressModal()" src="arrow.svg" alt="" class="h-8 w-8 text-gray-600" />
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
 
     <!-- Footer -->
@@ -95,3 +273,5 @@
   </div>
 </div>
 <app-bank-detail-modal></app-bank-detail-modal>
+<app-add-addres-modal></app-add-addres-modal>
+<app-checking-modal></app-checking-modal>

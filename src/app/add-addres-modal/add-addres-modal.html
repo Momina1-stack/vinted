@@ -1,1 +1,101 @@
-<p>add-addres-modal works!</p>
+ 
+ @if (isModalOpen) {
+ <div  class="fixed inset-0 bg-black/30 flex items-center justify-center ">
+      <div class="mx-auto w-full max-w-sm bg-white max-h-[80vh]  overflow-y-auto  rounded-md px-4 py-6 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="border-b border-gray-200 pb-2 mb-3">
+          <h1 class="text-xl text-center font-normal text-gray-900">Billing address</h1>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-3">
+          <!-- Full Name -->
+          <div>
+            <label for="fullName" class="block text-base font-normal text-gray-700 mb-1">
+              Full name
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              [(ngModel)]="formData.fullName"
+              name="fullName"
+              placeholder="Enter your full name"
+              class="block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-base sm:leading-6"
+            />
+          </div>
+
+          <!-- Country -->
+          <div>
+            <label for="country" class="block text-base font-normal text-gray-700 mb-1">
+              Country
+            </label>
+            <div class="relative">
+              <select
+                id="country"
+                [(ngModel)]="formData.country"
+                name="country"
+                class="block w-full appearance-none rounded-md border-0 px-3 py-2 pr-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-base sm:leading-6"
+              >
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Pakistan">Pakistan</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Address Line 1 -->
+          <div>
+            <label for="addressLine1" class="block text-base font-normal text-gray-700 mb-1">
+              Address line 1
+            </label>
+            <input
+              type="text"
+              id="addressLine1"
+              [(ngModel)]="formData.addressLine1"
+              name="addressLine1"
+              placeholder="e.g. 100 Well Lane"
+              class="block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-base sm:leading-6"
+            />
+          </div>
+
+          <!-- Address Line 2 -->
+          <div>
+            <label for="addressLine2" class="block text-base font-normal text-gray-700 mb-2">
+              Address line 2 (optional)
+            </label>
+            <input
+              type="text"
+              id="addressLine2"
+              [(ngModel)]="formData.addressLine2"
+              name="addressLine2"
+              placeholder="e.g. Apt 2"
+              class="block w-full rounded-md border-0 px-3 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-base sm:leading-6"
+            />
+          </div>
+
+          <!-- Zip Code -->
+          <div>
+            <label for="zipCode" class="block text-base font-normal text-gray-700 mb-1">
+              Zip code
+            </label>
+            <input
+              type="text"
+              id="zipCode"
+              [(ngModel)]="formData.zipCode"
+              name="zipCode"
+              placeholder="e.g. 12345"
+              class="block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-base sm:leading-6"
+            />
+          </div>
+        </form>
+         <!-- FOOTER -->
+    <div class="px-4 mt-6 pb-6">
+      <button class="w-full cursor-pointer bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-xl transition">
+        Save Address
+      </button>
+      <h4 (click)="closeAddAddress()" class="font-medium text-center mt-3 cursor-pointer">Cancel</h4>
+    </div>
+      </div>
+    </div>
+  }

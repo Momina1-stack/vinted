@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { MyService } from '../../app/my-service';
 import { ImgUpload } from "../../app/img-upload/img-upload";
@@ -8,11 +8,24 @@ import { Auth } from '../../app/services/auth';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink, ImgUpload, Menu],
+  imports: [CommonModule, RouterLink, ImgUpload, Menu,],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
+   isCatalogOpen = false;
+
+  toggleCatalog(event: Event) {
+    event.stopPropagation();
+    this.isCatalogOpen = !this.isCatalogOpen;
+  }
+
+  @HostListener('document:click')
+  closeOnOutsideClick() {
+    if (this.isCatalogOpen) {
+      this.isCatalogOpen = false;
+    }
+  }
 toggleDropdown() {
 throw new Error('Method not implemented.');
 }
@@ -30,21 +43,23 @@ throw new Error('Method not implemented.');
     this.auth.logout();
   }
 
-  isCatalogOpen = false;
-  isLanguageOpen = false;
+
   isOpen = false;
+isLanguageOpen = false;
 
+toggleLanguage(event?: Event) {
+  if (event) event.stopPropagation(); // button click ko document click se rokta hai
+  this.isLanguageOpen = !this.isLanguageOpen;
+}
 
-  toggleCatalog() {
-    this.isCatalogOpen = !this.isCatalogOpen;
+@HostListener('document:click')
+closeLanguageDropdown() {
+  if (this.isLanguageOpen) {
+    this.isLanguageOpen = false;
   }
+}
 
-  toggleLanguage() {
-    console.log("clicked", this.isLanguageOpen)
-
-    this.isLanguageOpen = !this.isLanguageOpen;
-  }
-
+ 
   toggleMobileMenu() {
     this.modalService.openMenu();
   }

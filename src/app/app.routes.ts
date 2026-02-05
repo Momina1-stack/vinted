@@ -38,6 +38,7 @@ import { Change } from './change/change';
 import { VerifyNo } from './verify-no/verify-no';
 import { PasswordChange } from './password-change/password-change';
 import { DeleteAccount } from './delete-account/delete-account';
+import { LoginActivity } from './login-activity/login-activity';
 export const routes: Routes = [
 
   {
@@ -72,6 +73,7 @@ export const routes: Routes = [
          { path: 'settings/security', component: Security},
          { path: 'settings/username', component: Username},
          { path: 'delete-account', component: DeleteAccount},
+            { path: 'login-activity', component: LoginActivity},
          
         ]
       },
@@ -83,6 +85,7 @@ export const routes: Routes = [
       { path: 'change', component: Change},
       { path: 'verify-no', component: VerifyNo},
       { path: 'password-change', component: PasswordChange},
+    
       
 
     

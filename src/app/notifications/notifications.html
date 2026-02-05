@@ -1,1 +1,174 @@
-<p>notifications works!</p>
+<div class="min-h-screen bg-white px-4 py-6 sm:px-8">
+  <div class="w-full max-w-full lg:max-w-7xl mx-auto space-y-10">
+
+    <!-- Enable email notifications -->
+    <div class="flex items-start justify-between gap-4 rounded-lg border border-gray-200 p-5">
+      <div>
+        <h2 class="text-base font-medium text-gray-900">
+          Enable email notifications
+        </h2>
+        <p class="mt-1 max-w-md text-sm text-gray-500">
+          Vinted might still send mandatory updates regarding important legal changes, your sales and purchases.
+        </p>
+      </div>
+
+      <!-- Main Toggle -->
+      <label class="relative inline-flex cursor-pointer items-center">
+        <input type="checkbox" [(ngModel)]="mainToggleChecked" (change)="syncToggles()" class="peer sr-only">
+        <div class="h-6 w-11 rounded-full bg-gray-300
+                 peer-checked:bg-[#006D6F]
+                 transition-colors duration-200">
+        </div>
+        <div class="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white
+                 transition-transform duration-200
+                 peer-checked:translate-x-5">
+        </div>
+      </label>
+    </div>
+
+    <!-- News Section -->
+    <div class="space-y-3">
+      <p class="text-sm font-medium text-gray-500">News</p>
+      <div class="overflow-hidden rounded-lg border border-gray-200">
+
+        <!-- Vinted Updates -->
+        <div class="flex items-center justify-between gap-4 p-5">
+          <div>
+            <h3 class="text-base font-medium text-gray-900">Vinted Updates</h3>
+            <p class="text-sm text-gray-500">Be the first to know about our newest features, updates, and changes</p>
+          </div>
+          <label class="relative inline-flex cursor-pointer items-center">
+            <input type="checkbox" [(ngModel)]="childTogglesState.vintedUpdates" [disabled]="!mainToggleChecked"
+              class="peer sr-only">
+            <div class="h-6 w-11 rounded-full bg-[#85BEC3] peer-checked:bg-[#006D6F] transition-colors duration-200">
+            </div>
+            <div
+              class="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform duration-200 peer-checked:translate-x-5">
+            </div>
+          </label>
+        </div>
+
+        <div class="h-px bg-gray-200"></div>
+
+        <!-- Marketing communications -->
+        <div class="flex items-center justify-between gap-4 p-5">
+          <div>
+            <h3 class="text-base font-medium text-gray-900">Marketing communications</h3>
+            <p class="text-sm text-gray-500">Receive personalized offers, news, and recommendations</p>
+          </div>
+          <label class="relative inline-flex cursor-pointer items-center">
+            <input type="checkbox" [(ngModel)]="childTogglesState.marketing" [disabled]="!mainToggleChecked"
+              class="peer sr-only">
+            <div class="h-6 w-11 rounded-full bg-[#85BEC3]  peer-checked:bg-[#006D6F] transition-colors duration-200">
+            </div>
+            <div
+              class="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform duration-200 peer-checked:translate-x-5">
+            </div>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="max-w-full mx-auto space-y-8">
+
+    <!-- High-priority notifications -->
+    <div>
+      <p class="text-gray-500 mb-2 mt-5 text-sm">High-priority notifications</p>
+      <div class="bg-white border border-gray-200 rounded-lg divide-y divide-gray-200">
+
+        <!-- New messages -->
+        <div class="flex items-center justify-between px-4 py-3">
+          <span class="font-medium text-gray-900">New messages</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" [(ngModel)]="childTogglesState.newMessages" [disabled]="!mainToggleChecked"
+              class="sr-only peer">
+            <div class="w-11 h-6 bg-[#85BEC3] rounded-full peer-checked:bg-[#006D6F] transition-colors"></div>
+            <div
+              class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform">
+            </div>
+          </label>
+        </div>
+
+        <!-- New feedback -->
+        <div class="flex items-center justify-between px-4 py-3">
+          <span class="font-medium text-gray-900">New feedback</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" [(ngModel)]="childTogglesState.newFeedback" [disabled]="!mainToggleChecked"
+              class="sr-only peer">
+            <div class="w-11 h-6 bg-[#85BEC3]  rounded-full peer-checked:bg-[#006D6F] transition-colors"></div>
+            <div
+              class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform">
+            </div>
+          </label>
+        </div>
+
+        <!-- Discounted items -->
+        <div class="flex items-center justify-between px-4 py-3">
+          <span class="font-medium text-gray-900">Discounted items</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" [(ngModel)]="childTogglesState.discountedItems" [disabled]="!mainToggleChecked"
+              class="sr-only peer">
+            <div class="w-11 h-6 bg-[#85BEC3]  rounded-full peer-checked:bg-[#006D6F] transition-colors"></div>
+            <div
+              class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform">
+            </div>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Other notifications -->
+    <div>
+      <p class="text-gray-500 mb-2 text-sm">Other notifications</p>
+      <div class="bg-white border border-gray-200 rounded-lg divide-y divide-gray-200">
+
+        <!-- Favorited Items -->
+        <div class="flex items-center justify-between px-4 py-3">
+          <span class="font-medium text-gray-900">Favorited Items</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" [(ngModel)]="childTogglesState.favoritedItems" [disabled]="!mainToggleChecked"
+              class="sr-only peer">
+            <div class="w-11 h-6 bg-[#85BEC3] rounded-full peer-checked:bg-[#006D6F] transition-colors"></div>
+            <div
+              class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform">
+            </div>
+          </label>
+        </div>
+
+        <!-- New items -->
+        <div class="flex items-center justify-between px-4 py-3">
+          <span class="font-medium text-gray-900">New items</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" [(ngModel)]="childTogglesState.newItems" [disabled]="!mainToggleChecked"
+              class="sr-only peer">
+            <div class="w-11 h-6 bg-[#85BEC3]  rounded-full peer-checked:bg-[#006D6F] transition-colors"></div>
+            <div
+              class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform">
+            </div>
+          </label>
+        </div>
+
+        <!-- Daily limit -->
+        <div class="px-4 py-3">
+          <label class="text-gray-400 text-sm block mb-1">Set a daily limit for each notification type</label>
+          <select [(ngModel)]="dailyLimit" [disabled]="!mainToggleChecked"
+            class="w-full border-0 border-b border-gray-200   text-sm">
+            <option> 1 notification</option>
+            <option>Up to 2 notifications</option>
+            <option>Up to 5 notifications</option>
+            <option>Up to 10 notifications</option>
+            <option>Up to 20 notifications</option>
+            <option>Send me everything</option>
+
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
