@@ -16,7 +16,7 @@
           <div class="w-12 h-12 border rounded-full"></div>
 
           <!-- Button triggers file input -->
-          <button class="text-nowrap px-3 py-2 border border-[#007580] text-[#007580] rounded"
+          <button class="cursor-pointer text-nowrap px-3 py-2 border border-[#007580] text-[#007580] rounded"
             (click)="fileInput.click()">
             Choose photo
           </button>
@@ -32,7 +32,7 @@
         class="flex justify-between sm:flex-row sm:items-center sm:justify-between border-b border-gray-200 p-4 md:p-6 gap-3">
         <p class="font-medium text-gray-700">Username</p>
         <button routerLink="/settings/username"
-          class="text-[14px] w-[50%] sm:w-auto text-nowrap px-4 py-2 border border-[#007580] text-[#007580] rounded">
+          class="cursor-pointer text-[14px] w-[50%] sm:w-auto text-nowrap px-4 py-2 border border-[#007580] text-[#007580] rounded">
           Change username
         </button>
       </div>
@@ -76,7 +76,7 @@
 
           <div class="relative w-full sm:w-auto">
             <button type="button"
-              class="w-full sm:w-auto bg-white border-b border-gray-300 pl-3 pr-2 py-2 flex justify-between items-center"
+              class="cursor-pointer w-full sm:w-auto bg-white border-b border-gray-300 pl-3 pr-2 py-2 flex justify-between items-center"
               [ngStyle]="{
         'width': selectedLanguage.name === 'English, US (English)' ? '290px' : '350px'
       }" (click)="dropdownOpen = !dropdownOpen">
@@ -124,7 +124,7 @@
       <label class="font-medium text-black">Language</label>
 
       <div class="relative w-full sm:w-auto">
-        <button class="w-full sm:w-[50%]  bg-white pl-3 pr-10 py-2 border-0 border-b border-gray-300"
+        <button class="cursor-pointer w-full sm:w-[50%]  bg-white pl-3 pr-10 py-2 border-0 border-b border-gray-300"
           (click)="dropdownOpenn = !dropdownOpenn">
           {{ selectedLanguage.name }}
         </button>
@@ -140,7 +140,7 @@
 
     <!-- ================= BUTTON ================= -->
     <div class="w-full flex justify-end">
-      <button class="w-[50%] sm:w-[20%] px-4 sm:px-6 py-2 bg-[#007580] text-white rounded-md whitespace-nowrap">
+      <button class="cursor-pointer w-[50%] sm:w-[20%] px-4 sm:px-6 py-2 bg-[#007580] text-white rounded-md whitespace-nowrap">
         Update profile
       </button>
     </div>

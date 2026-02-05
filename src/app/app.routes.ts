@@ -39,6 +39,8 @@ import { VerifyNo } from './verify-no/verify-no';
 import { PasswordChange } from './password-change/password-change';
 import { DeleteAccount } from './delete-account/delete-account';
 import { LoginActivity } from './login-activity/login-activity';
+import { MobileApps } from './mobile-apps/mobile-apps';
+import { Advertising } from './advertising/advertising';
 export const routes: Routes = [
 
   {
@@ -61,6 +63,8 @@ export const routes: Routes = [
       { path: 'profile', component: Profile },
       { path: 'invite', component: Invite },
       { path: 'referrals', component: Referrals},
+      { path: 'mobile-apps', component: MobileApps },
+       { path: 'advertising', component: Advertising },
       { path: '', component: Settings,
         children:[
           { path: 'settings/profile', component: ProfileDetails },

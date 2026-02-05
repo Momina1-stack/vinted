@@ -8,7 +8,7 @@
   </nav>
 
   <h1 class="text-4xl font-bold mb-8 text-gray-900 flex items-center justify-between">Bags
-      <button class="border rounded-md px-3   flex items-center" type="button">
+      <button class="cursor-pointer border rounded-md px-3   flex items-center" type="button">
        
       <span class="">
         <svg fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M6.75 2.5c-.69 0-1.25.56-1.25 1.25v17.793l5.483-3.738a1.75 1.75 0 0 1 2.034 0l5.483 3.738V3.75c0-.69-.56-1.25-1.25-1.25zM4 3.75A2.75 2.75 0 0 1 6.75 1h10.5A2.75 2.75 0 0 1 20 3.75v18.28a1.25 1.25 0 0 1-1.977 1.017l-5.878-4.02a.25.25 0 0 0-.29 0l-5.878 4.02A1.25 1.25 0 0 1 4 22.028z"></path></svg>
@@ -23,7 +23,7 @@
     <div class="relative">
       <button (click)="toggleMenu('category')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'category'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 transition-all">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 transition-all">
         Category
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'category'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -117,7 +117,7 @@
     <div class="relative">
       <button (click)="toggleMenu('brand')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'brand'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
         Brand
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'brand'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -240,7 +240,7 @@
     <div class="relative">
       <button (click)="toggleMenu('condition')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'condition'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
         Condition
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'condition'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -323,7 +323,7 @@
 
         <!-- Button -->
         <div class="p-4 border-t border-gray-200">
-          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+          <button class="cursor-pointer w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
             Show results
           </button>
         </div>
@@ -334,7 +334,7 @@
     <div class="relative">
       <button (click)="toggleMenu('color')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'color'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
         Color
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'color'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -500,7 +500,7 @@
 
         <!-- Button -->
         <div class="p-4 border-t border-gray-200">
-          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+          <button class="cursor-pointer w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
             Show results
           </button>
         </div>
@@ -511,7 +511,7 @@
     <div class="relative">
       <button (click)="toggleMenu('price')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'price'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400">
         Price
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'price'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -566,7 +566,7 @@
     <div class="relative">
       <button (click)="toggleMenu('material')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'material'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
         Material
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'mayerial'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -672,7 +672,7 @@
 
         <!-- Button -->
         <div class="p-4 border-t border-gray-200">
-          <button class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
+          <button class="cursor-pointer w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 rounded-lg">
             Show results
           </button>
         </div>
@@ -684,7 +684,7 @@
     <div class="relative">
       <button (click)="toggleMenu('sortby')"
         [ngClass]="{'border-teal-500 bg-teal-50 text-teal-700': activeMenu === 'sortby'}"
-        class="px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
+        class="cursor-pointer px-3 py-1.5 border border-gray-300 rounded-full text-[15px] flex items-center gap-3 hover:border-gray-400 ">
         Sort By
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform"
           [ngClass]="{'rotate-180': activeMenu === 'sortby'}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -742,7 +742,7 @@
 
     </div>
 
-    <button class="ml-auto text-teal-600 text-sm font-bold hover:underline">Clear filters</button>
+    <button class="cursor-pointer ml-auto text-teal-600 text-sm font-bold hover:underline">Clear filters</button>
   </div>
  
 
@@ -791,7 +791,7 @@
               <p class="text-xs text-gray-500  truncate">Anthropologie</p>
               <p class="text-xs text-gray-500 truncate">Very good</p>
               <p class="text-xs text-gray-500 ">$54.45</p>
-              <button class="flex items-center text-normal text-[#007782]">
+              <button class="cursor-pointer flex items-center text-normal text-[#007782]">
                 $57.87 incl.
                 <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
                   <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
@@ -808,7 +808,7 @@
               <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
               <p class="text-xs text-gray-500 truncate">New with tags</p>
               <p class="text-xs text-gray-500">$54.45</p>
-              <button class="flex items-center text-normal text-[#007782]">
+              <button class="cursor-pointer flex items-center text-normal text-[#007782]">
                 $57.87 incl.
                 <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
                   <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
@@ -825,7 +825,7 @@
               <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
               <p class="text-xs text-gray-500 truncate">New With Tags</p>
               <p class="text-xs text-gray-500">$54.45</p>
-              <button class="flex items-center text-normal text-[#007782]">
+              <button class="cursor-pointer flex items-center text-normal text-[#007782]">
                 $57.87 incl.
                 <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
                   <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />
@@ -842,7 +842,7 @@
               <p class="text-xs text-gray-500 truncate">Michael Kors</p>
               <p class="text-xs text-gray-500 truncate">New with tags</p>
               <p class="text-xs text-gray-500">$54.45</p>
-              <button class="flex items-center text-normal text-[#007782]">
+              <button class="cursor-pointer flex items-center text-normal text-[#007782]">
                 $57.87 incl.
                 <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 12 12">
                   <path d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z" />

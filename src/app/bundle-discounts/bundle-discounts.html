@@ -12,7 +12,7 @@
         type="button"
         (click)="toggleDiscount()"
         [class]="isEnabled ? 'bg-[#006D6F]' : 'bg-gray-300'"
-        class="relative inline-flex h-6 w-11 sm:h-7 sm:w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#006D6F] focus:ring-offset-2"
+        class="cursor-pointer relative inline-flex h-6 w-11 sm:h-7 sm:w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#006D6F] focus:ring-offset-2"
         role="switch"
         [attr.aria-checked]="isEnabled"
       >
@@ -88,7 +88,7 @@
                       <button
                         type="button"
                         (click)="selectDiscount(bundle, percentage); $event.stopPropagation()"
-                        class="w-full px-4 sm:px-6 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors duration-150 border-b border-gray-100 last:border-b-0"
+                        class="cursor-pointer  w-full px-4 sm:px-6 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors duration-150 border-b border-gray-100 last:border-b-0"
                       >
                         <!-- Percentage Text (Left) -->
                         <span class="text-sm sm:text-base font-normal text-gray-900">
