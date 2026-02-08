@@ -41,6 +41,11 @@ import { DeleteAccount } from './delete-account/delete-account';
 import { LoginActivity } from './login-activity/login-activity';
 import { MobileApps } from './mobile-apps/mobile-apps';
 import { Advertising } from './advertising/advertising';
+import { Sustainability } from './sustainability/sustainability';
+import { Press } from './press/press';
+import { Newsroom } from './newsroom/newsroom';
+import { MediaAssets } from './media-assets/media-assets';
+import { VintedVentures } from './vinted-ventures/vinted-ventures';
 export const routes: Routes = [
 
   {
@@ -48,7 +53,7 @@ export const routes: Routes = [
     component: Layout,
     children: [
       { path: '', component: Home },
-      { path: 'login', component:Login},
+      { path: 'login', component: Login },
       { path: 'items', component: BagItems },
       { path: 'about-subsection', component: AboutSubsection },
       { path: 'about-us', component: AboutUs },
@@ -62,42 +67,57 @@ export const routes: Routes = [
       { path: 'favlist', component: FavList },
       { path: 'profile', component: Profile },
       { path: 'invite', component: Invite },
-      { path: 'referrals', component: Referrals},
+      { path: 'referrals', component: Referrals },
       { path: 'mobile-apps', component: MobileApps },
-       { path: 'advertising', component: Advertising },
-      { path: '', component: Settings,
-        children:[
+      { path: 'advertising', component: Advertising },
+
+
+      {
+        path: '', component: Settings,
+        children: [
           { path: 'settings/profile', component: ProfileDetails },
-         { path: 'settings/accountsettings', component: AccountSettings},
-         { path: 'settings/shipping', component:Shipping},
-         { path: 'settings/payments', component: Payments},
-         { path: 'settings/bundle-discounts', component: BundleDiscounts},
-         { path: 'settings/notifications', component: Notifications},
-         { path: 'settings/privacy-settings', component: PrivacySettings},
-         { path: 'settings/security', component: Security},
-         { path: 'settings/username', component: Username},
-         { path: 'delete-account', component: DeleteAccount},
-            { path: 'login-activity', component: LoginActivity},
-         
+          { path: 'settings/accountsettings', component: AccountSettings },
+          { path: 'settings/shipping', component: Shipping },
+          { path: 'settings/payments', component: Payments },
+          { path: 'settings/bundle-discounts', component: BundleDiscounts },
+          { path: 'settings/notifications', component: Notifications },
+          { path: 'settings/privacy-settings', component: PrivacySettings },
+          { path: 'settings/security', component: Security },
+          { path: 'settings/username', component: Username },
+          { path: 'delete-account', component: DeleteAccount },
+          { path: 'login-activity', component: LoginActivity },
+
         ]
       },
-      { path: 'wallet', component: Wallet},
-      { path: 'personalization', component: Personalization},
-      { path: 'my-orders', component: MyOrders},
-      { path: 'donations', component: Donations},
-      { path: 'help', component: HelpCenter},
-      { path: 'change', component: Change},
-      { path: 'verify-no', component: VerifyNo},
-      { path: 'password-change', component: PasswordChange},
-    
-      
+      { path: 'wallet', component: Wallet },
+      { path: 'personalization', component: Personalization },
+      { path: 'my-orders', component: MyOrders },
+      { path: 'donations', component: Donations },
+      { path: 'help', component: HelpCenter },
+      { path: 'change', component: Change },
+      { path: 'verify-no', component: VerifyNo },
+      { path: 'password-change', component: PasswordChange },
 
-    
+
+
+
 
 
     ],
   },
-  { path: 'bank-deatil', component: BankDetail},
- 
+  { path: 'bank-deatil', component: BankDetail },
+  
+  { 
+    path: '', component: Press ,
+   children: [
+    { path: 'newsroom', component: Newsroom },
+    { path: 'sustainability', component: Sustainability },
+    { path: 'media-assets', component: MediaAssets },
+    { path: 'vinted-ventures', component: VintedVentures },
+
+
+  ]
+}
+
 ];
 

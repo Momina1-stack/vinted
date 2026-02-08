@@ -26,12 +26,12 @@
             </button>
 
             @if (isCatalogOpen) {
-            <div class="absolute left-0 mt-2 w-36 rounded-md border bg-white shadow-lg z-50"
-              (click)="$event.stopPropagation()">
-              <button class="cursor-pointer block w-full px-4 py-2 text-left hover:bg-gray-100">
+            <div class="absolute left-0 mt-2 w-36 rounded-md border border-gray-200 bg-white shadow-lg z-50"
+              (click)="$event.stopPropagation()" >
+              <button (click)="openModalCatalog()" class="cursor-pointer  block w-full px-4 py-2 text-left hover:bg-gray-100">
                 Catalog
               </button>
-              <button class="cursor-pointer block w-full px-4 py-2 text-left hover:bg-gray-100">
+              <button  (click)="onMemberClick()" class="cursor-pointer block w-full px-4 py-2 text-left hover:bg-gray-100">
                 Member
               </button>
             </div>
@@ -227,7 +227,7 @@
           </button>
 
           @if (isLanguageOpen) {
-          <div class="absolute right-0 mt-2 w-44 border rounded-lg bg-white shadow-lg z-50"
+          <div class="absolute right-0 mt-2 w-44 border border-gray-200 rounded-lg bg-white shadow-lg z-50"
             (click)="$event.stopPropagation()">
             <button class="cursor-pointer block w-full px-4 py-2 hover:bg-gray-100">
               English (US)
@@ -290,3 +290,4 @@
 </header>
 <app-img-upload></app-img-upload>
 <app-menu></app-menu>
+<app-catalog>

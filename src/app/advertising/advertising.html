@@ -1,66 +1,193 @@
-<section class="relative w-full overflow-hidden min-h-[85vh]">
+<!-- advertise.component.html -->
+<div class="bg-[#007782] text-white">
+  <div class="container mx-auto px-6 lg:px-30  flex flex-col lg:flex-row  items-center gap-10">
 
-  <div class="flex w-full h-full">
+    <!-- LEFT CONTENT -->
+    <div class="flex-1 flex flex-col gap-6 text-center lg:text-left pl-2 sm:pl-20">
+      <h1 class="text-4xl lg:text-5xl font-bold text-left">Advertise with Vinted</h1>
+      <p class="text-lg lg:text-xl leading-relaxed text-left">
+        Vinted is the largest online C2C marketplace in Europe dedicated to second-hand fashion,
+        with over 80 million members — and we’re growing.
+      </p>
+      <p class="text-lg lg:text-xl text-left">
+        Want to work with us? Tell us more in the form below.
+      </p>
+    </div>
 
-    <!-- LEFT PANEL -->
-    <div class="w-[58%] bg-[#006d6f] text-white flex items-center">
-      <div class="pl-20 max-w-[520px] space-y-6">
-        <h1 class="text-[44px] leading-tight font-semibold">
-          Advertise with Vinted
-        </h1>
+    <!-- RIGHT IMAGE -->
+    <div class="flex sm:flex-1">
+      <!-- yahan apni image ka path do -->
+      <img src="hero-mobile@2x.png" alt="Design Image" class="w-full h-auto">
+    </div>
 
-        <p class="text-[18px] leading-relaxed">
-          Vinted is the largest online C2C marketplace in Europe
-          dedicated to second-hand fashion, with over 80 million
-          members — and we’re growing.
-        </p>
+  </div>
+</div>
 
-        <p class="text-[18px]">
-          Want to work with us? Tell us more in the form below.
-        </p>
+<!-- form -->
+<div class="flex justify-center py-10 px-4">
+  <div class="w-full max-w-3xl bg-white rounded-lg shadow-md border border-gray-200">
+
+    <!-- Header -->
+    <div class="p-6 border-b">
+      <h2 class="text-lg font-semibold">Submit a request</h2>
+      <p class="text-gray-500 text-sm mt-1">Complete each section in English.</p>
+    </div>
+
+    <!-- Form Section -->
+    <div class=" space-y-2">
+      <!-- Contact Information -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 p-5">
+            <div class="bg-teal-700 text-white w-6 h-6 flex items-center justify-center rounded-full text-sm">1</div>
+            <span class="font-medium text-gray-800">Contact information</span>
+          </div>
+          <button class="text-gray-400 hover:text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- First Name -->
+        <div class="sm:flex justify-between gap-10 border-b border-gray-200 px-5">
+          <label class="block text-sm sm:text-md text-nowrap font-medium text-gray-700 ">First name</label>
+          <input type="text" placeholder="Enter your first name(s)"
+            class=" border-0 w-full sm:w-[50%] border-b border-gray-300  py-1 mb-5" />
+        </div>
+
+        <!-- Last Name -->
+        <div class="sm:flex justify-between gap-10 border-b border-gray-200 p-5">
+          <label class="block text-md text-nowrap font-medium text-gray-700">Last name</label>
+          <input type="text" placeholder="Enter your last name(s)"
+            class=" border-0 w-full  sm:w-[50%] border-b border-gray-300 py-1 " />
+        </div>
+
+        <!-- Email Address -->
+        <div class="sm:flex justify-between gap-10 border-b border-gray-200 p-5">
+          <label class="block text-md text-nowrap font-medium text-gray-700 mb-1">Email address</label>
+          <input type="email" placeholder="Enter your email"
+            class=" border-0 w-full sm:w-[50%] border-b border-gray-300  py-1" />
+        </div>
+
+        <!-- Phone Number -->
+        <div class="sm:flex justify-between gap-10 border-b border-gray-200 p-5">
+          <label class="block text-sm text-nowrap  font-medium text-gray-700 mb-1">Phone number (optional)</label>
+          <input type="text" placeholder="Enter your phone number"
+            class="  border-0 w-full  sm:w-[50%] border-b border-gray-300  py-1" />
+        </div>
       </div>
+      <!-- company-form.component.html -->
+      <div class="max-w-3xl mx-auto  space-y-6">
+
+        <!-- Section 2: Company Information -->
+        <div class="space-y-4 border-b">
+          <div class="flex items-center space-x-2 px-5">
+            <div class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-700 text-white font-medium ">2
+            </div>
+            <h2 class="text-lg font-medium ">Company information</h2>
+          </div>
+
+          <!-- Company Type -->
+          <div class="sm:flex justify-between gap-10 border-b border-gray-200 space-x-2 px-5 mt-5">
+            <label class="block mb-1 text-nowrap font-medium text-gray-700">Company type</label>
+            <select placeholder="Please Select"
+              class=" sm:w-[50%] w-full border-0 border-b border-gray-300 rounded px-3 py-2 mb-3 focus:outline-none focus:ring-2">
+              <option selected disabled>Please select</option>
+              <option>Agency</option>
+              <option>Brand</option>
+              <option>Adviser</option>
+              <option>Network</option>
+            </select>
+          </div>
+
+          <!-- Company Name -->
+          <div class="sm:flex justify-between gap-10 border-b border-gray-200 space-x-2 px-5">
+            <label class="block mb-1 text-nowrap font-medium text-gray-700">Company name</label>
+            <input type="text" placeholder="Enter company name"
+              class=" border-0 w-full  sm:w-[50%] border-b border-gray-300 py-1 mb-5" />
+          </div>
+        </div>
+
+        <!-- Section 3: Additional Information -->
+        <div class="space-y-4 pb-4">
+          <div class="flex items-center space-x-2 p-5">
+            <div class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-700 text-white font-medium">3
+            </div>
+            <h2 class="text-lg font-medium">Additional information</h2>
+          </div>
+
+          <!-- Estimated Budget -->
+          <div class="sm:flex justify-between gap-10 border-b border-gray-200 space-x-2  px-5">
+            <label class="block mb-1 text-sm text-nowrap font-medium  text-gray-700">Estimated budget (€)</label>
+            <select
+              class="w-full sm:w-[50%] border-0 border-b border-gray-200  rounded px-3 py-2 focus:outline-none focus:ring-2 mb-3">
+              <option>Please select</option>
+              <option>€5,000 - €10,000</option>
+              <option>€10,000 - €50,000</option>
+              <option>€50,000+</option>
+            </select>
+          </div>
+
+          <!-- Location -->
+          <div class="sm:flex justify-between gap-10 border-b border-gray-200 space-x-2  px-5">
+            <label class="block mb-1 text-nowrap font-medium text-gray-700">Where are you located?</label>
+            <select
+              class="w-full sm:w-[50%] border-0 border-b border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2  mb-3">
+              <option selected disabled>Please select</option>
+              <option>Europe</option>
+              <option>America</option>
+              <option>Asia</option>
+            </select>
+          </div>
+          <!-- type of request -->
+          <div class="sm:flex justify-between gap-10 border-b border-gray-200 space-x-2  px-5 ">
+            <label class="block mb-1 text-nowrap font-medium text-gray-700">Type of request</label>
+            <select
+              class=" w-full sm:w-[50%]  border-0 border-b border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2  mb-3">
+              <option selected disabled>Please select</option>
+              <option>Ad campaign</option>
+              <option>Other partnerships</option>
+            </select>
+          </div>
+          <div class="w-full max-w-4xl mx-auto px-5">
+            <!-- Label Row -->
+           <div class="flex flex-col md:flex-row md:items-start md:gap-6 gap-2 px-5">
+  <!-- Label -->
+  <label class="text-md font-medium text-gray-700 mb-1 md:mb-0 md:w-1/3">
+    Share any other relevant information.
+  </label>
+
+  <!-- Textarea and note -->
+  <div class="flex flex-col md:w-2/3">
+    <span class="text-sm text-gray-500 mb-1">
+      Please write in English.
+    </span>
+    <textarea rows="3"
+      class="w-full resize-none border-0 border-b border-gray-300 focus:border-teal-600 focus:ring-0 text-sm text-gray-800"></textarea>
+  </div>
+</div>
+
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- RIGHT PANEL -->
-    <div class="w-[42%] relative">
-      <img
-        src="hero-mobile@2x.png"
-        class="absolute -right-24 top-0 h-full object-contain"
-      />
-    </div>
 
   </div>
 
-  <!-- REAL WAVY CUT -->
-  <svg
-    class="absolute bottom-0 left-0 w-full"
-    viewBox="0 0 1440 90"
-    preserveAspectRatio="none">
-    <path fill="#fff"
-      d="M0,45 C160,70 320,70 480,55
-         C640,40 800,10 960,25
-         C1120,40 1280,65 1440,50
-         L1440,0 L0,0 Z"/>
-  </svg>
-
-</section>
-
-<!-- MOBILE VERSION -->
-<section class="lg:hidden bg-[#006d6f] text-white min-h-[70vh] flex items-center">
-  <div class="px-6 space-y-5">
-    <h1 class="text-3xl font-semibold">
-      Advertise with Vinted
-    </h1>
-
-    <p class="text-base leading-relaxed">
-      Vinted is the largest online C2C marketplace in Europe
-      dedicated to second-hand fashion, with over 80 million
-      members — and we’re growing.
-    </p>
-
-    <p class="text-base">
-      Want to work with us? Tell us more in the form below.
-    </p>
-  </div>
-</section>
-
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center max-w-3xl mx-auto gap-3 p-4">
+  <p class="text-sm text-gray-700">
+    For more information on how we process your personal data, read our 
+    <a href="#" class="text-[#007782] underline">Privacy Policy</a>.
+  </p>
+  <button class="cursor-pointer px-4 py-2.5 bg-[#007782] text-white text-xs rounded-md">
+    Sell now
+  </button>
+</div>

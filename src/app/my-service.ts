@@ -5,6 +5,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class MyService {
+  openCatalog() {
+    throw new Error('Method not implemented.');
+  }
+  closeCatalog() {
+    throw new Error('Method not implemented.');
+  }
 
   addchecking: any;
   addChecking: any;
@@ -186,6 +192,18 @@ openlogout() {
 
 closelogout() {
   this.logoutModal.next(false);
+}
+
+
+ private catalogModal = new BehaviorSubject<boolean>(false);
+catalogModal$ = this.catalogModal.asObservable();
+
+opencatalog() {
+  this.catalogModal.next(true);
+}
+
+closecatalog() {
+  this.catalogModal.next(false);
 }
 
 

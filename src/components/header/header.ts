@@ -5,10 +5,11 @@ import { MyService } from '../../app/my-service';
 import { ImgUpload } from "../../app/img-upload/img-upload";
 import { Menu } from "../../app/menu/menu";
 import { Auth } from '../../app/services/auth';
+import { Catalog } from "../../app/catalog/catalog";
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink, ImgUpload, Menu,],
+  imports: [CommonModule, RouterLink, ImgUpload, Menu, Catalog],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -31,7 +32,7 @@ throw new Error('Method not implemented.');
 }
   Service: any;
   router: any;
-  // authService: any;
+
 
   constructor(
     public auth: Auth,
@@ -48,7 +49,7 @@ throw new Error('Method not implemented.');
 isLanguageOpen = false;
 
 toggleLanguage(event?: Event) {
-  if (event) event.stopPropagation(); // button click ko document click se rokta hai
+  if (event) event.stopPropagation(); 
   this.isLanguageOpen = !this.isLanguageOpen;
 }
 
@@ -78,5 +79,22 @@ isDropdownOpen = false;
 toggleDropdownn() {
   this.isDropdownOpen = !this.isDropdownOpen;
 }
+
+
+    
+      isModalOpen = false;
+  
+      openModalCatalog() {
+        this.modalService.opencatalog()
+      }
+
+  onMemberClick() {
+  console.log('Member selected');
+}
+
+
+
+
+
 
 }
