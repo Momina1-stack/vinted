@@ -19,7 +19,7 @@
           <div class="relative catalog-wrapper">
             <button (click)="toggleCatalog($event)"
               class="cursor-pointer flex items-center gap-2 px-3 h-9 border-r border-gray-300 hover:bg-gray-200">
-              <span class="text-sm text-[#5A6566] font-medium">Catalog</span>
+              <span class="text-sm text-[#5A6566] font-medium">{{ selectedCatalog }}</span>
               <svg viewBox="0 0 16 16" width="16" height="16" class="fill-[#5A6566]">
                 <path d="M8 12 2 6h12z"></path>
               </svg>
@@ -28,10 +28,10 @@
             @if (isCatalogOpen) {
             <div class="absolute left-0 mt-2 w-36 rounded-md border border-gray-200 bg-white shadow-lg z-50"
               (click)="$event.stopPropagation()" >
-              <button (click)="openModalCatalog()" class="cursor-pointer  block w-full px-4 py-2 text-left hover:bg-gray-100">
+              <button (click)="openModalCatalog()"   (click)="selectCatalog('Catalog')"class="cursor-pointer  block w-full px-4 py-2 text-left hover:bg-gray-100">
                 Catalog
               </button>
-              <button  (click)="onMemberClick()" class="cursor-pointer block w-full px-4 py-2 text-left hover:bg-gray-100">
+              <button (click)="selectCatalog('Member')" class="cursor-pointer block w-full px-4 py-2 text-left hover:bg-gray-100">
                 Member
               </button>
             </div>
@@ -290,4 +290,4 @@
 </header>
 <app-img-upload></app-img-upload>
 <app-menu></app-menu>
-<app-catalog>
+<app-catalog></app-catalog>

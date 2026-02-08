@@ -5,21 +5,33 @@ import { MyService } from '../../app/my-service';
 import { ImgUpload } from "../../app/img-upload/img-upload";
 import { Menu } from "../../app/menu/menu";
 import { Auth } from '../../app/services/auth';
+import { CardModal } from "../../app/card-modal/card-modal";
 import { Catalog } from "../../app/catalog/catalog";
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink, ImgUpload, Menu, Catalog],
+  imports: [CommonModule, RouterLink, ImgUpload, Menu, CardModal, Catalog],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
-   isCatalogOpen = false;
 
-  toggleCatalog(event: Event) {
-    event.stopPropagation();
-    this.isCatalogOpen = !this.isCatalogOpen;
-  }
+isCatalogOpen = false;
+selectedCatalog = 'Catalog';
+
+toggleCatalog(event: Event) {
+  event.stopPropagation(); // prevent closing immediately
+  this.isCatalogOpen = !this.isCatalogOpen;
+}
+
+selectCatalog(item: string) {
+  this.selectedCatalog = item; // update button text
+  this.isCatalogOpen = false;  // close dropdown
+}
+
+
+
+
 
   @HostListener('document:click')
   closeOnOutsideClick() {
@@ -87,12 +99,6 @@ toggleDropdownn() {
       openModalCatalog() {
         this.modalService.opencatalog()
       }
-
-  onMemberClick() {
-  console.log('Member selected');
-}
-
-
 
 
 

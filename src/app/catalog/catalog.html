@@ -1,6 +1,9 @@
-<div *ngIf="isModalOpen" class="fixed inset-0 bg-black/30 flex justify-start p-4 z-50">
+<div *ngIf="isModalOpen" class="fixed inset-0 bg-black/30 flex justify-start p-4 z-50"
+(click)="isModalOpen = false">
 
-<div class="max-w-4xl mx-auto px-4 py-6 bg-white rounded-md h-[72%] relative sm:right-60 sm:top-10">
+<div class="max-w-4xl mx-auto px-4 py-6 bg-white rounded-md h-[72%] relative sm:right-60 sm:top-10"
+(click)="$event.stopPropagation()">
+ 
   <h2 class="text-sm text-gray-500 mb-4">Your searches</h2>
 
   <!-- Item -->
