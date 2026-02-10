@@ -1,0 +1,73 @@
+<div class="w-full max-w-7xl  bg-white">
+  <!-- Heading -->
+  <h1 class=" text-2xl md:text-3xl font-semibold text-gray-900">
+    What can we help you with?
+  </h1>
+
+  <!-- Sub text -->
+  <p class=" text-gray-500 mt-8 text-sm md:text-base">
+    I have a general question
+  </p>
+
+  <!-- Search -->
+  <div class="mt-2 flex justify-center">
+    <div
+      class="flex items-center w-full max-w-4xl bg-gray-100 rounded-lg px-4"
+    >
+      <svg
+        class="w-5 h-5 text-gray-400 "
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 21l-4.35-4.35m1.85-5.65a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
+        />
+      </svg>
+
+      <input
+        type="text"
+        placeholder="Type your question..."
+        class="w-full p-1.5 bg-[#EDF2F2] border-0 outline-none text-gray-700 text-md md:text-base"
+      />
+    </div>
+  </div>
+
+  <!-- General topics -->
+  <h2 class="mt-10 px-2 text-lg font-semibold text-gray-900 md:text-left md:max-w-5xl md:mx-auto">
+    General topics
+  </h2>
+
+  <!-- Cards -->
+  <div
+    class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4  border border-gray-200  "
+  >
+    <!-- Selling -->
+    <div routerLink="/selling"
+      class="border-r  border-gray-200 px-10  py-10 flex flex-col items-center cursor-pointer"
+    >
+      <img src="selling.svg" alt="" class="h-10 w-10">
+      <p class="mt-3 font-medium text-gray-800">Selling</p>
+    </div>
+
+    <!-- Buying -->
+    <div
+      class="border-r  border-gray-200 px-10  py-10 flex flex-col items-center cursor-pointer"
+    >
+            <img src="buying.svg" alt="" class="h-10 w-10">
+      <p class="mt-3 font-medium text-gray-800">Buying</p>
+    </div>
+
+    <!-- Account -->
+    <div
+      class=" py-10 px-10  flex flex-col items-center cursor-pointer"
+    >
+        <img src="account.svg" alt="" class="h-10 w-10">
+
+      <p class="mt-3 font-medium text-gray-800">Account</p>
+    </div>
+  </div>
+</div>

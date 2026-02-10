@@ -10,7 +10,7 @@ import { Catalog } from "../../app/catalog/catalog";
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink, ImgUpload, Menu, CardModal, Catalog],
+  imports: [CommonModule, RouterLink, ImgUpload, Menu, Catalog],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

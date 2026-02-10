@@ -46,6 +46,17 @@ import { Press } from './press/press';
 import { Newsroom } from './newsroom/newsroom';
 import { MediaAssets } from './media-assets/media-assets';
 import { VintedVentures } from './vinted-ventures/vinted-ventures';
+import { InfoModal } from './info-modal/info-modal';
+import { Infoboard } from './infoboard/infoboard';
+import { HelpHome } from './help-home/help-home';
+import { Selling } from './selling/selling';
+import { SellingBasics } from './selling-basics/selling-basics';
+import { UploadingListing } from './uploading-listing/uploading-listing';
+import { ManagingListing } from './managing-listing/managing-listing';
+import { Withdrawals } from './withdrawals/withdrawals';
+import { ShippingReturns } from './shipping-returns/shipping-returns';
+import { HiddenListing } from './hidden-listing/hidden-listing';
+import { VintedPro } from './vinted-pro/vinted-pro';
 export const routes: Routes = [
 
   {
@@ -70,6 +81,7 @@ export const routes: Routes = [
       { path: 'referrals', component: Referrals },
       { path: 'mobile-apps', component: MobileApps },
       { path: 'advertising', component: Advertising },
+      { path: 'infoboard', component: Infoboard },
 
 
       {
@@ -93,15 +105,24 @@ export const routes: Routes = [
       { path: 'personalization', component: Personalization },
       { path: 'my-orders', component: MyOrders },
       { path: 'donations', component: Donations },
-      { path: 'help', component: HelpCenter },
+      {
+         path: '', component: HelpCenter,
+        children:[
+          { path: 'help-center/help-home', component: HelpHome},
+          { path: 'selling', component: Selling},
+          { path: 'basics', component: SellingBasics},
+          { path: 'uploading-listing', component: UploadingListing},
+          { path: 'managing-listing', component: ManagingListing},
+          { path: 'hidden-listing', component: HiddenListing},
+          { path: 'shipping-returns', component: ShippingReturns},
+          { path: 'withdrawals', component: Withdrawals},
+          { path: 'vinted-pro', component:VintedPro},
+        ]
+
+       },
       { path: 'change', component: Change },
       { path: 'verify-no', component: VerifyNo },
       { path: 'password-change', component: PasswordChange },
-
-
-
-
-
 
     ],
   },
