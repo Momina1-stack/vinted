@@ -57,6 +57,22 @@ import { Withdrawals } from './withdrawals/withdrawals';
 import { ShippingReturns } from './shipping-returns/shipping-returns';
 import { HiddenListing } from './hidden-listing/hidden-listing';
 import { VintedPro } from './vinted-pro/vinted-pro';
+import { Buying } from './buying/buying';
+import { FindingItems } from './finding-items/finding-items';
+import { GettingItems } from './getting-items/getting-items';
+import { Refunds } from './refunds/refunds';
+import { Returns } from './returns/returns';
+import { Account } from './account/account';
+import { ProfileSettings } from './profile-settings/profile-settings';
+import { IdVerfications } from './id-verfications/id-verfications';
+import { BannedAcc } from './banned-acc/banned-acc';
+import { Reporting } from './reporting/reporting';
+import { DataPrivacy } from './data-privacy/data-privacy';
+import { Regestration } from './regestration/regestration';
+import { ReferralsDonations } from './referrals-donations/referrals-donations';
+import { Policies } from './policies/policies';
+import { BuyingBasics } from './buying-basics/buying-basics';
+import { Feedback } from './feedback/feedback';
 export const routes: Routes = [
 
   {
@@ -111,12 +127,28 @@ export const routes: Routes = [
           { path: 'help-center/help-home', component: HelpHome},
           { path: 'selling', component: Selling},
           { path: 'basics', component: SellingBasics},
+          { path: 'buying-basics', component: BuyingBasics},
+           { path: 'feedback', component:Feedback},
           { path: 'uploading-listing', component: UploadingListing},
           { path: 'managing-listing', component: ManagingListing},
           { path: 'hidden-listing', component: HiddenListing},
           { path: 'shipping-returns', component: ShippingReturns},
           { path: 'withdrawals', component: Withdrawals},
           { path: 'vinted-pro', component:VintedPro},
+          { path: 'buying', component:Buying},
+          { path: 'finding-items', component:FindingItems},
+          { path: 'getting-items', component:GettingItems},
+          { path: 'refunds', component:Refunds},
+          { path: 'returns', component:Returns},
+          { path: 'account', component:Account},
+          { path: 'profile-settings', component:ProfileSettings},
+          { path: 'id-verfications', component:IdVerfications},
+          { path: 'banned-acc', component:BannedAcc},
+          { path: 'reporting', component:Reporting},
+          { path: 'data-privacy', component:DataPrivacy},
+          { path: 'registration', component:Regestration},
+          { path: 'referrals-and-donations', component:ReferralsDonations},
+          { path: 'policies', component:Policies},
         ]
 
        },

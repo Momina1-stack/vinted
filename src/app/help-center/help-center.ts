@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLinkWithHref, RouterOutlet } from "@angular/router";
+import { RouterLink, RouterLinkWithHref, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-help-center',
@@ -11,8 +11,20 @@ import { RouterLinkWithHref, RouterOutlet } from "@angular/router";
 export class HelpCenter {
     isSellingOpen = false;
 
+
   toggleSelling() {
     this.isSellingOpen = !this.isSellingOpen;
   }
 
+   isBuyingOpen = false;
+
+  toggleBuying() {
+    this.isBuyingOpen = !this.isBuyingOpen;
+  }
+  
+   isAccountOpen = false;
+
+  toggleAccount() {
+    this.isAccountOpen = !this.isAccountOpen;
+  }
 }

@@ -1,0 +1,70 @@
+<div class="max-w-7xl mx-auto px-4">
+
+  <!-- Search -->
+ <div
+      class="flex items-center w-full max-w-4xl bg-gray-100 rounded-md px-4"
+    >
+      <svg class="w-5 h-5 text-gray-400 " fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m1.85-5.65a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"/></svg>
+      <input
+        type="text"
+        placeholder="Type your question..."
+        class="w-full p-1.5 bg-[#EDF2F2] border-0 outline-none text-gray-500 text-md md:text-base"
+      />
+    </div>
+
+  <!-- Heading -->
+  <h1 class="text-xl font-semibold mb-6 mt-3 ml-1">Buying</h1>
+
+  <!-- Recommended -->
+  <p class="text-sm text-gray-500 mb-4">Recommended for you</p>
+
+  <!-- Selling basics -->
+  <div routerLink="/buying-basics"
+    class="flex items-center justify-between py-4 cursor-pointer hover:bg-gray-100">
+    <div class="flex items-center gap-3">
+      <svg fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M4.75 2a.75.75 0 0 1 .75.75V4h14.75c.616 0 .97.737.586 1.218L17.193 10l3.664 4.808c.353.486-.006 1.192-.607 1.192H5.5v5.25a.75.75 0 0 1-1.5 0V2.75A.75.75 0 0 1 4.75 2m.75 12.5h13.277l-3.134-4.081a.75.75 0 0 1 .021-.91L18.69 5.5H5.5z" class="text-gray-400"></path></svg>
+
+      <span class="text-sm font-medium text-gray-900">
+        Buying basics
+      </span>
+    </div>
+
+    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2"
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+
+  <!-- Pick a topic -->
+  <p class="text-sm text-gray-500 mt-6 mb-2">Pick a topic</p>
+
+  <div class="">
+   <div
+  *ngFor="let item of topics"
+  [routerLink]="item.route"
+  class="flex items-center justify-between py-4 border-b border-gray-300 cursor-pointer hover:bg-gray-100"
+>
+  <span class="text-sm font-medium text-gray-900">
+    {{ item.title }}
+  </span>
+
+  <svg
+    class="w-5 h-5 text-gray-400"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M9 5l7 7-7 7"
+    />
+  </svg>
+</div>
+
+  </div>
+
+</div>

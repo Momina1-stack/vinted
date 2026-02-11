@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-help-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './help-home.html',
   styleUrl: './help-home.css',
 })

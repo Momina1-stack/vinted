@@ -1,22 +1,22 @@
-<div class="min-h-screen bg-white  ">
-  <div class="max-w-[1100px] py-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 ">
+<div class="min-h-screen bg-white px-4 sm:px-0 ">
+  <div class="max-w-275 py-8 mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2  ">
 
       <!-- Left Sidebar -->
       <div class="space-y-6">
-        <h2 class="text-xl font-semibold text-center">Help Center</h2>
+        <h2 class=" hidden sm:block text-xl font-semibold text-center">Help Center</h2>
 
         <ul class="space-y-8 text-gray-600 text-center mr-13">
-          <li routerLink="/help-center/help-home" class="font-medium text-black cursor-pointer">Home</li>
-          <li (click)="toggleSelling()" routerLink="/selling" class="cursor-pointer hover:text-black">Selling
+          <li routerLink="/help-center/help-home" class="hidden sm:block  font-medium text-black cursor-pointer">Home</li>
+          <li (click)="toggleSelling()" routerLink="/selling" class="hidden sm:block  cursor-pointer hover:text-black">Selling
           <!-- Selling Sub Menu -->
-          <ul *ngIf="isSellingOpen" class="space-y-3 text-sm text-gray-500 text-left pl-55 mt-2 py-7">
+          <ul *ngIf="isSellingOpen" class=" hidden sm:block space-y-3 text-sm text-gray-500 text-left pl-55 mt-2 py-7">
 
-            <li routerLink="/uploading-listing" class="cursor-pointer hover:text-black">
+            <li  routerLink="/uploading-listing" class="cursor-pointer hover:text-black">
               Uploading lisitings
             </li>
 
-            <li routerLink="/managing-listing" class="cursor-pointer hover:text-black">
+            <li routerLink='/managing-listing' class="cursor-pointer hover:text-black">
               Managing listing
             </li>
 
@@ -27,7 +27,7 @@
             <li routerLink="/shipping-returns" class="cursor-pointer hover:text-black">
               Shipping and returns
             </li>
-            <li routerLink="w/ithdrawals" class="cursor-pointer hover:text-black">
+            <li routerLink="/withdrawals" class="cursor-pointer hover:text-black">
               Payments and Widthdrawals
             </li>
             <li routerLink="/vinted-pro" class="cursor-pointer hover:text-black">
@@ -36,8 +36,59 @@
           </ul>
           </li>
          
-          <li class="cursor-pointer hover:text-black">Buying</li>
-          <li class="cursor-pointer hover:text-black">Account</li>
+          <li (click)="toggleBuying()" routerLink="/buying" class="hidden sm:block cursor-pointer hover:text-black">Buying
+             <ul *ngIf="isBuyingOpen" class="hidden sm:block space-y-3 text-sm text-gray-500 text-left pl-55 mt-2 py-7">
+
+            <li  routerLink="/finding-items" class="cursor-pointer hover:text-black">
+              Finding items to buy
+            </li>
+
+            <li routerLink='/getting-items' class="cursor-pointer hover:text-black">
+              Getting items verified
+            </li>
+
+            <li routerLink="/refunds" class="cursor-pointer hover:text-black">
+            Payments and refunds
+            </li>
+            
+            <li routerLink="/returns" class="cursor-pointer hover:text-black">
+              Shipping and returns
+            </li>
+           
+          </ul>
+          </li>
+          <li (click)="toggleAccount()" routerLink="/account"  class="  hidden sm:block cursor-pointer hover:text-black mb-6">Account
+            <ul *ngIf="isAccountOpen" class="space-y-3 text-sm text-gray-500 text-left pl-2 sm:pl-55 mt-2 py-7">
+
+            <li  routerLink="/uploading-listing" class="cursor-pointer hover:text-black">
+              Profile and settings
+            </li>
+
+            <li routerLink='/managing-listing' class="cursor-pointer hover:text-black">
+              ID verfications
+            </li>
+
+            <li routerLink="/hidden-listing" class="cursor-pointer hover:text-black">
+              Banned account
+            </li>
+            
+            <li routerLink="/shipping-returns" class="cursor-pointer hover:text-black">
+              Security and reporting
+            </li>
+            <li routerLink="/withdrawals" class="cursor-pointer hover:text-black">
+              Data privacy
+            </li>
+            <li routerLink="/vinted-pro" class="cursor-pointer hover:text-black">
+              Registration and login
+            </li>
+            <li routerLink="/vinted-pro" class="cursor-pointer hover:text-black">
+              Referrals and donations
+            </li>
+            <li routerLink="/vinted-pro" class="cursor-pointer hover:text-black">
+              Term and policies
+            </li>
+          </ul>
+          </li>
         </ul>
       </div>
 
