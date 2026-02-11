@@ -4,6 +4,7 @@ import { RouterLink, RouterLinkWithHref, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-help-center',
+  standalone:true,
   imports: [RouterOutlet, CommonModule, RouterLinkWithHref],
   templateUrl: './help-center.html',
   styleUrl: './help-center.css',

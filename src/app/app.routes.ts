@@ -124,7 +124,7 @@ export const routes: Routes = [
       {
          path: '', component: HelpCenter,
         children:[
-          { path: 'help-center/help-home', component: HelpHome},
+          { path: '', component: HelpHome},
           { path: 'selling', component: Selling},
           { path: 'basics', component: SellingBasics},
           { path: 'buying-basics', component: BuyingBasics},
