@@ -1,0 +1,197 @@
+<div class=" bg-gray-100 py-10 px-4">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Heading -->
+    <h1 class="text-2xl font-semibold mb-4">Sell an item</h1>
+
+    <!-- Upload Section -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-4">
+
+      <!-- Upload Box -->
+      <div
+        class="border border-dashed border-gray-300 rounded-md h-44 flex flex-col items-center justify-center text-center relative">
+
+        <!-- Hidden Input -->
+        <input
+          type="file"
+          #fileInput
+          multiple
+          accept="image/*"
+          (change)="onFileSelected($event)"
+          class="hidden"
+        />
+
+        <!-- Upload Button -->
+        <button
+          (click)="fileInput.click()"
+          class="flex items-center gap-2 px-5 py-2 border border-teal-600 text-teal-700 rounded-md hover:bg-teal-50 transition">
+
+          <span class="text-xl font-bold">+</span>
+          Upload photos
+        </button>
+
+        <!-- Preview Images -->
+        <div *ngIf="imagePreviews.length > 0"
+          class="absolute bottom-3 left-3 right-3 flex gap-3 overflow-x-auto">
+
+          <img *ngFor="let img of imagePreviews"
+            [src]="img"
+            class="w-20 h-20 object-cover rounded-md border" />
+        </div>
+
+      </div>
+
+      <!-- Info Bar -->
+      <div class="mt-4 bg-[#C9F0EE] text-teal-900 px-4 py-3 rounded-md flex items-center gap-3 text-sm">
+        <span class="text-lg">
+          <svg fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v2a.75.75 0 0 1-1.5 0v-2A2.75 2.75 0 0 1 4.75 2h2a.75.75 0 0 1 0 1.5zm14.5 0c.69 0 1.25.56 1.25 1.25v2a.75.75 0 0 0 1.5 0v-2A2.75 2.75 0 0 0 19.25 2h-2a.75.75 0 0 0 0 1.5zm-14.5 17c-.69 0-1.25-.56-1.25-1.25v-2a.75.75 0 0 0-1.5 0v2A2.75 2.75 0 0 0 4.75 22h2a.75.75 0 0 0 0-1.5zm15.75-1.25c0 .69-.56 1.25-1.25 1.25h-2a.75.75 0 0 0 0 1.5h2A2.75 2.75 0 0 0 22 19.25v-2a.75.75 0 0 0-1.5 0zM10.92 6.665a.75.75 0 0 0-.876-.386l-3.5 1A.75.75 0 0 0 6 8v3c0 .414.336.75.75.75H8v5.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-5.5h1.25A.75.75 0 0 0 18 11V8a.75.75 0 0 0-.544-.721l-3.5-1a.75.75 0 0 0-.877.386A1.32 1.32 0 0 1 12 7.25c-.83 0-1.008-.418-1.066-.556l-.013-.03ZM7.5 10.25V8.566l2.466-.705c.45.457.96.89 2.034.89.824 0 1.584-.433 2.034-.89l2.466.705v1.684h-1.25a.75.75 0 0 0-.75.75v5.5h-5V11a.75.75 0 0 0-.75-.75z"></path></svg>
+        </span>
+        Catch your buyers' eye — use quality photos.
+        <a href="#" class="underline font-medium">Learn how</a>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 divide-y divide-gray-200">
+
+      <!-- Title -->
+      <div class="grid grid-cols-1 md:grid-cols-3 p-6 items-center gap-4">
+        <label class="font-medium text-gray-800">Title</label>
+        <input
+          type="text"
+          placeholder="Tell buyers what you're selling"
+          class="placeholder:text-gray-500 border-0  md:col-span-2 border-b border-gray-200 outline-none py-2 focus:border-teal-600"
+        />
+      </div>
+
+      <!-- Description -->
+      <div class="grid grid-cols-1 md:grid-cols-3 p-6 items-start gap-4">
+        <label class="font-medium text-gray-800">Describe your item</label>
+        <textarea
+          rows="4"
+          placeholder="Tell buyers more about it"
+          class="border-0 placeholder:text-gray-500  md:col-span-2 border-b border-gray-200 outline-none py-2 resize-none focus:border-teal-600"
+        ></textarea>
+      </div>
+
+    </div>
+    <!-- next -->
+     <!-- Category Section -->
+<div class="bg-white rounded-lg shadow-sm border  border-gray-200 divide-y divide-gray-200 mt-6">
+
+  <!-- Category -->
+ <div class="grid grid-cols-1 md:grid-cols-3 p-6 items-center gap-4 relative">
+  <label class="font-medium text-gray-800">Category</label>
+
+  <div class="md:col-span-2 relative">
+
+    <!-- Select Box -->
+    <div
+      (click)="toggleDropdown()"
+      class="border-b border-gray-200 py-2 cursor-pointer flex justify-between items-center">
+
+      <span class="text-gray-700">
+        {{ selectedCategory || 'Select a category' }}
+      </span>
+
+      <svg class="w-4 h-4 text-gray-500"
+        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+
+    <!-- Dropdown Panel -->
+    <div *ngIf="isDropdownOpen"
+      class="absolute mt-2 w-full bg-white rounded-xl shadow-lg border border-gray-200 z-50 max-h-80 overflow-y-auto">
+
+      <!-- Search -->
+      <div class="p-3">
+        <input type="text"
+          [(ngModel)]="searchText"
+          placeholder="Find a category"
+          class="border-0 w-full bg-gray-100 rounded-md px-4 py-2 outline-none text-sm" />
+      </div>
+
+      <!-- Category List -->
+      <div>
+        <div *ngFor="let item of filteredCategories()"
+          (click)="selectCategory(item)"
+          class="flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer border-t border-gray-100">
+
+          <div class="flex items-center gap-3">
+            <!-- ICON IMAGE -->
+            <img
+              [src]="'' + item.icon"
+              class="w-5 h-5 object-contain"
+              alt=""
+            />
+
+            <span class="text-gray-800">{{ item.name }}</span>
+          </div>
+
+          <!-- Arrow -->
+          <svg class="w-4 h-4 text-gray-400"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+  <!-- Price -->
+  <div class="grid grid-cols-1 md:grid-cols-3 p-6 items-center gap-4">
+    <label class="font-medium text-gray-800">Price</label>
+
+    <div class="md:col-span-2">
+      <input
+        type="number"
+        placeholder="$0.00"
+        class="border-0 w-full border-b placeholder:text-gray-500 border-gray-200 outline-none py-2 focus:border-teal-600" />
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Feedback Section -->
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 mt-6 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+  <p class="text-gray-500">
+    What do you think of our upload process?
+  </p>
+
+  <button
+    class="px-5 py-2 border border-teal-600 text-teal-700 rounded-md hover:bg-teal-50 transition">
+    Give feedback
+  </button>
+
+</div>
+
+
+<!-- Bottom Buttons -->
+<div class="flex flex-col sm:flex-row justify-end gap-4 mt-8">
+
+  <button
+    class="px-6 py-3 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50 transition w-full sm:w-auto">
+    Save draft
+  </button>
+
+  <button
+    class="px-6 py-3 bg-teal-700 text-white rounded-md hover:bg-teal-800 transition w-full sm:w-auto">
+    Upload
+  </button>
+
+</div>
+
+
+  </div>
+</div>

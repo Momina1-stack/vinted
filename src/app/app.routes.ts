@@ -73,6 +73,7 @@ import { ReferralsDonations } from './referrals-donations/referrals-donations';
 import { Policies } from './policies/policies';
 import { BuyingBasics } from './buying-basics/buying-basics';
 import { Feedback } from './feedback/feedback';
+import { SellNow } from './sell-now/sell-now';
 export const routes: Routes = [
 
   {
@@ -98,6 +99,7 @@ export const routes: Routes = [
       { path: 'mobile-apps', component: MobileApps },
       { path: 'advertising', component: Advertising },
       { path: 'infoboard', component: Infoboard },
+      { path: 'sell-now', component: SellNow },
 
 
       {
