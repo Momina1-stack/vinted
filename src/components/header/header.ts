@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { RouterLink, Router } from "@angular/router";
 import { MyService } from '../../app/my-service';
 import { ImgUpload } from "../../app/img-upload/img-upload";
 import { Menu } from "../../app/menu/menu";
@@ -12,95 +12,82 @@ import { Catalog } from "../../app/catalog/catalog";
   selector: 'app-header',
   imports: [CommonModule, RouterLink, ImgUpload, Menu, Catalog],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrls: ['./header.css'],
 })
 export class Header {
 
-isCatalogOpen = false;
-selectedCatalog = 'Catalog';
+  // ================== Dropdown States ==================
+  isCatalogOpen = false;
+  selectedCatalog = 'Catalog';
+  
+  isLanguageOpen = false;
+  isDropdownOpen = false;
 
-toggleCatalog(event: Event) {
-  event.stopPropagation(); // prevent closing immediately
-  this.isCatalogOpen = !this.isCatalogOpen;
-}
+  isModalOpen = false;
 
-selectCatalog(item: string) {
-  this.selectedCatalog = item; // update button text
-  this.isCatalogOpen = false;  // close dropdown
-}
-
-
-
-
-
-  @HostListener('document:click')
-  closeOnOutsideClick() {
-    if (this.isCatalogOpen) {
-      this.isCatalogOpen = false;
-    }
-  }
-toggleDropdown() {
-throw new Error('Method not implemented.');
-}
-  Service: any;
-  router: any;
-
-
+  // ================== Constructor ==================
   constructor(
     public auth: Auth,
-    private modalService: MyService
+    private modalService: MyService,
+    private router: Router
   ) { }
- 
 
-  logout() {
-    this.auth.logout();
+  // ================== Catalog Dropdown ==================
+  toggleCatalog(event: Event) {
+    event.stopPropagation();
+    this.isCatalogOpen = !this.isCatalogOpen;
   }
 
-
-  isOpen = false;
-isLanguageOpen = false;
-
-toggleLanguage(event?: Event) {
-  if (event) event.stopPropagation(); 
-  this.isLanguageOpen = !this.isLanguageOpen;
-}
-
-@HostListener('document:click')
-closeLanguageDropdown() {
-  if (this.isLanguageOpen) {
-    this.isLanguageOpen = false;
+  selectCatalog(item: string) {
+    this.selectedCatalog = item;
+    this.isCatalogOpen = false;
   }
-}
 
- 
+  openModalCatalog() {
+    this.modalService.opencatalog();
+  }
+
+  // ================== Language Dropdown ==================
+  toggleLanguage(event?: Event) {
+    if (event) event.stopPropagation();
+    this.isLanguageOpen = !this.isLanguageOpen;
+  }
+
+  // ================== Outside Click Handler ==================
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: Event) {
+    const target = event.target as HTMLElement;
+    const catalogWrapper = document.querySelector('.catalog-wrapper');
+    if (catalogWrapper && !catalogWrapper.contains(target)) {
+      this.isCatalogOpen = false;
+    }
+
+    // Close language dropdown if open
+    const languageDropdown = document.querySelector('.language-wrapper');
+    if (languageDropdown && !languageDropdown.contains(target)) {
+      this.isLanguageOpen = false;
+    }
+  }
+
+  // ================== Mobile Menu ==================
   toggleMobileMenu() {
     this.modalService.openMenu();
   }
 
+  // ================== Modals ==================
   openModal() {
     this.modalService.openModal();
-
   }
 
-  logoutt() {
-  this.auth.logout();
-  this.router.navigate(['/login']);
-}
-isDropdownOpen = false;
+  // ================== Logout ==================
+  logout() {
+    this.auth.logout();
+    this.router.navigate(['/login']);
+  }
 
-toggleDropdownn() {
-  this.isDropdownOpen = !this.isDropdownOpen;
-}
-
-
-    
-      isModalOpen = false;
-  
-      openModalCatalog() {
-        this.modalService.opencatalog()
-      }
-
-
-
+  // ================== Generic Dropdown ==================
+  toggleDropdownn() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 
 }

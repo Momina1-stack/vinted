@@ -59,23 +59,23 @@
   </div>
 
   <!-- Menu Links -->
-  <div class="flex-1 px-10">
-    <a routerLink="/newsroom"
+  <div *ngIf="isMenuOpen" class="flex-1 px-10">
+    <a  (click)="closeMenu()" routerLink="/newsroom"
        class="block py-4 border-b text-black border-gray-200">
       Newsroom
     </a>
 
-    <a routerLink="/media-assets"
+    <a  (click)="closeMenu()" routerLink="/media-assets"
        class="block py-4 border-b text-black border-gray-200">
       Media Assets
     </a>
 
-    <a routerLink="/sustainability"
+    <a  (click)="closeMenu()" routerLink="/sustainability"
        class="block py-4 border-b text-black border-gray-200">
       Sustainability
     </a>
 
-    <a routerLink="/ventures"
+    <a  (click)="closeMenu()" routerLink="/ventures"
        class="block py-4 border-b text-[#008080] border-gray-200">
       Vinted Ventures
     </a>

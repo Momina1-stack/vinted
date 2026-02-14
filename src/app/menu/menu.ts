@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MyService } from '../my-service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-menu',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './menu.html',
   styleUrl: './menu.css',
 })
@@ -21,4 +22,8 @@ export class Menu {
   close() {
     this.modalService.closeModal();
   }
+  closeMenu() {
+  this.isMobileMenuOpen = false;
+}
+
 }
