@@ -16,25 +16,19 @@
 
     <div class="p-4 mb-4 space-y-3 relative top-5">
 
-     <div class="flex border border-[#007782] rounded-md overflow-hidden">
+      <div class="flex border border-[#007782] rounded-md overflow-hidden">
 
-  <button
-    routerLink="/signup"
-    (click)="closeMenu()"
-    class="cursor-pointer flex-1 py-2 text-md text-[#007782]">
-    Sign up
-  </button>
+        <button routerLink="/signup" (click)="closeMenu()" class="cursor-pointer flex-1 py-2 text-md text-[#007782]">
+          Sign up
+        </button>
 
-  <div class="w-px bg-[#007782]"></div>
+        <div class="w-px bg-[#007782]"></div>
 
-  <button
-    routerLink="/signup"
-    (click)="closeMenu()"
-    class="cursor-pointer flex-1 py-2 text-md text-[#007782]">
-    Log in
-  </button>
+        <button routerLink="/signup" (click)="closeMenu()" class="cursor-pointer flex-1 py-2 text-md text-[#007782]">
+          Log in
+        </button>
 
-</div>
+      </div>
 
 
       <button class="cursor-pointer w-full py-2 bg-[#007782] text-white rounded-md">
@@ -143,13 +137,15 @@
         <ul class="space-y-3 text-md text-gray-700">
 
           <li class="border-b border-gray-300">
-            <a  (click)="closeMenu()" routerLink="/about-subsection" class="block py-3 px-4 cursor-pointer hover:text-gray-900">
+            <a (click)="closeMenu()" routerLink="/about-subsection"
+              class="block py-3 px-4 cursor-pointer hover:text-gray-900">
               How it works
             </a>
           </li>
 
           <li class="border-b border-gray-300">
-            <a (click)="closeMenu()" routerLink="/mobile-apps" class="block py-3 px-4 cursor-pointer hover:text-gray-900">
+            <a (click)="closeMenu()" routerLink="/mobile-apps"
+              class="block py-3 px-4 cursor-pointer hover:text-gray-900">
               Mobile apps
             </a>
           </li>
@@ -175,7 +171,8 @@
         <p class="py-4 px-4   text-gray-600 mb-2">Company</p>
 
         <ul class="space-y-3  text-gray-700">
-          <li (click)="closeMenu()" routerLink="/about-us" class=" px-4 border-b  border-gray-300 py-2 cursor-pointer hover:text-gray-900">
+          <li (click)="closeMenu()" routerLink="/about-us"
+            class=" px-4 border-b  border-gray-300 py-2 cursor-pointer hover:text-gray-900">
             About us</li>
           <li (click)="closeMenu()" routerLink="/sustainability"
             class="px-4  border-b border-gray-300 py-3 cursor-pointer hover:text-gray-900">Sustainability</li>
@@ -197,11 +194,13 @@
           Policies
         </li>
 
-        <li (click)="closeMenu()" routerLink="/trust&safety" class=" py-3 px-4  border-b border-gray-300 cursor-pointer hover:bg-gray-50">
+        <li (click)="closeMenu()" routerLink="/trust&safety"
+          class=" py-3 px-4  border-b border-gray-300 cursor-pointer hover:bg-gray-50">
           Trust and Safety
         </li>
 
-        <li (click)="closeMenu()" routerLink="/privacy-center" class=" py-3 px-4  border-b border-gray-300 cursor-pointer hover:bg-gray-50">
+        <li (click)="closeMenu()" routerLink="/privacy-center"
+          class=" py-3 px-4  border-b border-gray-300 cursor-pointer hover:bg-gray-50">
           Privacy Center
         </li>
 
