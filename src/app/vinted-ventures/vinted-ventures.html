@@ -30,11 +30,31 @@
 <!-- Image Card -->
 <section class="-mt-28 px-4">
   <div class="max-w-6xl mx-auto rounded-4xl overflow-hidden shadow-2xl aspect-18/9">
-    <img 
-      src="vinted-venture.png" 
-      class="w-full h-full  object-center"
-      alt="hero"
-    />
+    <picture>
+  <source 
+    srcset="https://press-center-static.vinted.com/Hero_image_desktop_1914x978_b8f90a82dd_f6443510f6.png" 
+    media="(min-width: 768px)"
+  />
+
+  <img 
+    src="https://press-center-static.vinted.com/Mobile_image_1x_39a2dda488.png"
+    alt="hero"
+    class="
+      h-99.75 
+      w-83.75 
+      md:w-full 
+      md:aspect-[1.955] 
+      md:h-auto 
+      md:max-h-163 
+      mx-auto 
+      mb-17 
+      md:mb-29.75 
+      rounded-3xl 
+      object-contain
+    "
+  />
+</picture>
+
   </div>
 </section>
    <!-- Intro Paragraph -->
