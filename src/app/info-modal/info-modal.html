@@ -1,15 +1,19 @@
 <div *ngIf="isModalOpen" class="fixed inset-0 z-60 bg-black/40 flex items-center justify-center min-h-screen p-4">
     
     <div class="bg-white rounded-lg shadow-xl w-full max-w-sm sm:max-w-md md:max-w-sm lg:max-w-xs relative">
-        <!-- Close Button -->
-        <button (click)="isModalOpen = false" class="cursor-pointer absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-3xl font-light leading-none p-2">
-            ×
-        </button>
+        <!-- Sticky Close Button -->
+  <div class="sticky top-0 z-50 flex justify-end bg-white">
+    <button 
+      (click)="isModalOpen = false" 
+      class="cursor-pointer text-gray-400 hover:text-gray-600 text-3xl font-light leading-none p-3">
+      ×
+    </button>
+  </div>
         
         <!-- Modal Content -->
-        <div class="p-6 sm:p-4 max-h-[80vh] overflow-y-auto">
+        <div class="px-6 sm:p-4 max-h-[80vh] overflow-y-auto">
             <!-- Heading -->
-            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 pt-10">Choosing item condition</h1>
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 pt-2">Choosing item condition</h1>
             
             <!-- Description -->
             <p class="text-gray-600 text-sm sm:text-md leading-relaxed mb-4 sm:mb-6">

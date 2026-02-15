@@ -16,11 +16,26 @@
 
     <div class="p-4 mb-4 space-y-3 relative top-5">
 
-      <div class="flex border border-[#007782] rounded-md overflow-hidden" routerLink="/login">
-        <button class="cursor-pointer flex-1 py-2 text-md text-[#007782]">Sign up</button>
-        <div class="w-px bg-[#007782]"></div>
-        <button class="cursor-pointer flex-1 py-2 text-md text-[#007782]">Log in</button>
-      </div>
+     <div class="flex border border-[#007782] rounded-md overflow-hidden">
+
+  <button
+    routerLink="/signup"
+    (click)="closeMenu()"
+    class="cursor-pointer flex-1 py-2 text-md text-[#007782]">
+    Sign up
+  </button>
+
+  <div class="w-px bg-[#007782]"></div>
+
+  <button
+    routerLink="/login"
+    (click)="closeMenuu()"
+    class="cursor-pointer flex-1 py-2 text-md text-[#007782]">
+    Log in
+  </button>
+
+</div>
+
 
       <button class="cursor-pointer w-full py-2 bg-[#007782] text-white rounded-md">
         Sell now

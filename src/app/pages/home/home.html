@@ -25,19 +25,17 @@
   </div>
 </div>
 
-<!-- cards section -->
-<div class="homepage-blocks__item
-         px-4 sm:px-6 md:px-8 lg:px-10
-         py-5
-         flex flex-wrap justify-center gap-3.5
-         overflow-x-auto lg:overflow-x-hidden
-         scrollbar-hide ">
 
-  <!--  CARD 1  -->
-  <div class="relative flex flex-col  rounded-lg overflow-hidden">
+
+<!-- ALL CARDS IN ONE SECTION -->
+<div class="homepage-blocks__item all-cards-grid
+         px-4 sm:px-6 md:px-8 lg:px-10
+         py-5">
+
+  <!-- ROW 1 - CARD 1 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative" routerLink="/items">
-      <img src="white-bag.webp" alt="Sample Item" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-
+      <img src="white-bag.webp" alt="Sample Item" class="w-full h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button aria-pressed="false" aria-label="Add to favorites"
         class="cursor-pointer absolute right-2 bottom-2 flex items-center p-1 rounded-full bg-white">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
@@ -64,10 +62,11 @@
       </button>
     </div>
   </div>
-  <!--CARD 2  -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+
+  <!-- ROW 1 - CARD 2 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag2.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag2.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -93,10 +92,11 @@
       </button>
     </div>
   </div>
-  <!--CARD 3  -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+
+  <!-- ROW 1 - CARD 3 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag10.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag10.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -123,10 +123,10 @@
     </div>
   </div>
 
-  <!--CARD 4-->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+  <!-- ROW 1 - CARD 4 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="black-bag.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="black-bag.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -137,7 +137,6 @@
       </button>
       <a class="absolute inset-0"></a>
     </div>
-
     <div class="p-3 flex flex-col space-y-1">
       <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
       <p class="text-xs text-gray-500 truncate">New with tags</p>
@@ -154,10 +153,10 @@
     </div>
   </div>
 
-  <!-- CARD 5-->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+  <!-- ROW 1 - CARD 5 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="brown bag.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="brown bag.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -168,7 +167,6 @@
       </button>
       <a class="absolute inset-0"></a>
     </div>
-
     <div class="p-3 flex flex-col space-y-1">
       <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
       <p class="text-xs text-gray-500 truncate">New with tags</p>
@@ -185,21 +183,10 @@
     </div>
   </div>
 
-</div>
-
-<!-- cards 2nd row -->
-<div class="homepage-blocks__item
-         px-4 sm:px-6 md:px-8 lg:px-10
-         py-5
-         flex flex-wrap justify-center gap-3.5
-         overflow-x-auto lg:overflow-x-hidden
-         scrollbar-hide ">
-
-  <!-- CARD 1 -->
+  <!-- ROW 2 - CARD 1 -->
   <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag5.webp" alt="Sample Item" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-
+      <img src="bag5.webp" alt="Sample Item" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button aria-pressed="false" aria-label="Add to favorites"
         class="cursor-pointer absolute right-2 bottom-2 flex items-center p-1 rounded-full bg-white">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
@@ -226,10 +213,11 @@
       </button>
     </div>
   </div>
-  <!-- CARD 2 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+
+  <!-- ROW 2 - CARD 2 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag6.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag6.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -255,10 +243,11 @@
       </button>
     </div>
   </div>
-  <!-- CARD 3 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+
+  <!-- ROW 2 - CARD 3 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag8.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag8.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -285,10 +274,10 @@
     </div>
   </div>
 
-  <!-- CARD 4 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+  <!-- ROW 2 - CARD 4 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="baggg.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="baggg.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -299,7 +288,6 @@
       </button>
       <a class="absolute inset-0"></a>
     </div>
-
     <div class="p-3 flex flex-col space-y-1">
       <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
       <p class="text-xs text-gray-500 truncate">New with tags</p>
@@ -316,10 +304,10 @@
     </div>
   </div>
 
-  <!-- CARD 5 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+  <!-- ROW 2 - CARD 5 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag9.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag9.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -330,7 +318,6 @@
       </button>
       <a class="absolute inset-0"></a>
     </div>
-
     <div class="p-3 flex flex-col space-y-1">
       <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
       <p class="text-xs text-gray-500 truncate">New with tags</p>
@@ -347,21 +334,10 @@
     </div>
   </div>
 
-</div>
-
-<!-- cards 3rd row -->
-<div class="homepage-blocks__item
-         px-4 sm:px-6 md:px-8 lg:px-10
-         py-5
-         flex flex-wrap justify-center gap-3.5
-         overflow-x-auto lg:overflow-x-hidden
-         scrollbar-hide ">
-
-  <!-- CARD 1 -->
+  <!-- ROW 3 - CARD 1 -->
   <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="pink2.webp" alt="Sample Item" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-
+      <img src="pink2.webp" alt="Sample Item" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button aria-pressed="false" aria-label="Add to favorites"
         class="cursor-pointer absolute right-2 bottom-2 flex items-center p-1 rounded-full bg-white">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
@@ -388,10 +364,11 @@
       </button>
     </div>
   </div>
-  <!-- CARD 2 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+
+  <!-- ROW 3 - CARD 2 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="darkpink.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="darkpink.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -417,10 +394,11 @@
       </button>
     </div>
   </div>
-  <!-- CARD 3 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+
+  <!-- ROW 3 - CARD 3 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag12.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="pinkk-bag.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -447,10 +425,10 @@
     </div>
   </div>
 
-  <!-- CARD 4 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+  <!-- ROW 3 - CARD 4 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag13.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag13.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -461,7 +439,6 @@
       </button>
       <a class="absolute inset-0"></a>
     </div>
-
     <div class="p-3 flex flex-col space-y-1">
       <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
       <p class="text-xs text-gray-500 truncate">New with tags</p>
@@ -478,10 +455,10 @@
     </div>
   </div>
 
-  <!-- CARD 5 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
+  <!-- ROW 3 - CARD 5 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
     <div class="relative">
-      <img src="bag14.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
+      <img src="bag14.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
       <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
         <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
           <path fill="currentColor"
@@ -492,7 +469,157 @@
       </button>
       <a class="absolute inset-0"></a>
     </div>
+    <div class="p-3 flex flex-col space-y-1">
+      <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
+      <p class="text-xs text-gray-500 truncate">New with tags</p>
+      <p class="text-xs text-gray-500">$54.45</p>
+      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
+        $57.87 incl.
+        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
+          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
 
+  <!-- ROW 4 - CARD 1 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
+    <div class="relative">
+      <img src="bluemkk.webp" alt="Sample Item" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
+      <button aria-pressed="false" aria-label="Add to favorites"
+        class="cursor-pointer absolute right-2 bottom-2 flex items-center p-1 rounded-full bg-white">
+        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor"
+            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
+          </path>
+        </svg>
+        <span class="ml-1 text-xs text-gray-600">6</span>
+      </button>
+      <a class="absolute inset-0"></a>
+    </div>
+    <div class="p-3 flex flex-col space-y-1">
+      <p class="text-xs text-gray-500 truncate">Anthropologie</p>
+      <p class="text-xs text-gray-500 truncate">Very good</p>
+      <p class="text-xs text-gray-500">$54.45</p>
+      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
+        $57.87 incl.
+        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
+          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ROW 4 - CARD 2 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
+    <div class="relative">
+      <img src="bluem.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
+      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
+        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor"
+            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
+          </path>
+        </svg>
+        <span class="ml-1 text-xs text-gray-600">2</span>
+      </button>
+      <a class="absolute inset-0"></a>
+    </div>
+    <div class="p-3 flex flex-col space-y-1">
+      <p class="text-xs text-gray-500 truncate">A Luyifanghua big</p>
+      <p class="text-xs text-gray-500 truncate">New without tags</p>
+      <p class="text-xs text-gray-500">$54.45</p>
+      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
+        $57.87 incl.
+        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
+          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ROW 4 - CARD 3 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
+    <div class="relative">
+      <img src="zara2.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
+      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
+        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor"
+            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
+          </path>
+        </svg>
+        <span class="ml-1 text-xs text-gray-600">5</span>
+      </button>
+      <a class="cursor-pointer absolute inset-0"></a>
+    </div>
+    <div class="p-3 flex flex-col space-y-1">
+      <p class="text-xs text-gray-500 truncate">Michael Kors</p>
+      <p class="text-xs text-gray-500 truncate">New with tags</p>
+      <p class="text-xs text-gray-500">$54.45</p>
+      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
+        $57.87 incl.
+        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
+          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ROW 4 - CARD 4 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
+    <div class="relative">
+      <img src="blue.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
+      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
+        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor"
+            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
+          </path>
+        </svg>
+        <span class="ml-1 text-xs text-gray-600">3</span>
+      </button>
+      <a class="absolute inset-0"></a>
+    </div>
+    <div class="p-3 flex flex-col space-y-1">
+      <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
+      <p class="text-xs text-gray-500 truncate">New with tags</p>
+      <p class="text-xs text-gray-500">$54.45</p>
+      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
+        $57.87 incl.
+        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
+          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ROW 4 - CARD 5 -->
+  <div class="relative flex flex-col rounded-lg overflow-hidden">
+    <div class="relative">
+      <img src="zara.webp" class="w-full  h-auto sm:h-83.75  object-cover rounded-lg bg-[#E8DED1]" />
+      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
+        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path fill="currentColor"
+            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
+          </path>
+        </svg>
+        <span class="ml-1 text-xs text-gray-600">7</span>
+      </button>
+      <a class="absolute inset-0"></a>
+    </div>
     <div class="p-3 flex flex-col space-y-1">
       <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
       <p class="text-xs text-gray-500 truncate">New with tags</p>
@@ -511,22 +638,17 @@
 
 </div>
 
-<!-- login show -->
+<!-- login show section (banner between row 3 and row 4 in original) -->
 <section *ngIf="auth.isLoggedIn" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
   <div class="relative bg-[#EAFBE8] rounded-2xl overflow-hidden
            min-h-60 sm:min-h-70 lg:min-h-80">
-    <!-- BACKGROUND IMAGE -->
-    <img src="hero-img.jpg" alt="" class="absolute  w-full h-full object-cover object-right" />
-
-    <!-- CONTENT OVER IMAGE -->
-    <div class="relative z-10 h-full
-             flex items-center">
+    <img src="hero-img.jpg" alt="" class="absolute w-full h-full object-cover object-right" />
+    <div class="relative z-10 h-full flex items-center">
       <div class="max-w-md pl-6 sm:pl-10 lg:pl-14 py-8">
         <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl
                  font-semibold text-black leading-tight mb-15">
           No selling fees. Just extra cash.
         </h2>
-
         <button class="cursor-pointer mt-26 bg-teal-700 hover:bg-teal-800
                  text-white font-medium
                  px-6 py-3 rounded-lg
@@ -537,168 +659,6 @@
     </div>
   </div>
 </section>
-
-<!-- cards 4th row -->
- <div class="homepage-blocks__item
-         px-4 sm:px-6 md:px-8 lg:px-10
-         py-5
-         flex flex-wrap justify-center gap-3.5
-         overflow-x-auto lg:overflow-x-hidden
-         scrollbar-hide ">
-
-  
-  <div class="relative flex flex-col rounded-lg overflow-hidden">
-    <div class="relative">
-      <img src="bluemkk.webp" alt="Sample Item" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-
-      <button aria-pressed="false" aria-label="Add to favorites"
-        class="cursor-pointer absolute right-2 bottom-2 flex items-center p-1 rounded-full bg-white">
-        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-          <path fill="currentColor"
-            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
-          </path>
-        </svg>
-        <span class="ml-1 text-xs text-gray-600">6</span>
-      </button>
-      <a class="absolute inset-0"></a>
-    </div>
-    <div class="p-3 flex flex-col space-y-1">
-      <p class="text-xs text-gray-500 truncate">Anthropologie</p>
-      <p class="text-xs text-gray-500 truncate">Very good</p>
-      <p class="text-xs text-gray-500">$54.45</p>
-      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
-        $57.87 incl.
-        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
-          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
-          <path fill="currentColor" fill-rule="evenodd"
-            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <!-- CARD 2 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
-    <div class="relative">
-      <img src="bluem.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
-        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-          <path fill="currentColor"
-            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
-          </path>
-        </svg>
-        <span class="ml-1 text-xs text-gray-600">2</span>
-      </button>
-      <a class="absolute inset-0"></a>
-    </div>
-    <div class="p-3 flex flex-col space-y-1">
-      <p class="text-xs text-gray-500 truncate">A Luyifanghua big</p>
-      <p class="text-xs text-gray-500 truncate">New without tags</p>
-      <p class="text-xs text-gray-500">$54.45</p>
-      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
-        $57.87 incl.
-        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
-          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
-          <path fill="currentColor" fill-rule="evenodd"
-            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <!-- CARD 3 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
-    <div class="relative">
-      <img src="zara2.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
-        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-          <path fill="currentColor"
-            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
-          </path>
-        </svg>
-        <span class="ml-1 text-xs text-gray-600">5</span>
-      </button>
-      <a class="cursor-pointer absolute inset-0"></a>
-    </div>
-    <div class="p-3 flex flex-col space-y-1">
-      <p class="text-xs text-gray-500 truncate">Michael Kors</p>
-      <p class="text-xs text-gray-500 truncate">New with tags</p>
-      <p class="text-xs text-gray-500">$54.45</p>
-      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
-        $57.87 incl.
-        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
-          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
-          <path fill="currentColor" fill-rule="evenodd"
-            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- CARD 4 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
-    <div class="relative">
-      <img src="blue.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
-        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-          <path fill="currentColor"
-            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
-          </path>
-        </svg>
-        <span class="ml-1 text-xs text-gray-600">3</span>
-      </button>
-      <a class="absolute inset-0"></a>
-    </div>
-
-    <div class="p-3 flex flex-col space-y-1">
-      <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
-      <p class="text-xs text-gray-500 truncate">New with tags</p>
-      <p class="text-xs text-gray-500">$54.45</p>
-      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
-        $57.87 incl.
-        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
-          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
-          <path fill="currentColor" fill-rule="evenodd"
-            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- CARD 5 -->
-  <div class="relative flex flex-col rounded-lg overflow-hidden w-57.5 shrink-0">
-    <div class="relative">
-      <img src="zara.webp" class="h-83.75 object-cover rounded-lg bg-[#E8DED1]" />
-      <button class="cursor-pointer absolute right-2 bottom-2 flex items-center bg-white p-1 rounded-full">
-        <svg fill="none" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-          <path fill="currentColor"
-            d="M3.149 3.247c-1.03.662-1.462 1.67-1.392 2.79.073 1.146.68 2.425 1.797 3.477 1.608 1.515 3.4 2.968 4.31 3.688.081.064.19.064.271 0 .91-.72 2.702-2.173 4.31-3.688 1.117-1.052 1.725-2.331 1.798-3.476.07-1.12-.363-2.13-1.392-2.79-.576-.371-1.113-.498-1.591-.498-.673 0-1.317.366-1.843.819a6 6 0 0 0-.343.322l-.716.736a.5.5 0 0 1-.717 0l-.716-.736a5 5 0 0 0-.342-.322c-.526-.453-1.17-.819-1.843-.819-.48 0-1.015.127-1.591.497m-.811-1.262c.818-.526 1.636-.735 2.402-.735 1.2 0 2.186.634 2.822 1.182A7 7 0 0 1 8 2.845a7 7 0 0 1 .438-.413c.636-.548 1.621-1.182 2.822-1.182.765 0 1.583.21 2.402.735 1.529.983 2.18 2.535 2.078 4.147-.1 1.586-.92 3.206-2.267 4.474-1.654 1.559-3.485 3.043-4.407 3.772a1.715 1.715 0 0 1-2.132 0c-.922-.729-2.754-2.213-4.408-3.772C1.18 9.338.36 7.718.26 6.132.16 4.52.81 2.968 2.338 1.985">
-          </path>
-        </svg>
-        <span class="ml-1 text-xs text-gray-600">7</span>
-      </button>
-      <a class="absolute inset-0"></a>
-    </div>
-
-    <div class="p-3 flex flex-col space-y-1">
-      <p class="text-xs text-gray-500 truncate">Calvin Klein</p>
-      <p class="text-xs text-gray-500 truncate">New with tags</p>
-      <p class="text-xs text-gray-500">$54.45</p>
-      <button class="cursor-pointer flex items-center text-xs text-[#007782]">
-        $57.87 incl.
-        <svg fill="none" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true">
-          <path fill="currentColor" d="m7.924 4.114.708.707-2.829 2.828-2.121-2.121.707-.707 1.414 1.414z"></path>
-          <path fill="currentColor" fill-rule="evenodd"
-            d="M11 6c0 4.2-5 6-5 6s-5-1.8-5-6V1.8L6 0l5 1.8zM2 6V2.503l4-1.44 4 1.44V6c0 1.66-.98 2.902-2.115 3.787A9.4 9.4 0 0 1 6 10.917a9.368 9.368 0 0 1-1.885-1.13C2.981 8.902 2 7.66 2 6m3.66 5.06"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-</div>
 
 
 

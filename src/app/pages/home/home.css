@@ -1,0 +1,27 @@
+/* Responsive Grid for ALL cards in ONE section */
+.all-cards-grid {
+  display: grid;
+  gap: 0.875rem; /* gap-3.5 */
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns for mobile (<730px) */
+}
+
+/* 730px and above: 3 columns */
+@media (min-width: 730px) {
+  .all-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 960px and above: 4 columns */
+@media (min-width: 960px) {
+  .all-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 1199px and above: 5 columns */
+@media (min-width: 1199px) {
+  .all-cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

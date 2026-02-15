@@ -26,4 +26,9 @@ export class Menu {
   this.isMobileMenuOpen = false;
 }
 
+isMenuOpen = false;
+
+closeMenuu() {
+  this.isMenuOpen = false;
+}
 }
