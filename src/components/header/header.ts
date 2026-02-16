@@ -24,7 +24,6 @@ export class Header {
   isDropdownOpen = false;
 
   isModalOpen = false;
-  eRef: any;
 
   // ================== Constructor ==================
   constructor(
@@ -90,12 +89,5 @@ export class Header {
   toggleDropdownn() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
-
-  @HostListener('document:click', ['$event'])
-handleClickOutside(event: Event) {
-  if (!this.eRef.nativeElement.contains(event.target)) {
-    this.isDropdownOpen = false;
-  }
-}
 
 }
