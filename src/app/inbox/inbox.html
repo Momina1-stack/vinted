@@ -1,4 +1,4 @@
-<div class="p-10 h-[80vh] w-full flex bg-white">
+<div class="p-10 h-[80vh] w-full bg-white hidden sm:flex">
 
   <!-- LEFT SIDEBAR -->
   <div class="w-[320px] border border-gray-200 flex justify-center flex-col">
@@ -128,3 +128,35 @@
     </div>
   </div>
 </div>
+<div class="min-h-screen bg-white  block sm:hidden">
+
+  <!-- Inbox Title -->
+  <div class="border-b border-gray-200 py-4">
+    <h1 class="text-lg font-semibold text-gray-900 px-4">
+      Inbox
+    </h1>
+  </div>
+
+  <!-- Empty State -->
+  <div class="flex flex-col items-center justify-center text-center mt-24">
+
+    <!-- Icon -->
+    <img
+      src="msg.svg"
+      alt="No messages"
+      class="w-16 h-16 mb-4"
+    />
+
+    <!-- Heading -->
+    <h2 class="text-base font-semibold text-gray-900 mb-1">
+      No messages yet
+    </h2>
+
+    <!-- Description -->
+    <p class="text-sm text-gray-500 max-w-xs">
+      When someone sends you a message, it will appear here.
+    </p>
+
+  </div>
+</div>
+
