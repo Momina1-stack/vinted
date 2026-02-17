@@ -11,7 +11,7 @@ slideWidth() {
 throw new Error('Method not implemented.');
 }
   
-    currentIndex = 0;
+  currentIndex = 0;
   slidePx = 360;
 
   team = [
