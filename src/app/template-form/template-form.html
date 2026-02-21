@@ -1,0 +1,21 @@
+<h1 class="p-5">Template driven form</h1>
+<form class="p-5" #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+  <input type="text" required name="name" placeholder="enter name" ngModel>
+  <span *ngIf="name.invalid">Name is required</span>
+  <br> <br>
+    <input type="text" name="password" placeholder="enter password" ngModel>
+<br><br>
+<select name="gender" ngModel >
+  <option value="">Select gender</option>
+  <option value="male">Male</option>
+  <option value="">Female</option>
+</select>
+<br><br>
+<input type="range" max="50" min="3" ngModel>
+<br><br>
+<button class="border p-2">Add user</button>
+</form>
+<h3>{{userDetail?.name}}</h3>
+<h3>{{userDetail?.password}}</h3>
+<h3>{{userDetail?.name}}</h3>
+<h3>{{userDetail?.name}}</h3>

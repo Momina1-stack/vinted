@@ -1,0 +1,25 @@
+<h1 class="p-5">Basics of reactive forms</h1>
+
+<form [formGroup]="profileform" (ngSubmit)="onSubmit()" class="p-5">
+
+  <input type="text" placeholder="enter name" formControlName="name">
+  <span *ngIf="name?. hasError('required')">Name is required</span>
+    <span class="text-red-600 px-4 border" *ngIf="name?.invalid && (name?.dirty || name?.touched)">Please provide username</span>
+
+  <br><br>
+
+  <input type="text" placeholder="enter password" formControlName="password">
+   <span *ngIf="name?. hasError('required')">Password is required.</span>
+    <span class="text-red-600 px-4 border" *ngIf="password?.invalid && (password?.dirty || password?.touched)">Please provide valid password</span>
+  <br><br>
+
+  <input type="text" placeholder="enter email" formControlName="email">
+   <span *ngIf="name?. hasError('required')">Email is required.</span>
+    <span class="text-red-600 px-4 border" *ngIf="email?.invalid && (email?.dirty || email?.touched)">Please provide valid email</span>
+  <br><br>
+
+  <button class="border px-5" type="submit">Submit</button>
+
+
+
+</form>
